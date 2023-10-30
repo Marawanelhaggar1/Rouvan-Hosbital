@@ -1,0 +1,228 @@
+<div class="appointment-overview-area pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12">
+                <div class="appointment-overview-contact">
+                    <img
+                        src="assets/images/appointment/appointment-1.jpg"
+                        alt="appointment-image"
+                    />
+                    <div class="appointment-info">
+                        <div class="call-info">
+                            <i class="flaticon-039-emergency-call"></i>
+                            Call Today
+                            <span>
+                                <a href="tel:088123654987">
+                                    +088 123 654 987
+                                </a>
+                            </span>
+                        </div>
+                        <p>
+                            Aenean sollicitudin, here lorem lorem quis auctor
+                            nisi elit lorem nec.
+                        </p>
+                        <a routerLink="/contact-us" class="default-btn">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="appointment-overview-box">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="make-appointment-content">
+                                <h4>
+                                    <i class="flaticon-170-calendar-1"></i>
+                                    Make An Appointment
+                                </h4>
+
+                                <form [formGroup]="searchForm">
+                                    <div class="form-group">
+                                        <label>Specialty</label>
+                                        <select
+                                            formControlName="specialty"
+                                            aria-placeholder="Select Specialty"
+                                        >
+                                            <option value="" selected>
+                                                Select Specialty
+                                            </option>
+                                            <option value="male">
+                                                Surgery
+                                            </option>
+                                            <option value="female">
+                                                Urology
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Doctor</label>
+                                        <select
+                                            formControlName="doctor"
+                                            aria-placeholder="Select Doctor"
+                                        >
+                                            <option value="" selected>
+                                                Select Doctor
+                                            </option>
+                                            <option value="male">Marwan</option>
+                                            <option value="female">
+                                                Ibrahem
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <a
+                                        routerLink="/doctors"
+                                        type="button"
+                                        class="default-btn"
+                                    >
+                                        <i class="bx bx-search"></i>
+                                        <span> Search </span>
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="content">
+                                <h4>
+                                    We Are a Certified and Award-winning
+                                    Hospital
+                                </h4>
+                                <div class="box-image">
+                                    <img
+                                        src="assets/images/appointment/appointment-2.jpg"
+                                        alt="appointment-image"
+                                    />
+                                    <button
+                                        class="video-btn"
+                                        (click)="openPopup()"
+                                    >
+                                        <i class="bx bx-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Appointment Section for Home Demo - 8 -->
+<!-- <div
+    class="hospital-appointment-area ptb-100 mb-3"
+    style="background-image: url(assets/images/hospital/appointment-bg.jpg)"
+>
+    <div class="container">
+        <div class="section-title with-hospital-color">
+            <span class="sub-title">Appointment</span>
+            <h2>Request An Appointment</h2>
+        </div>
+        <div class="hospital-appointment-form">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Name"
+                        />
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Email"
+                        />
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Phone"
+                        />
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="form-group">
+                        <select>
+                            <option value="1">Select Service</option>
+                            <option value="2">Prosthodontics Dentist</option>
+                            <option value="3">Aesthetic Dentistry</option>
+                            <option value="4">Gastroenterologists</option>
+                            <option value="5">Endocrinologists</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="form-group">
+                        <select>
+                            <option value="1">Select Department</option>
+                            <option value="2">Prosthodontics Dentist</option>
+                            <option value="3">Aesthetic Dentistry</option>
+                            <option value="4">Gastroenterologists</option>
+                            <option value="5">Endocrinologists</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="form-group">
+                        <select>
+                            <option value="1">Doctor Name</option>
+                            <option value="2">Addison Smith</option>
+                            <option value="3">Liam Mason</option>
+                            <option value="4">Aiken Ward</option>
+                            <option value="5">Ena Dicrosa</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Date"
+                            bsDatepicker
+                        />
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="form-group">
+                        <select>
+                            <option value="1">Select Time</option>
+                            <option value="2">8:00 - 22:00</option>
+                            <option value="3">8:00 - 22:00</option>
+                            <option value="4">8:00 - 22:00</option>
+                            <option value="5">8:00 - 22:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <button type="submit" class="default-btn">
+                        Submit Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- Video Popup -->
+<div class="video-popup" *ngIf="isOpen">
+    <div class="popup-inner">
+        <iframe
+            src="https://www.youtube.com/embed/XNQk1qt__Vw"
+            title="Setup and Local Installation - React Nextjs Online Yoga Coaching &amp; Training Courses System"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+        ></iframe>
+        <button (click)="closePopup()" type="button" class="close-btn">
+            <i class="bx bx-x"></i>
+        </button>
+    </div>
+</div>

@@ -1,0 +1,106 @@
+form {
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    border: 1px solid #e1e1e1;
+    background-color: white;
+
+    .form-group {
+        padding-right: 0;
+        height: 100%;
+
+        align-self: center;
+        .default-btn {
+            width: 100%;
+            font-size: 22px;
+            // text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bolder;
+
+            i {
+                font-weight: bolder;
+
+                padding-right: 5px;
+            }
+        }
+        border-right: 1px solid #e1e1e1;
+    }
+}
+.form-control {
+    background-color: transparent;
+    transition: var(--transition);
+
+    font-size: var(--font-size);
+    border: none;
+    color: var(--black-color);
+    line-height: initial;
+    padding: 15px 18px;
+    border-radius: 5px;
+    box-shadow: unset;
+    height: 55px;
+
+    &::placeholder {
+        color: var(--paragraph-color);
+    }
+    &:focus {
+        border-color: var(--main-color);
+
+        &::placeholder {
+            color: transparent;
+            transition: var(--transition);
+        }
+    }
+}
+
+select {
+    background-color: var(--white-color);
+    color: var(--paragraph-color2);
+    transition: var(--transition);
+    // border: 1px solid #eeeeee;
+    border: none;
+    font-size: var(--font-size);
+    box-shadow: none;
+    border-radius: 0;
+    cursor: pointer;
+    display: block;
+    height: 60px;
+    width: 100%;
+    outline: 0;
+    padding: {
+        left: 15px;
+        right: 15px;
+    }
+    &:focus {
+        border-color: var(--main-color);
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        margin-right: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    form {
+        flex-direction: column;
+        max-width: 400px;
+
+        .form-group {
+            width: 300px;
+            border: 1px solid #e1e1e1;
+            // margin: 1rem;
+            margin: 2rem;
+            .form-control,
+            select {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+<div class="container">
+    <form class="row" [formGroup]="searchForm">
+        <div class="form-group col-4">
+            <label>Specialty</label>
+            <select
+                formControlName="specialty"
+                aria-placeholder="Select Specialty"
+            >
+                <option value="" selected>Select Specialty</option>
+                <option value="male">Surgery</option>
+                <option value="female">Urology</option>
+            </select>
+        </div>
+        <div class="form-group col-4">
+            <label>Doctor</label>
+            <select formControlName="doctor" aria-placeholder="Select Doctor">
+                <option value="" selected>Select Doctor</option>
+                <option value="male">Marwan</option>
+                <option value="female">Ibrahem</option>
+            </select>
+        </div>
+        <div class="form-group col-4">
+            <a routerLink="/doctors" class="default-btn">
+                <i class="bx bx-search"></i> <span> Search </span>
+            </a>
+        </div>
+    </form>
+</div>

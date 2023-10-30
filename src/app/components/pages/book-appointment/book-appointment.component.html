@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="profile">
+        <div class="image">
+            <img src="../../../../assets/images/marwan.jpg" alt="" />
+        </div>
+        <div class="details">
+            <h3>Marwan magdy elhaggar</h3>
+            <p>Consultant Obstetrics and Gynecology Clinics</p>
+        </div>
+    </div>
+    <div class="form">
+        <h3>Appointment Form</h3>
+        <div>
+            <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <input
+                        type="text"
+                        class="form-control"
+                        formControlName="first_name"
+                        placeholder="First Name"
+                    />
+                </div>
+                <div class="form-group">
+                    <input
+                        type="text"
+                        formControlName="last_name"
+                        class="form-control"
+                        placeholder="Last Name"
+                    />
+                </div>
+                <div class="form-group">
+                    <input
+                        type="text"
+                        formControlName="email"
+                        class="form-control"
+                        placeholder="Email address"
+                    />
+                </div>
+                <div class="form-group">
+                    <input
+                        type="text"
+                        formControlName="mobile"
+                        class="form-control"
+                        placeholder="Mobile Number"
+                    />
+                </div>
+                <div class="form-group text-start">
+                    <label class="payment-label">PayMent Method</label>
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault1"
+                        />
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Insured
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault2"
+                            checked
+                        />
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Cash
+                        </label>
+                    </div>
+                </div>
+                <re-captcha
+                    (resolved)="resolved($event)"
+                    (errored)="onError($event)"
+                    errorMode="handled"
+                    render="explicit"
+                    [siteKey]="siteKey"
+                ></re-captcha>
+                <button type="submit" class="default-btn">
+                    Book an Appointment
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

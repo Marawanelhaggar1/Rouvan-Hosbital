@@ -1,0 +1,87 @@
+<div class="hospital-information-area pt-100 pb-75" [dir]="lang">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="hospital-information-card">
+                    <div class="content">
+                        <div class="icon">
+                            <i class="bx bx-map"></i>
+                        </div>
+                        <h3>
+                            {{
+                                lang === "ltr"
+                                    ? "Office Address"
+                                    : "عنوان المستشفى"
+                            }}
+                        </h3>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "2130 Fulton Street San Diego CA 94117-1080 USA"
+                                    : "الخانكه شارع الكستشفى المركزى "
+                            }}
+                        </p>
+                    </div>
+                    <div class="shape">
+                        <img
+                            src="assets/images/hospital/info-shape.png"
+                            alt="image"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="hospital-information-card">
+                    <div class="content">
+                        <div class="icon">
+                            <i class="bx bx-envelope"></i>
+                        </div>
+                        <h3>
+                            {{
+                                lang === "ltr"
+                                    ? "Email Us"
+                                    : "بريدنا الالكترونى"
+                            }}
+                        </h3>
+                        <p>
+                            <a href="mailto:hello@inba.com">hello@inba.com</a>
+                            <a href="mailto:info@inba.com">info@inba.com</a>
+                        </p>
+                    </div>
+                    <div class="shape">
+                        <img
+                            src="assets/images/hospital/info-shape.png"
+                            alt="image"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="hospital-information-card">
+                    <div class="content">
+                        <div class="icon">
+                            <i class="bx bx-phone-call"></i>
+                        </div>
+                        <h3>
+                            {{
+                                lang === "ltr"
+                                    ? "Contact Us Free"
+                                    : "تواصل معنا مجانا"
+                            }}
+                        </h3>
+                        <p>
+                            <a href="tel:00874847348734">(008) 7484 7348 734</a>
+                            <a href="tel:00164787586758">+001 6478 7586 758</a>
+                        </p>
+                    </div>
+                    <div class="shape">
+                        <img
+                            src="assets/images/hospital/info-shape.png"
+                            alt="image"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

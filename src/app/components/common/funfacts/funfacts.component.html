@@ -1,0 +1,91 @@
+<div
+    [dir]="lang"
+    class="hospital-fun-facts-area pt-100 pb-75"
+    style="
+        background-image: url(assets/images/hospital/fun-fact/fun-facts-bg.jpg);
+    "
+    [ngClass]="{
+        'bg-color': router.url === '/about-us' || router.url === '/about-us-2'
+    }"
+>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-6 col-sm-3">
+                <div
+                    class="hospital-fun-fact"
+                    [ngClass]="{
+                        'font-family':
+                            router.url === '/about-us' ||
+                            router.url === '/about-us-2'
+                    }"
+                >
+                    <h3>120</h3>
+                    <p>Health Sections</p>
+                    <div class="shape">
+                        <img
+                            src="assets/images/hospital/fun-fact/img1.png"
+                            alt="image"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 col-sm-3">
+                <div
+                    class="hospital-fun-fact"
+                    [ngClass]="{
+                        'font-family':
+                            router.url === '/about-us' ||
+                            router.url === '/about-us-2'
+                    }"
+                >
+                    <h3>234</h3>
+                    <p>Professionals Doctor</p>
+                    <div class="shape">
+                        <img
+                            src="assets/images/hospital/fun-fact/img2.png"
+                            alt="image"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 col-sm-3">
+                <div
+                    class="hospital-fun-fact"
+                    [ngClass]="{
+                        'font-family':
+                            router.url === '/about-us' ||
+                            router.url === '/about-us-2'
+                    }"
+                >
+                    <h3>2234</h3>
+                    <p>Satisfied Patients</p>
+                    <div class="shape">
+                        <img
+                            src="assets/images/hospital/fun-fact/img3.png"
+                            alt="image"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 col-sm-3">
+                <div
+                    class="hospital-fun-fact"
+                    [ngClass]="{
+                        'font-family':
+                            router.url === '/about-us' ||
+                            router.url === '/about-us-2'
+                    }"
+                >
+                    <h3>100+</h3>
+                    <p>Health Plans</p>
+                    <div class="shape">
+                        <img
+                            src="assets/images/hospital/fun-fact/img4.png"
+                            alt="image"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

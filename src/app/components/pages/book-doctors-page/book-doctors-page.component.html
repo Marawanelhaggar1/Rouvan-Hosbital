@@ -1,0 +1,196 @@
+<div class="page-banner-area ptb-100 four" [dir]="lang">
+    <div class="container">
+        <div class="page-banner-content">
+            <h2>Best Doctors in Egypt</h2>
+            <ul class="pages-list" dir="ltr">
+                <li dir="ltr"><a href="index.html">Home</a></li>
+                <li dir="ltr">Find a Doctor</li>
+            </ul>
+            <div class="mt-4">
+                <app-appointment-search></app-appointment-search>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="booking" [dir]="lang">
+    <div class="container">
+        <div class="header">
+            <div class="header-contnet">
+                <h4>All Specialities</h4>
+                <span> Doctors</span>
+            </div>
+            <div class="sort">
+                <label>Sort : </label>
+                <select aria-placeholder="Sort Doctor">
+                    <option value="best match" selected>Best Match</option>
+                    <option value="top rated">Top Rated</option>
+                </select>
+                <!--
+                <div>
+                    <input type="time" [(ngModel)]="binding" />
+                </div>
+
+                <button type="button" (click)="consoleTime()">console</button> -->
+            </div>
+        </div>
+        <div class="booking-card">
+            <div class="image">
+                <img src="../../../../assets/images/marwan.jpg" alt="" />
+            </div>
+            <div class="details">
+                <div class="title">
+                    <div class="name">
+                        <span>Doctor </span>
+                        <h3>Tamer Yehia</h3>
+                    </div>
+                    <p class="job-title">
+                        Ph.D. and Consultant Oral and Maxillofacial Surgery
+                    </p>
+                </div>
+
+                <div class="ratings">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+
+                    <p>overall ratings from 1232</p>
+                </div>
+
+                <div class="doctor-info">
+                    <div class="info">
+                        <i class="bx bx-location-plus"></i>
+                        <p>
+                            Orthopedist Specialized in Hand and Upper Limb
+                            Surgery,
+                        </p>
+                    </div>
+                    <div class="info">
+                        <i class="bx bx-money"></i>
+                        <p>
+                            Orthopedist Specialized in Hand and Upper Limb
+                            Surgery,
+                        </p>
+                    </div>
+                    <div class="info">
+                        <i class="bx bx-stopwatch"></i>
+                        <p>
+                            Orthopedist Specialized in Hand and Upper Limb
+                            Surgery,
+                        </p>
+                    </div>
+                    <div class="info">
+                        <i class="bx bx-phone"></i>
+                        <p>
+                            Orthopedist Specialized in Hand and Upper Limb
+                            Surgery,
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="date">
+                <owl-carousel-o [options]="customOptions" dir="ltr">
+                    <ng-template
+                        *ngFor="let item of daysOfTheWeek; index as i"
+                        carouselSlide
+                    >
+                        <div class="dates-card">
+                            <p class="date-banner">{{ item }}</p>
+                            <p class="dates">From 8pm To 12pm</p>
+                            <button type="button">Book</button>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+        <div class="booking-card">
+            <div class="image">
+                <img src="../../../../assets/images/marwan.jpg" alt="" />
+            </div>
+            <div class="details">
+                <div class="title">
+                    <div class="name">
+                        <span>Doctor </span>
+                        <h3>Tamer Yehia</h3>
+                    </div>
+                    <p class="job-title">
+                        Ph.D. and Consultant Oral and Maxillofacial Surgery
+                    </p>
+                </div>
+
+                <div class="ratings">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+
+                    <p>overall ratings from 1232</p>
+                </div>
+
+                <div class="doctor-info">
+                    <div class="info">
+                        <i class="bx bx-location-plus"></i>
+                        <p>
+                            Orthopedist Specialized in Hand and Upper Limb
+                            Surgery,
+                        </p>
+                    </div>
+                    <div class="info">
+                        <i class="bx bx-money"></i>
+                        <p>
+                            Orthopedist Specialized in Hand and Upper Limb
+                            Surgery,
+                        </p>
+                    </div>
+                    <div class="info">
+                        <i class="bx bx-stopwatch"></i>
+                        <p>
+                            Orthopedist Specialized in Hand and Upper Limb
+                            Surgery,
+                        </p>
+                    </div>
+                    <div class="info">
+                        <i class="bx bx-phone"></i>
+                        <p>
+                            Orthopedist Specialized in Hand and Upper Limb
+                            Surgery,
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="date" dir="ltr">
+                <!-- <div class="dates-card">
+                    <p class="date-banner">today</p>
+                    <p class="dates">From 8pm To 12pm</p>
+                    <button type="button">Book</button>
+                </div>
+                <div class="dates-card">
+                    <p class="date-banner">Mon 10/30</p>
+                    <p class="dates">From 8pm To 12pm</p>
+                    <button type="button">Book</button>
+                </div>
+                <div class="dates-card">
+                    <p class="date-banner">today</p>
+                    <p class="dates">From 8pm To 12pm</p>
+                    <button type="button">Book</button>
+                </div> -->
+                <owl-carousel-o [options]="customOptions">
+                    <ng-template
+                        *ngFor="let item of daysOfTheWeek; index as i"
+                        carouselSlide
+                    >
+                        <div class="dates-card">
+                            <p class="date-banner">{{ item }}</p>
+                            <p class="dates">From 8pm To 12pm</p>
+                            <button type="button">Book</button>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div [ngClass]="lang === 'rtl' ? 'blue' : 'red'">dasfasasf</div>
