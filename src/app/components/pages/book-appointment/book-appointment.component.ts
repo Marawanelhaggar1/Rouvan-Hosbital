@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RecaptchaErrorParameters } from 'ng-recaptcha';
 
@@ -8,6 +8,7 @@ import { RecaptchaErrorParameters } from 'ng-recaptcha';
     styleUrls: ['./book-appointment.component.scss'],
 })
 export class BookAppointmentComponent {
+    lang?: string;
     appointmentForm: FormGroup;
     siteKey = '6LdICtkoAAAAAD6AtUM08O4U-DS_5HIVfSY__Py3';
 
@@ -22,6 +23,14 @@ export class BookAppointmentComponent {
     }
 
     onSubmit() {}
+
+    ngOnInit() {
+        if (localStorage.getItem('lang')) {
+            this.lang = JSON.parse(localStorage.getItem('lang')!);
+        } else {
+            this.lang = 'ltr';
+        }
+    }
 
     public resolved(captchaResponse: string): void {
         console.log(`Resolved captcha with response: ${captchaResponse}`);

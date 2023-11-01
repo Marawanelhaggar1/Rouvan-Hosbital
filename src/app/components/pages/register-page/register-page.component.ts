@@ -21,7 +21,7 @@ import { Router } from '@angular/router';
 export class RegisterPageComponent implements OnInit {
     // date_of_birth = new FormControl('', [Validators.required]);
     // date_of_birth?: any;
-
+    lang?: string;
     datePickerConfig!: Partial<BsDatepickerConfig>;
     registerForm: FormGroup;
     user!: User;
@@ -60,6 +60,11 @@ export class RegisterPageComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        if (localStorage.getItem('lang')) {
+            this.lang = JSON.parse(localStorage.getItem('lang')!);
+        } else {
+            this.lang = 'ltr';
+        }
         this.socialAuthService.authState.subscribe((user) => {
             this.socialUser = user;
             this.isLoggedin = user != null;

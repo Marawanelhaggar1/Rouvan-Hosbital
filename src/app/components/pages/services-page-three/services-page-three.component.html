@@ -1,5 +1,5 @@
 <!-- Page Banner -->
-<div class="page-banner-area ptb-100">
+<div [dir]="lang" class="page-banner-area ptb-100">
     <div class="container">
         <div
             [ngClass]="
@@ -7,7 +7,6 @@
                     ? 'page-banner-content'
                     : 'page-banner-content-rtl'
             "
-            class=""
         >
             <h2>Dental Services</h2>
             <ul class="pages-list">
@@ -19,7 +18,7 @@
 </div>
 
 <!-- Services -->
-<div class="services-area ptb-100">
+<div [dir]="lang" class="services-area ptb-100">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6 col-sm-6">

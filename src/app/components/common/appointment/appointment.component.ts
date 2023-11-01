@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AppointmentComponent implements OnInit {
     mytime: Date = new Date();
+    lang?: string;
 
     searchForm!: FormGroup;
 
@@ -19,7 +20,13 @@ export class AppointmentComponent implements OnInit {
         });
     }
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        if (localStorage.getItem('lang')) {
+            this.lang = JSON.parse(localStorage.getItem('lang')!);
+        } else {
+            this.lang = 'ltr';
+        }
+    }
 
     // Video Popup
     isOpen = false;

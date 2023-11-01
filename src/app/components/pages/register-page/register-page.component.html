@@ -1,7 +1,13 @@
 <!-- Page Banner -->
-<div class="page-banner-area ptb-100">
+<div [dir]="lang" class="page-banner-area ptb-100">
     <div class="container">
-        <div class="page-banner-content">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl '
+            "
+        >
             <h2>Register</h2>
             <ul class="pages-list">
                 <li><a href="index.html">Home</a></li>
@@ -12,7 +18,7 @@
 </div>
 
 <!-- Register -->
-<div class="register-area ptb-100">
+<div [dir]="lang" class="register-area ptb-100">
     <div class="container">
         <div class="register-form">
             <h4>Create Your Account</h4>

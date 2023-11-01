@@ -26,6 +26,7 @@ export class LoginPageComponent implements OnInit {
     user!: User;
     socialUser!: SocialUser;
     isLoggedin: boolean = false;
+    lang?: string;
 
     constructor(
         private _userServices: UserService,
@@ -41,6 +42,11 @@ export class LoginPageComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        if (localStorage.getItem('lang')) {
+            this.lang = JSON.parse(localStorage.getItem('lang')!);
+        } else {
+            this.lang = 'ltr';
+        }
         this.socialAuthService.authState.subscribe((user) => {
             this.socialUser = user;
             this.isLoggedin = user != null;

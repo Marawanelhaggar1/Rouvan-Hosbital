@@ -1,10 +1,16 @@
 <div class="page-banner-area ptb-100 four" [dir]="lang">
     <div class="container">
-        <div class="page-banner-content">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl text-end'
+            "
+        >
             <h2>Best Doctors in Egypt</h2>
-            <ul class="pages-list" dir="ltr">
-                <li dir="ltr"><a href="index.html">Home</a></li>
-                <li dir="ltr">Find a Doctor</li>
+            <ul class="pages-list">
+                <li><a href="index.html">Home</a></li>
+                <li>Find a Doctor</li>
             </ul>
             <div class="mt-4">
                 <app-appointment-search></app-appointment-search>
@@ -192,5 +198,3 @@
         </div>
     </div>
 </div>
-
-<div [ngClass]="lang === 'rtl' ? 'blue' : 'red'">dasfasasf</div>

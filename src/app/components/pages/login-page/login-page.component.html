@@ -1,7 +1,17 @@
 <!-- Page Banner -->
-<div class="page-banner-area ptb-100">
+<div
+    [dir]="lang"
+    [ngClass]="lang === 'ltr' ? 'page-banner-area' : 'page-banner-area-rtl '"
+    class="ptb-100"
+>
     <div class="container">
-        <div class="page-banner-content">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl '
+            "
+        >
             <h2>Login</h2>
             <ul class="pages-list">
                 <li><a href="index.html">Home</a></li>
@@ -12,9 +22,9 @@
 </div>
 
 <!-- Login -->
-<div class="login-area ptb-100">
+<div [dir]="lang" class="login-area ptb-100">
     <div class="container">
-        <div class="login-form">
+        <div [ngClass]="lang === 'ltr' ? 'login-form' : 'login-form-rtl'">
             <h4>Login Here</h4>
             <p>Welcome back, login to your account!</p>
 

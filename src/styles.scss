@@ -244,7 +244,7 @@ h6 {
             transform: translateY(-50%);
             position: absolute;
             font-style: italic;
-            color: #14e49a;
+            color: var(--main-color);
             margin-top: 2px;
             right: 20px;
             top: 50%;
@@ -295,7 +295,7 @@ h6 {
             transform: translateY(-50%);
             position: absolute;
             font-style: italic;
-            color: #14e49a;
+            color: var(--main-color);
             margin-top: 2px;
             left: 20px;
             top: 50%;
@@ -1403,61 +1403,6 @@ h6 {
     }
 }
 
-.covid-page-banner-area {
-    background-color: #f1f5fe;
-    padding-top: 170px;
-}
-.covid-page-banner-content {
-    position: relative;
-    top: -20px;
-
-    h3 {
-        font-size: 40px;
-        margin-bottom: 12px;
-        color: var(--covid-black-color);
-    }
-    .list {
-        padding-left: 0;
-        margin-bottom: 0;
-        list-style-type: none;
-        color: var(--paragraph-color2);
-
-        li {
-            display: inline-block;
-            position: relative;
-            margin-left: 25px;
-
-            &::before {
-                top: 5px;
-                width: 1px;
-                content: "";
-                left: -13px;
-                height: 15px;
-                position: absolute;
-                transform: rotate(20deg);
-                background: var(--paragraph-color2);
-            }
-            &:first-child {
-                margin-left: 0;
-
-                &::before {
-                    display: none;
-                }
-            }
-            a {
-                color: var(--paragraph-color2);
-
-                &:hover {
-                    color: var(--covid-main-color);
-                }
-            }
-        }
-    }
-}
-.covid-page-banner-image {
-    text-align: center;
-}
-
 // Pagination
 .pagination-area {
     margin-top: 20px;
@@ -1572,6 +1517,32 @@ h6 {
         }
     }
 
+    .section-title-warp-rtl {
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 30px;
+
+        .sub-title {
+            padding: 7px 35px 7px 15px;
+            margin-bottom: 17px;
+            font-size: 13px;
+
+            i {
+                margin-top: 1px;
+                right: 15px;
+            }
+        }
+        h2 {
+            font-size: 24px;
+            max-width: 100%;
+        }
+        .default-btn {
+            position: relative;
+            margin-top: 15px;
+            bottom: 0;
+        }
+    }
+
     .section-title {
         margin-bottom: 30px;
         max-width: 100%;
@@ -1654,127 +1625,6 @@ h6 {
             }
             .owl-nav.disabled + .owl-dots {
                 margin-top: 5px;
-            }
-        }
-    }
-    .dental-tourism-review-slides {
-        .owl-theme {
-            .owl-dots {
-                .owl-dot {
-                    span {
-                        width: 15px;
-                        height: 15px;
-                        margin: 0 3px;
-
-                        &::before {
-                            margin: 2px;
-                        }
-                    }
-                }
-            }
-            .owl-nav.disabled + .owl-dots {
-                margin-top: 5px;
-            }
-        }
-    }
-    .skin-care-before-after-slides {
-        .owl-theme {
-            .owl-nav {
-                [class*="owl-"] {
-                    font-size: 18px;
-                    margin: 0 5px;
-                }
-            }
-            .owl-item {
-                .skin-care-before-after-card {
-                    transform: scale(1);
-                }
-            }
-        }
-    }
-    .eye-care-services-slides {
-        .owl-theme {
-            .owl-nav {
-                opacity: 1;
-                margin-bottom: 25px;
-                visibility: visible;
-
-                [class*="owl-"] {
-                    top: 0;
-                    left: 0;
-                    width: 40px;
-                    height: 40px;
-                    font-size: 18px;
-                    position: relative;
-                    transform: translateY(-0);
-                    margin: {
-                        left: 4px;
-                        right: 4px;
-                    }
-                    &.owl-next {
-                        right: 0;
-                    }
-                }
-            }
-        }
-    }
-    .eye-care-review-slides {
-        .owl-theme {
-            .owl-nav.disabled + .owl-dots {
-                right: 20px;
-                bottom: 20px;
-            }
-        }
-    }
-    .covid-tracker-slides {
-        .owl-theme {
-            .owl-nav {
-                opacity: 1;
-                margin-bottom: 25px;
-                visibility: visible;
-
-                [class*="owl-"] {
-                    top: 0;
-                    left: 0;
-                    width: 40px;
-                    height: 40px;
-                    font-size: 18px;
-                    position: relative;
-                    transform: translateY(-0);
-                    margin: {
-                        left: 4px;
-                        right: 4px;
-                    }
-                    &.owl-next {
-                        right: 0;
-                    }
-                }
-            }
-        }
-    }
-    .covid-blog-slides {
-        .owl-theme {
-            .owl-nav {
-                opacity: 1;
-                margin-bottom: 25px;
-                visibility: visible;
-
-                [class*="owl-"] {
-                    top: 0;
-                    left: 0;
-                    width: 40px;
-                    height: 40px;
-                    font-size: 18px;
-                    position: relative;
-                    transform: translateY(-0);
-                    margin: {
-                        left: 4px;
-                        right: 4px;
-                    }
-                    &.owl-next {
-                        right: 0;
-                    }
-                }
             }
         }
     }
@@ -1870,6 +1720,11 @@ h6 {
             padding-top: 240px;
         }
     }
+    .page-banner-area-rtl {
+        &.two {
+            padding-top: 240px;
+        }
+    }
     .page-banner-content {
         h2 {
             margin-bottom: 10px;
@@ -1883,26 +1738,18 @@ h6 {
             }
         }
     }
-    .covid-page-banner-area {
-        padding-top: 200px;
-    }
-    .covid-page-banner-content {
-        top: 0;
-
-        h3 {
+    .page-banner-content-rtl {
+        h2 {
+            margin-bottom: 10px;
             font-size: 24px;
-            margin-bottom: 8px;
         }
-        .list {
+        .pages-list {
             li {
                 &::before {
-                    top: 4px;
+                    font-size: 18px;
                 }
             }
         }
-    }
-    .covid-page-banner-image {
-        margin-top: 25px;
     }
 
     // Pagination
@@ -1999,6 +1846,25 @@ h6 {
             max-width: 100%;
         }
     }
+    .section-title-warp-rtl {
+        padding-left: 155px;
+        margin-bottom: 35px;
+
+        .sub-title {
+            font-size: 14px;
+            margin-bottom: 20px;
+            padding: 10px 35px 10px 15px;
+
+            i {
+                margin-top: 0;
+                right: 15px;
+            }
+        }
+        h2 {
+            font-size: 29px;
+            max-width: 100%;
+        }
+    }
     .section-title {
         margin-bottom: 35px;
         max-width: 100%;
@@ -2076,133 +1942,6 @@ h6 {
             }
         }
     }
-    .dental-tourism-review-slides {
-        .owl-theme {
-            .owl-dots {
-                .owl-dot {
-                    span {
-                        width: 16px;
-                        height: 16px;
-                        margin: 0 4px;
-
-                        &::before {
-                            margin: 3px;
-                        }
-                    }
-                }
-            }
-            .owl-nav.disabled + .owl-dots {
-                margin-top: 5px;
-            }
-        }
-    }
-    .skin-care-before-after-slides {
-        .owl-theme {
-            .owl-nav {
-                [class*="owl-"] {
-                    font-size: 20px;
-                }
-            }
-            .owl-item {
-                .skin-care-before-after-card {
-                    transform: scale(0.9);
-                }
-                &.center {
-                    &.active {
-                        .skin-care-before-after-card {
-                            transform: scale(1);
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .eye-care-services-slides {
-        .owl-theme {
-            .owl-nav {
-                opacity: 1;
-                margin-bottom: 25px;
-                visibility: visible;
-
-                [class*="owl-"] {
-                    top: 0;
-                    left: 0;
-                    width: 40px;
-                    height: 40px;
-                    font-size: 18px;
-                    position: relative;
-                    transform: translateY(-0);
-                    margin: {
-                        left: 4px;
-                        right: 4px;
-                    }
-                    &.owl-next {
-                        right: 0;
-                    }
-                }
-            }
-        }
-    }
-    .eye-care-review-slides {
-        .owl-theme {
-            .owl-nav.disabled + .owl-dots {
-                right: 25px;
-                bottom: 25px;
-            }
-        }
-    }
-    .covid-tracker-slides {
-        .owl-theme {
-            .owl-nav {
-                opacity: 1;
-                margin-bottom: 25px;
-                visibility: visible;
-
-                [class*="owl-"] {
-                    top: 0;
-                    left: 0;
-                    width: 40px;
-                    height: 40px;
-                    font-size: 18px;
-                    position: relative;
-                    transform: translateY(-0);
-                    margin: {
-                        left: 4px;
-                        right: 4px;
-                    }
-                    &.owl-next {
-                        right: 0;
-                    }
-                }
-            }
-        }
-    }
-    .covid-blog-slides {
-        .owl-theme {
-            .owl-nav {
-                opacity: 1;
-                margin-bottom: 25px;
-                visibility: visible;
-
-                [class*="owl-"] {
-                    top: 0;
-                    left: 0;
-                    width: 40px;
-                    height: 40px;
-                    font-size: 18px;
-                    position: relative;
-                    transform: translateY(-0);
-                    margin: {
-                        left: 4px;
-                        right: 4px;
-                    }
-                    &.owl-next {
-                        right: 0;
-                    }
-                }
-            }
-        }
-    }
 
     // Accordion
     .protection-faq-accordion {
@@ -2258,19 +1997,23 @@ h6 {
             }
         }
     }
-    .covid-page-banner-area {
-        padding-top: 200px;
-    }
-    .covid-page-banner-content {
-        top: 0;
-
-        h3 {
-            font-size: 29px;
-            margin-bottom: 10px;
+    .page-banner-area-rtl {
+        &.two {
+            padding-top: 230px;
         }
     }
-    .covid-page-banner-image {
-        margin-top: 25px;
+    .page-banner-content-rtl {
+        h2 {
+            margin-bottom: 15px;
+            font-size: 29px;
+        }
+        .pages-list {
+            li {
+                &::before {
+                    font-size: 18px;
+                }
+            }
+        }
     }
 
     // Pagination
@@ -2296,6 +2039,15 @@ h6 {
     // Section Title
     .section-title-warp {
         padding-right: 175px;
+        margin-bottom: 40px;
+
+        h2 {
+            font-size: 35px;
+            max-width: 665px;
+        }
+    }
+    .section-title-warp-rtl {
+        padding-left: 175px;
         margin-bottom: 40px;
 
         h2 {
@@ -2432,15 +2184,11 @@ h6 {
             font-size: 35px;
         }
     }
-    .covid-page-banner-area {
-        padding-top: 160px;
-    }
-    .covid-page-banner-content {
-        top: -20px;
 
-        h3 {
+    .page-banner-content-rtl {
+        h2 {
+            margin-bottom: 15px;
             font-size: 35px;
-            margin-bottom: 12px;
         }
     }
 
@@ -2494,84 +2242,6 @@ h6 {
             }
         }
     }
-    .eye-care-services-slides {
-        .owl-theme {
-            .owl-nav {
-                opacity: 1;
-                margin-bottom: 5px;
-                visibility: visible;
-
-                [class*="owl-"] {
-                    top: 0;
-                    left: 0;
-                    width: 40px;
-                    height: 40px;
-                    font-size: 18px;
-                    position: relative;
-                    transform: translateY(-0);
-                    margin: {
-                        left: 4px;
-                        right: 4px;
-                    }
-                    &.owl-next {
-                        right: 0;
-                    }
-                }
-            }
-        }
-    }
-    .covid-tracker-slides {
-        .owl-theme {
-            .owl-nav {
-                opacity: 1;
-                margin-bottom: 25px;
-                visibility: visible;
-
-                [class*="owl-"] {
-                    top: 0;
-                    left: 0;
-                    width: 40px;
-                    height: 40px;
-                    font-size: 18px;
-                    position: relative;
-                    transform: translateY(-0);
-                    margin: {
-                        left: 4px;
-                        right: 4px;
-                    }
-                    &.owl-next {
-                        right: 0;
-                    }
-                }
-            }
-        }
-    }
-    .covid-blog-slides {
-        .owl-theme {
-            .owl-nav {
-                opacity: 1;
-                margin-bottom: 25px;
-                visibility: visible;
-
-                [class*="owl-"] {
-                    top: 0;
-                    left: 0;
-                    width: 40px;
-                    height: 40px;
-                    font-size: 18px;
-                    position: relative;
-                    transform: translateY(-0);
-                    margin: {
-                        left: 4px;
-                        right: 4px;
-                    }
-                    &.owl-next {
-                        right: 0;
-                    }
-                }
-            }
-        }
-    }
 }
 
 /* Min width 1600px */
@@ -2591,52 +2261,10 @@ h6 {
             }
         }
     }
-    .eye-care-services-slides {
-        .owl-theme {
-            .owl-nav {
-                [class*="owl-"] {
-                    left: -55px;
-
-                    &.owl-next {
-                        left: auto;
-                        right: -55px;
-                    }
-                }
-            }
-        }
-    }
-    .covid-blog-slides {
-        .owl-theme {
-            .owl-nav {
-                [class*="owl-"] {
-                    left: -65px;
-
-                    &.owl-next {
-                        left: auto;
-                        right: -65px;
-                    }
-                }
-            }
-        }
-    }
-    .covid-tracker-slides {
-        .owl-theme {
-            .owl-nav {
-                [class*="owl-"] {
-                    left: -65px;
-
-                    &.owl-next {
-                        left: auto;
-                        right: -65px;
-                    }
-                }
-            }
-        }
-    }
 }
 
 .mt-7 {
-    margin-top: 7rem !important;
+    margin-top: 11rem !important;
 }
 
 .pointer {

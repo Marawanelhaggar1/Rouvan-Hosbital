@@ -10,6 +10,7 @@ import { User } from 'src/app/core/models/user';
 })
 export class NavbarComponent implements OnInit {
     // user?: User | null;
+    lang?: string;
     constructor(public router: Router, public _cookie: CookieService) {}
 
     ngOnInit(): void {
@@ -18,6 +19,11 @@ export class NavbarComponent implements OnInit {
         // } else {
         //     this.user = null;
         // }
+        if (localStorage.getItem('lang')) {
+            this.lang = JSON.parse(localStorage.getItem('lang')!);
+        } else {
+            this.lang = 'ltr';
+        }
     }
 
     switcherClassApplied = false;

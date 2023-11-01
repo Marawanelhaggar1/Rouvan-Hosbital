@@ -26,7 +26,11 @@ export class BookDoctorsPageComponent {
     constructor() {}
 
     ngOnInit() {
-        this.lang = 'rtl';
+        if (localStorage.getItem('lang')) {
+            this.lang = JSON.parse(localStorage.getItem('lang')!);
+        } else {
+            this.lang = 'ltr';
+        }
         this.startAndEndOfWeek();
         console.log(this.daysOfTheWeek);
     }

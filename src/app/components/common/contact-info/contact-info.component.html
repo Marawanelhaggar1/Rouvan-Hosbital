@@ -2,7 +2,13 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="hospital-information-card">
+                <div
+                    [ngClass]="
+                        lang === 'ltr'
+                            ? 'hospital-information-card'
+                            : 'hospital-information-card-rtl'
+                    "
+                >
                     <div class="content">
                         <div class="icon">
                             <i class="bx bx-map"></i>
@@ -31,7 +37,13 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="hospital-information-card">
+                <div
+                    [ngClass]="
+                        lang === 'ltr'
+                            ? 'hospital-information-card'
+                            : 'hospital-information-card-rtl'
+                    "
+                >
                     <div class="content">
                         <div class="icon">
                             <i class="bx bx-envelope"></i>
@@ -57,7 +69,13 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="hospital-information-card">
+                <div
+                    [ngClass]="
+                        lang === 'ltr'
+                            ? 'hospital-information-card'
+                            : 'hospital-information-card-rtl'
+                    "
+                >
                     <div class="content">
                         <div class="icon">
                             <i class="bx bx-phone-call"></i>

@@ -141,11 +141,17 @@
     </div>
 </div> -->
 
-<footer class="footer-area pt-100 pb-75">
+<footer [dir]="lang" class="footer-area pt-100 pb-75">
     <div class="container">
         <div class="row">
             <div class="col-xl-3 col-lg-3 col-sm-6">
-                <div class="single-footer-widget">
+                <div
+                    [ngClass]="
+                        lang === 'ltr'
+                            ? 'single-footer-widget'
+                            : 'single-footer-widget-rtl'
+                    "
+                >
                     <h2>
                         <!-- <a routerLink="/"> ROUVAN </a> -->
                         <a routerLink="/">
@@ -172,7 +178,14 @@
                 </div>
             </div>
             <div class="col-xl-3 col-lg-2 col-sm-6">
-                <div class="single-footer-widget ps-5">
+                <div
+                    [ngClass]="
+                        lang === 'ltr'
+                            ? 'single-footer-widget'
+                            : 'single-footer-widget-rtl'
+                    "
+                    class="ps-5"
+                >
                     <h3>Useful Link</h3>
                     <ul class="quick-links">
                         <li>
@@ -203,7 +216,13 @@
                 </div>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="single-footer-widget">
+                <div
+                    [ngClass]="
+                        lang === 'ltr'
+                            ? 'single-footer-widget'
+                            : 'single-footer-widget-rtl'
+                    "
+                >
                     <h3>Services</h3>
                     <div class="footer-widget-blog">
                         <article class="item">
@@ -282,7 +301,13 @@
                 </div>
             </div>
             <div class="col-xl-3 col-lg-3 col-sm-6">
-                <div class="single-footer-widget">
+                <div
+                    [ngClass]="
+                        lang === 'ltr'
+                            ? 'single-footer-widget'
+                            : 'single-footer-widget-rtl'
+                    "
+                >
                     <h3>Contact Information</h3>
                     <ul class="footer-information">
                         <li>
@@ -312,25 +337,7 @@
 </footer>
 
 <!-- Copyright -->
-<div
-    class="copyright-area"
-    [ngClass]="{
-        'd-none':
-            router.url === '/index-4' ||
-            router.url === '/index-5' ||
-            router.url === '/index-6' ||
-            router.url === '/index-7' ||
-            router.url === '/index-8' ||
-            router.url === '/services-4' ||
-            router.url === '/services-5' ||
-            router.url === '/services-6' ||
-            router.url === '/service-details-2' ||
-            router.url === '/contact-us-2' ||
-            router.url === '/contact-us-3' ||
-            router.url === '/portfolio' ||
-            router.url === '/portfolio-details'
-    }"
->
+<div class="copyright-area">
     <div class="container">
         <div class="copyright-area-content">
             <p>
