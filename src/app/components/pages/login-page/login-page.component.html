@@ -12,10 +12,14 @@
                     : 'page-banner-content-rtl '
             "
         >
-            <h2>Login</h2>
+            <h2>{{ lang === "ltr" ? " Login" : "تسجيل الدخول" }}</h2>
             <ul class="pages-list">
-                <li><a href="index.html">Home</a></li>
-                <li>Login</li>
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? " Home" : "الرئيسيه"
+                    }}</a>
+                </li>
+                <li>{{ lang === "ltr" ? " Login" : "تسجيل الدخول" }}</li>
             </ul>
         </div>
     </div>
@@ -25,8 +29,14 @@
 <div [dir]="lang" class="login-area ptb-100">
     <div class="container">
         <div [ngClass]="lang === 'ltr' ? 'login-form' : 'login-form-rtl'">
-            <h4>Login Here</h4>
-            <p>Welcome back, login to your account!</p>
+            <h4>{{ lang === "ltr" ? " Login Here" : "سجل دخولك هنا" }}</h4>
+            <p>
+                {{
+                    lang === "ltr"
+                        ? " Welcome back, login to your account!"
+                        : "مرحبًا بك مرة أخرى، قم بتسجيل الدخول إلى حسابك!"
+                }}
+            </p>
 
             <div class="m-2">
                 <asl-google-signin-button
@@ -38,21 +48,33 @@
             </div>
             <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
-                    <label>Your email address or Phone Number</label>
+                    <label>{{
+                        lang === "ltr"
+                            ? " Your email address or Phone Number"
+                            : "عنوان بريدك الإلكتروني أو رقم هاتفك"
+                    }}</label>
                     <input
                         type="text"
                         formControlName="email"
                         class="form-control"
-                        placeholder="Your email address or Phone Number"
+                        [placeholder]="
+                            lang === 'ltr'
+                                ? ' Your email address or Phone Number'
+                                : 'عنوان بريدك الإلكتروني أو رقم هاتفك'
+                        "
                     />
                 </div>
                 <div class="form-group">
-                    <label>Your password</label>
+                    <label>{{
+                        lang === "ltr" ? " Your password" : "كلمة السر"
+                    }}</label>
                     <input
                         type="password"
                         formControlName="password"
                         class="form-control"
-                        placeholder="Your password"
+                        [placeholder]="
+                            lang === 'ltr' ? 'Your password' : 'كلمة السر'
+                        "
                     />
                 </div>
 
@@ -68,7 +90,7 @@
                                 required
                             />
                             <label class="form-check-label" for="gridCheck">
-                                Remember me
+                                {{ lang === "ltr" ? " Remember me" : "تذكرنى" }}
                             </label>
                         </div>
                     </div>
@@ -76,17 +98,29 @@
                         <a
                             routerLink="/forgot-password"
                             class="lost-your-password"
-                            >Lost your password?</a
+                            >{{
+                                lang === "ltr"
+                                    ? " Lost your password?"
+                                    : "فقدت كلمة المرور الخاصة بك؟"
+                            }}</a
                         >
                     </div>
                 </div>
 
-                <button type="submit" class="default-btn">Login Now</button>
+                <button type="submit" class="default-btn">
+                    {{ lang === "ltr" ? " Login Now" : "سجل دخولك اللأن" }}
+                </button>
 
                 <div class="account-text">
                     <span
-                        >Don’t have an account?
-                        <a routerLink="/register">Create Account</a></span
+                        >{{
+                            lang === "ltr"
+                                ? " Don’t have an account?"
+                                : "ليس لديك حساب؟"
+                        }}
+                        <a routerLink="/register">{{
+                            lang === "ltr" ? " Create Account" : "إنشاء حساب"
+                        }}</a></span
                     >
                 </div>
             </form>

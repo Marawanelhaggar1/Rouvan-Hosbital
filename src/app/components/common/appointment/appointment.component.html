@@ -4,25 +4,28 @@
             <div class="col-lg-4 col-md-12">
                 <div class="appointment-overview-contact">
                     <img
-                        src="assets/images/appointment/appointment-1.jpg"
+                        src="https://angular.hibotheme.com/inba/inba-rtl/assets/images/appointment/appointment-1.jpg"
                         alt="appointment-image"
                     />
                     <div class="appointment-info">
                         <div class="call-info">
                             <i class="flaticon-039-emergency-call"></i>
-                            Call Today
+                            {{ lang === "ltr" ? "Call Today" : "اتصل اليوم" }}
                             <span>
-                                <a href="tel:088123654987">
-                                    +088 123 654 987
+                                <a href="tel:19647">
+                                    {{ lang === "ltr" ? "+19647" : "١٩٦٤٧+ " }}
                                 </a>
                             </span>
                         </div>
                         <p>
-                            Aenean sollicitudin, here lorem lorem quis auctor
-                            nisi elit lorem nec.
+                            {{
+                                lang === "ltr"
+                                    ? "Call Us AnyTime Between 10 am and 10pm "
+                                    : "اتصل بنا فى أى وقت بين ١٠ صباحا و ١٠ مساءا"
+                            }}
                         </p>
                         <a routerLink="/contact-us" class="default-btn">
-                            Contact Us
+                            {{ lang === "ltr" ? "Contact Us" : " تواصل معنا " }}
                         </a>
                     </div>
                 </div>
@@ -34,49 +37,94 @@
                             <div class="make-appointment-content">
                                 <h4>
                                     <i class="flaticon-170-calendar-1"></i>
-                                    Make An Appointment
+
+                                    {{
+                                        lang === "ltr"
+                                            ? " Make An Appointment"
+                                            : " إحجز موعد"
+                                    }}
                                 </h4>
 
                                 <form [formGroup]="searchForm">
                                     <div class="form-group">
-                                        <label>Specialty</label>
+                                        <label>{{
+                                            lang === "ltr"
+                                                ? "  Specialty "
+                                                : " التخصص "
+                                        }}</label>
                                         <select
                                             formControlName="specialty"
                                             aria-placeholder="Select Specialty"
                                         >
                                             <option value="" selected>
-                                                Select Specialty
+                                                {{
+                                                    lang === "ltr"
+                                                        ? "  Select Specialty "
+                                                        : " أختار التخصص"
+                                                }}
                                             </option>
                                             <option value="male">
-                                                Surgery
+                                                {{
+                                                    lang === "ltr"
+                                                        ? "  Surgery "
+                                                        : " الجراحه "
+                                                }}
                                             </option>
                                             <option value="female">
-                                                Urology
+                                                {{
+                                                    lang === "ltr"
+                                                        ? " Urology "
+                                                        : " جراحة المسالك البولية "
+                                                }}
                                             </option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label>Doctor</label>
+                                        <label>{{
+                                            lang === "ltr"
+                                                ? "  Doctor "
+                                                : " دكتور "
+                                        }}</label>
                                         <select
                                             formControlName="doctor"
                                             aria-placeholder="Select Doctor"
                                         >
                                             <option value="" selected>
-                                                Select Doctor
+                                                {{
+                                                    lang === "ltr"
+                                                        ? "  Select Doctor "
+                                                        : " أختر الدكتور "
+                                                }}
                                             </option>
-                                            <option value="male">Marwan</option>
+                                            <option value="male">
+                                                {{
+                                                    lang === "ltr"
+                                                        ? "  Marwan "
+                                                        : " مروان "
+                                                }}
+                                            </option>
                                             <option value="female">
-                                                Ibrahem
+                                                {{
+                                                    lang === "ltr"
+                                                        ? "  Ibrahem "
+                                                        : " ابراهيم "
+                                                }}
                                             </option>
                                         </select>
                                     </div>
                                     <a
-                                        routerLink="/doctors"
+                                        routerLink="/book-doctor"
                                         type="button"
                                         class="default-btn"
                                     >
                                         <i class="bx bx-search"></i>
-                                        <span> Search </span>
+                                        <span>
+                                            {{
+                                                lang === "ltr"
+                                                    ? "  Search "
+                                                    : " أبحث "
+                                            }}
+                                        </span>
                                     </a>
                                 </form>
                             </div>
@@ -84,12 +132,15 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="content">
                                 <h4>
-                                    We Are a Certified and Award-winning
-                                    Hospital
+                                    {{
+                                        lang === "ltr"
+                                            ? " We Are a Certified and Award-winning Hospital "
+                                            : " نحن مستشفى معتمد وحائز على جوائز "
+                                    }}
                                 </h4>
                                 <div class="box-image">
                                     <img
-                                        src="assets/images/appointment/appointment-2.jpg"
+                                        src="https://angular.hibotheme.com/inba/inba-rtl/assets/images/appointment/appointment-2.jpg"
                                         alt="appointment-image"
                                     />
                                     <button

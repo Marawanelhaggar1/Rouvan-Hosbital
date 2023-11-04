@@ -8,6 +8,16 @@ import { Router } from '@angular/router';
 })
 export class AboutComponent implements OnInit {
     lang?: string;
+    services = [
+        { en: 'Radiology Center', ar: 'مركز الأشعة' },
+        { en: 'Operations Department', ar: ' قسم العمليات ' },
+        { en: 'Emergency and Trauma Center', ar: ' مركز الطوارئ والإصابات ' },
+        { en: 'Intensive Care Unit', ar: ' الرعاية المركزة ' },
+        { en: 'Outpatient clinics', ar: 'العيادات الخارجية' },
+        { en: 'Accommodation', ar: 'الإقامات' },
+        { en: 'Medical analysis laboratory', ar: 'معمل التحاليل الطبية' },
+        { en: 'Anything', ar: 'اى حاجه' },
+    ];
     constructor() {}
 
     ngOnInit(): void {

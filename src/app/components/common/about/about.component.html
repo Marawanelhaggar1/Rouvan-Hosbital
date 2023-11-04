@@ -9,48 +9,44 @@
                 >
                     <span class="sub-title">
                         <i class="flaticon-198-hashtag-1"></i>
-                        About Our Hospital
+                        {{
+                            lang === "ltr"
+                                ? "About Our Hospital"
+                                : "حول مستشفانا"
+                        }}
                     </span>
                     <h3>
-                        Our Clients are Our Priority, We Offer Quality Dental
-                        Services
-                        <span>of Specialists</span>
+                        {{
+                            lang === "ltr"
+                                ? " Our Clients are Our Priority, We Offer Quality Medical   Services"
+                                : "عملائنا هم أولويتنا، ونحن نقدم خدمات طبية عالية الجودة"
+                        }}
+
+                        <span>
+                            {{
+                                lang === "ltr"
+                                    ? "of Specialists"
+                                    : "من المتخصصين "
+                            }}
+                        </span>
                     </h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        {{
+                            lang === "ltr"
+                                ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
+                        magna aliqua."
+                                : " مستشفى إيليت هي أول مستشفى في مصر تعمل
+                       بنظام المراكز الطبية المتخصصة، حيث نمتلك 10 مراكز طبية
+                        نقدم من خلالها خدماتنا الطبية المتكاملة لكل مريض "
+                        }}
                     </p>
                     <div class="row">
-                        <div class="col-lg-4 col-6">
-                            <ul class="about-list">
-                                <li>
+                        <div class="col-lg-4 col-6 w-100">
+                            <ul class="service-list w-100">
+                                <li *ngFor="let item of services">
                                     <i class="flaticon-163-draw-check-mark"></i>
-                                    Complete Crown
-                                </li>
-                                <li>
-                                    <i class="flaticon-163-draw-check-mark"></i>
-                                    Dental Implants
-                                </li>
-                                <li>
-                                    <i class="flaticon-163-draw-check-mark"></i>
-                                    Dental X-Ray
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-6">
-                            <ul class="about-list">
-                                <li>
-                                    <i class="flaticon-163-draw-check-mark"></i>
-                                    Cosmetic Filling
-                                </li>
-                                <li>
-                                    <i class="flaticon-163-draw-check-mark"></i>
-                                    Cosmetic Filling
-                                </li>
-                                <li>
-                                    <i class="flaticon-163-draw-check-mark"></i>
-                                    Root Canal
+                                    {{ lang === "ltr" ? item.en : item.ar }}
                                 </li>
                             </ul>
                         </div>
@@ -60,8 +56,18 @@
                             <div class="col-6">
                                 <div class="about-info">
                                     <i class="flaticon-157-caduceus"></i>
-                                    <h4>25+ Years</h4>
-                                    <span>Dental Experienced</span>
+                                    <h4>
+                                        {{
+                                            lang === "ltr"
+                                                ? "25+ Years"
+                                                : " ٢٥+ سنه"
+                                        }}
+                                    </h4>
+                                    <span>{{
+                                        lang === "ltr"
+                                            ? "Medical Experience"
+                                            : "خبره طبية"
+                                    }}</span>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +77,7 @@
             <div class="col-lg-5 col-md-12">
                 <div class="about-image">
                     <img
-                        src="assets/images/about/about-1.jpg"
+                        src="https://angular.hibotheme.com/inba/assets/images/about/about-1.jpg"
                         alt="about-image"
                     />
                 </div>

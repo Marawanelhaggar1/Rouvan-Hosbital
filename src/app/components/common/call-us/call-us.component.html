@@ -5,21 +5,36 @@
                 <div class="overview-content">
                     <span class="sub-title">
                         <i class="flaticon-198-hashtag-1"></i>
-                        We Care For Every Patient
+                        {{
+                            lang === "ltr"
+                                ? "We Care For Every Patient"
+                                : "نحن نهتم بكل مريض"
+                        }}
                     </span>
                     <h3>
-                        Nervous Troubled Attractive Staring Right Anxiously!
+                        {{
+                            lang === "ltr"
+                                ? "Nervous Troubled Attractive Staring Right Anxiously!"
+                                : " عصبية مضطربة جذابة تحدق في اليمين بقلق! "
+                        }}
                     </h3>
                     <p>
-                        Contact Us Today
-                        <a href="tel:088123654987">+088 123 654 987</a>
+                        {{
+                            lang === "ltr"
+                                ? "Contact Us Today"
+                                : "اتصل بنا اليوم"
+                        }}
+
+                        <a href="tel:19647">
+                            {{ lang === "ltr" ? "+19647" : "١٩٦٤٧+ " }}</a
+                        >
                     </p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="overview-image">
                     <img
-                        src="assets/images/overview.png"
+                        src="https://angular.hibotheme.com/inba/inba-rtl/assets/images/overview.png"
                         alt="overview-image"
                     />
                 </div>

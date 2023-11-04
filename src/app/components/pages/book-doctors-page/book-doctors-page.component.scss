@@ -95,6 +95,7 @@
                     display: flex;
                     h3 {
                         color: var(--optional-color);
+                        font-weight: 500;
                     }
                 }
             }
@@ -116,8 +117,9 @@
             .doctor-info {
                 .info {
                     display: flex;
-                    justify-content: space-evenly;
+                    justify-content: flex-start;
                     align-items: center;
+                    gap: 1rem;
                     margin-top: 1rem;
 
                     i {
@@ -160,7 +162,7 @@
                 }
 
                 button {
-                    background-color: rgb(239, 15, 15);
+                    background-color: var(--main-color2);
                     border: none;
                     font-weight: bold;
                     padding: 10px 0;

@@ -156,7 +156,7 @@
                         <!-- <a routerLink="/"> ROUVAN </a> -->
                         <a routerLink="/">
                             <img
-                                src="../../../../assets/images/logo2.png"
+                                src="../../../../assets/images/footer-logo.png"
                                 alt=""
                             />
                         </a>
@@ -172,8 +172,18 @@
                             src="assets/images/footer/footer-1.jpg"
                             alt="footer-image"
                         />
-                        <h4>Dr. Thomas Albin</h4>
-                        <span>CEO & Founder</span>
+                        <h4>
+                            {{
+                                lang === "ltr"
+                                    ? "Dr. Thomas Albin"
+                                    : "د. مصطفى محمود"
+                            }}
+                        </h4>
+                        <span>{{
+                            lang === "ltr"
+                                ? "CEO & Founder"
+                                : "الرئيس التنفيذي والمؤسس"
+                        }}</span>
                     </div>
                 </div>
             </div>
@@ -186,31 +196,51 @@
                     "
                     class="ps-5"
                 >
-                    <h3>Useful Link</h3>
+                    <h3>{{ lang === "ltr" ? "Menu" : "القائمه" }}</h3>
                     <ul class="quick-links">
                         <li>
-                            <a routerLink="/about-us">About Us</a>
+                            <a routerLink="/about-us">
+                                {{ lang === "ltr" ? "About Us" : "من نحن " }}</a
+                            >
                         </li>
                         <li>
-                            <a routerLink="/services">Dental Services</a>
+                            <a routerLink="/services">{{
+                                lang === "ltr"
+                                    ? "Medical Services"
+                                    : "الخدمات الطبية"
+                            }}</a>
                         </li>
                         <li>
-                            <a routerLink="/dentists">Dentists</a>
+                            <a routerLink="/dentists">{{
+                                lang === "ltr" ? "Doctors" : "الأطباء"
+                            }}</a>
                         </li>
                         <li>
-                            <a routerLink="/blog-grid">Blog</a>
+                            <a routerLink="/blog-grid">{{
+                                lang === "ltr" ? "Blog" : "مدونة"
+                            }}</a>
                         </li>
                         <li>
-                            <a routerLink="/faq">FAQs</a>
+                            <a routerLink="/faq">{{
+                                lang === "ltr" ? "FAQs" : "الأسئلة الشائعة"
+                            }}</a>
                         </li>
                         <li>
-                            <a routerLink="/privacy-policy">Privacy Policy</a>
+                            <a routerLink="/privacy-policy">{{
+                                lang === "ltr"
+                                    ? "Privacy Policy"
+                                    : "سياسة الخصوصية"
+                            }}</a>
                         </li>
                         <li>
-                            <a routerLink="/services">Pediatrics</a>
+                            <a routerLink="/services">{{
+                                lang === "ltr" ? "Pediatrics" : "طب الأطفال "
+                            }}</a>
                         </li>
                         <li>
-                            <a routerLink="/services">Woman's Health</a>
+                            <a routerLink="/services">{{
+                                lang === "ltr" ? "Woman's Health" : "صحة المرأه"
+                            }}</a>
                         </li>
                     </ul>
                 </div>
@@ -223,7 +253,7 @@
                             : 'single-footer-widget-rtl'
                     "
                 >
-                    <h3>Services</h3>
+                    <h3>{{ lang === "ltr" ? "Services " : "خدمات" }}</h3>
                     <div class="footer-widget-blog">
                         <article class="item">
                             <a routerLink="/blog-details" class="thumb">
@@ -237,15 +267,19 @@
                             </a>
                             <div class="info">
                                 <span
-                                    >By
-                                    <a routerLink="/blog-grid"
-                                        >Daisy Gabriela</a
-                                    ></span
+                                    >{{ lang === "ltr" ? "By " : " بواسطة" }}
+                                    <a routerLink="/blog-grid">{{
+                                        lang === "ltr"
+                                            ? "Daisy Gabriela"
+                                            : "تامر مصطفى "
+                                    }}</a></span
                                 >
                                 <h4>
-                                    <a routerLink="/blog-details"
-                                        >Dental Hygiene for Children</a
-                                    >
+                                    <a routerLink="/blog-details">{{
+                                        lang === "ltr"
+                                            ? "Dental Hygiene for Children"
+                                            : "صحة الأسنان للأطفال"
+                                    }}</a>
                                 </h4>
                             </div>
                         </article>
@@ -261,15 +295,19 @@
                             </a>
                             <div class="info">
                                 <span
-                                    >By
-                                    <a routerLink="/blog-grid"
-                                        >Ronnie Aaron</a
-                                    ></span
+                                    >{{ lang === "ltr" ? "By " : " بواسطة" }}
+                                    <a routerLink="/blog-grid">{{
+                                        lang === "ltr"
+                                            ? "Ronnie Aaron"
+                                            : "أحمد عبدالله"
+                                    }}</a></span
                                 >
                                 <h4>
-                                    <a routerLink="/blog-details"
-                                        >Regular Checkup for Good Teeth</a
-                                    >
+                                    <a routerLink="/blog-details">{{
+                                        lang === "ltr"
+                                            ? "Regular Checkup for Good Health"
+                                            : "الفحص الدوري للصحة جيدة"
+                                    }}</a>
                                 </h4>
                             </div>
                         </article>
@@ -284,16 +322,19 @@
                                 ></span>
                             </a>
                             <div class="info">
-                                <span
-                                    >By
-                                    <a routerLink="/blog-grid"
-                                        >Babatunde Jon</a
-                                    ></span
+                                <span>
+                                    <a routerLink="/blog-grid">{{
+                                        lang === "ltr"
+                                            ? "Babatunde Jon"
+                                            : "معز محمد"
+                                    }}</a></span
                                 >
                                 <h4>
-                                    <a routerLink="/blog-details"
-                                        >Teeth Whitening is Now Popular</a
-                                    >
+                                    <a routerLink="/blog-details">{{
+                                        lang === "ltr"
+                                            ? "The Future Of Health"
+                                            : " مستقبل الصحة كمنظومة فى مصر"
+                                    }}</a>
                                 </h4>
                             </div>
                         </article>
@@ -308,26 +349,38 @@
                             : 'single-footer-widget-rtl'
                     "
                 >
-                    <h3>Contact Information</h3>
+                    <h3>
+                        {{
+                            lang === "ltr"
+                                ? "Contact Information"
+                                : "بيانات الاتصال"
+                        }}
+                    </h3>
                     <ul class="footer-information">
                         <li>
                             <i class="flaticon-039-emergency-call"></i>
-                            Call Today
+                            {{ lang === "ltr" ? "Call Today" : " اتصل اليوم " }}
                             <span
-                                ><a href="tel:088123654987"
-                                    >+088 123 654 987</a
-                                ></span
+                                ><a href="tel:19647">{{
+                                    lang === "ltr" ? "19647" : "١٩٦٤٧ "
+                                }}</a></span
                             >
                         </li>
                         <li>
                             <i class="flaticon-040-back-in-time"></i>
-                            Open Hour
-                            <span>09:00 AM to 18:00 PM</span>
+                            {{ lang === "ltr" ? " Open Hour" : "ساعات العمل" }}
+                            <span>{{
+                                lang === "ltr" ? "24 Hours" : "٢٤ ساعة"
+                            }}</span>
                         </li>
                         <li>
                             <i class="flaticon-041-placeholder"></i>
-                            Our Location
-                            <span>35 West Dental Street California 1004</span>
+                            {{ lang === "ltr" ? "Our Location" : "عنوانا" }}
+                            <span>{{
+                                lang === "ltr"
+                                    ? " Al Wasti, El Fateh, Assiut Governorate 2232121"
+                                    : "الطريق المؤدي الي كوبري الواسطي العلوي- شرق النیل بجوار مدارس دار الكوثر, Asyut, Egypt, 112121 "
+                            }}</span>
                         </li>
                     </ul>
                 </div>
@@ -341,8 +394,12 @@
     <div class="container">
         <div class="copyright-area-content">
             <p>
-                © Inba is Proudly Owned by
-                <a href="https://hibotheme.com/" target="_blank">HiboTheme</a>
+                {{
+                    lang === "ltr"
+                        ? "Proudly Powered by Axon | © All rights reserved Rovan Hospital 2023"
+                        : " مدعوم بفخر من أكسون | © جميع الحقوق محفوظة لمستشفى روفان ٢٠٢٣"
+                }}
+                <!-- <a href="https://hibotheme.com/" target="_blank">HiboTheme</a> -->
             </p>
         </div>
     </div>

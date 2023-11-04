@@ -661,7 +661,7 @@
 
                 h1 {
                     color: var(--hospital-black-color);
-                    font-family: var(--hospital-font-family);
+                    // font-family: var(--hospital-font-family);
                 }
             }
             .navbar-nav {
@@ -672,7 +672,7 @@
                 .nav-item {
                     .nav-link {
                         font: {
-                            family: var(--hospital-font-family);
+                            // family: var(--hospital-font-family);
                         }
                         &:hover,
                         &.active {
@@ -775,7 +775,7 @@
             }
             .others-option {
                 margin-left: 0;
-                font-family: var(--hospital-font-family);
+                // font-family: var(--hospital-font-family);
 
                 .option-item {
                     .search-btn {

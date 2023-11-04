@@ -1,7 +1,11 @@
 <!-- Page Banner -->
 <div
     [dir]="lang"
-    style="background-image: url(assets/images/page-title/page-title1.jpg)"
+    [style]="
+        lang === 'ltr'
+            ? ' background-image: url(https://angular.hibotheme.com/inba/assets/images/page-title/page-title1.jpg);'
+            : ' background-image: url(https://angular.hibotheme.com/inba/inba-rtl/assets/images/page-title/page-title1.jpg);'
+    "
     [ngClass]="
         lang === 'ltr'
             ? 'page-banner-area ptb-100 four'
@@ -16,10 +20,16 @@
                     : 'page-banner-content-rtl text-end'
             "
         >
-            <h2>The Inba Short Story</h2>
+            <h2>
+                {{ lang === "ltr" ? "Center Of Excellence" : "مركز التميز" }}
+            </h2>
             <ul class="pages-list">
-                <li><a href="index.html">Home</a></li>
-                <li>About Us</li>
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? "Home" : "الرئيسه"
+                    }}</a>
+                </li>
+                <li>{{ lang === "ltr" ? "About Us" : "من نحن" }}</li>
             </ul>
         </div>
     </div>

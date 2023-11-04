@@ -14,27 +14,69 @@
         >
             <span class="sub-title">
                 <i class="flaticon-198-hashtag-1"></i>
-                Our Dentists
+                {{ lang === "ltr" ? "Our Doctors" : " أطبائنا " }}
             </span>
-            <h2>Specialized and Experienced Dentists From Inba</h2>
-            <a routerLink="/dentists" class="default-btn">View All</a>
+            <h2>
+                {{
+                    lang === "ltr"
+                        ? "Specialized and Experienced Doctors From Rovan Hospital"
+                        : " أطباء متخصصون وذوو خبرة من مستشفى روفان "
+                }}
+            </h2>
+            <a routerLink="/doctors" class="default-btn">
+                {{ lang === "ltr" ? "View All" : " عرض الكل " }}
+            </a>
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-doctor">
                     <a routerLink="/dentist-details" class="d-block">
                         <img
-                            src="assets/images/doctor/doctor-1.jpg"
+                            src="https://angular.hibotheme.com/inba/assets/images/doctor/doctor-2.jpg"
                             alt="doctor-image"
                         />
                     </a>
                     <div class="doctor-content">
                         <h3>
                             <a routerLink="/dentist-details">
-                                Dr. Johnson Melbourne
+                                {{
+                                    lang === "ltr"
+                                        ? " Dr. Johnson Melbourne"
+                                        : "  د.محمد الابراهيم"
+                                }}
                             </a>
                         </h3>
-                        <span>Prosthodontics Dentist</span>
+                        <span>
+                            {{
+                                lang === "ltr"
+                                    ? "Gastroenterologists"
+                                    : " الجهاز الهضمى"
+                            }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="single-doctor">
+                    <a routerLink="/dentist-details" class="d-block">
+                        <img
+                            src="https://angular.hibotheme.com/inba/assets/images/doctor/doctor-5.jpg"
+                            alt="doctor-image"
+                        />
+                    </a>
+                    <div class="doctor-content">
+                        <h3>
+                            <a routerLink="/dentist-details">
+                                {{
+                                    lang === "ltr"
+                                        ? " Dr. Ena Dicrosa"
+                                        : " د. عادل رامى "
+                                }}
+                            </a>
+                        </h3>
+                        <span>{{
+                            lang === "ltr" ? "Internist" : " باطنه "
+                        }}</span>
                         <!-- <div class="share-link">
                             <a href="https://www.facebook.com/" target="_blank">
                                 <i class='bx bxl-facebook'></i>
@@ -56,49 +98,23 @@
                 <div class="single-doctor">
                     <a routerLink="/dentist-details" class="d-block">
                         <img
-                            src="assets/images/doctor/doctor-2.jpg"
+                            src="https://angular.hibotheme.com/inba/assets/images/doctor/doctor-8.jpg"
                             alt="doctor-image"
                         />
                     </a>
                     <div class="doctor-content">
                         <h3>
                             <a routerLink="/dentist-details">
-                                Dr. Ena Dicrosa
+                                {{
+                                    lang === "ltr"
+                                        ? "Dr. Addison Smith"
+                                        : " د. مصطفى محمد "
+                                }}
                             </a>
                         </h3>
-                        <span>Aesthetic Dentistry</span>
-                        <!-- <div class="share-link">
-                            <a href="https://www.facebook.com/" target="_blank">
-                                <i class='bx bxl-facebook'></i>
-                            </a>
-                            <a href="https://twitter.com/?lang=en" target="_blank">
-                                <i class='bx bxl-twitter'></i>
-                            </a>
-                            <a href="https://www.linkedin.com/" target="_blank">
-                                <i class='bx bxl-linkedin'></i>
-                            </a>
-                            <a href="https://www.instagram.com/" target="_blank">
-                                <i class='bx bxl-instagram'></i>
-                            </a>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="single-doctor">
-                    <a routerLink="/dentist-details" class="d-block">
-                        <img
-                            src="assets/images/doctor/doctor-3.jpg"
-                            alt="doctor-image"
-                        />
-                    </a>
-                    <div class="doctor-content">
-                        <h3>
-                            <a routerLink="/dentist-details">
-                                Dr. Addison Smith
-                            </a>
-                        </h3>
-                        <span>Gastroenterologists</span>
+                        <span>{{
+                            lang === "ltr" ? "Pediatrician" : " أطفال"
+                        }}</span>
                         <!-- <div class="share-link">
                             <a href="https://www.facebook.com/" target="_blank">
                                 <i class='bx bxl-facebook'></i>
@@ -119,244 +135,3 @@
         </div>
     </div>
 </div>
-
-<!-- Features Section for Home Demo - 4 -->
-<!-- <div
-    class="doctor-area ptb-100 d-none"
-    [ngClass]="{
-        'd-block': router.url === '/index-4' || router.url === '/about-us-3'
-    }"
->
-    <div class="container">
-        <div class="section-title-warp">
-            <span class="sub-title main-color">
-                <i class="flaticon-198-hashtag-1"></i>
-                Our Dentists
-            </span>
-            <h2>Specialized and Experienced Dentists From Inba</h2>
-            <a routerLink="/dentists" class="default-btn two"
-                >See All Dentist</a
-            >
-        </div>
-        <div class="dental-tourism-dentist-slides">
-            <owl-carousel-o [options]="dentistsSlides">
-                <ng-template carouselSlide>
-                    <div class="dental-tourism-dentist-card">
-                        <div class="dentist-image">
-                            <a routerLink="/dentist-details" class="d-block">
-                                <img
-                                    src="assets/images/dental-tourism/dentist/dentist-1.jpg"
-                                    alt="dentist-image"
-                                />
-                            </a>
-                            <ul class="share-link">
-                                <li>
-                                    <a
-                                        href="https://www.facebook.com/"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://twitter.com/?lang=en"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://www.linkedin.com/"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://www.instagram.com/"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="dentist-content">
-                            <h3>
-                                <a routerLink="/dentist-details">
-                                    Dr. John Melborn
-                                </a>
-                            </h3>
-                            <span>Dental Medicine</span>
-                        </div>
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="dental-tourism-dentist-card">
-                        <div class="dentist-image">
-                            <a routerLink="/dentist-details" class="d-block">
-                                <img
-                                    src="assets/images/dental-tourism/dentist/dentist-2.jpg"
-                                    alt="dentist-image"
-                                />
-                            </a>
-                            <ul class="share-link">
-                                <li>
-                                    <a
-                                        href="https://www.facebook.com/"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://twitter.com/?lang=en"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://www.linkedin.com/"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://www.instagram.com/"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="dentist-content">
-                            <h3>
-                                <a routerLink="/dentist-details">
-                                    Dr. Ena Dicrosa
-                                </a>
-                            </h3>
-                            <span>Dental Surgeon</span>
-                        </div>
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="dental-tourism-dentist-card">
-                        <div class="dentist-image">
-                            <a routerLink="/dentist-details" class="d-block">
-                                <img
-                                    src="assets/images/dental-tourism/dentist/dentist-3.jpg"
-                                    alt="dentist-image"
-                                />
-                            </a>
-                            <ul class="share-link">
-                                <li>
-                                    <a
-                                        href="https://www.facebook.com/"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://twitter.com/?lang=en"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://www.linkedin.com/"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://www.instagram.com/"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="dentist-content">
-                            <h3>
-                                <a routerLink="/dentist-details">
-                                    Dr. Addison Smith
-                                </a>
-                            </h3>
-                            <span>Dental Tourist Host</span>
-                        </div>
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="dental-tourism-dentist-card">
-                        <div class="dentist-image">
-                            <a routerLink="/dentist-details" class="d-block">
-                                <img
-                                    src="assets/images/dental-tourism/dentist/dentist-4.jpg"
-                                    alt="dentist-image"
-                                />
-                            </a>
-                            <ul class="share-link">
-                                <li>
-                                    <a
-                                        href="https://www.facebook.com/"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://twitter.com/?lang=en"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://www.linkedin.com/"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://www.instagram.com/"
-                                        target="_blank"
-                                    >
-                                        <i class="bx bxl-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="dentist-content">
-                            <h3>
-                                <a routerLink="/dentist-details">
-                                    Dr. Jason Smith
-                                </a>
-                            </h3>
-                            <span>Dental Medicine</span>
-                        </div>
-                    </div>
-                </ng-template>
-            </owl-carousel-o>
-        </div>
-    </div>
-</div> -->

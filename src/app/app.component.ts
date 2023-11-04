@@ -24,11 +24,17 @@ export class AppComponent {
     location: any;
     routerSubscription: any;
     title: any;
+    lang?: string;
 
     constructor(public router: Router) {}
 
     ngOnInit() {
         this.recallJsFuntions();
+        if (localStorage.getItem('lang')) {
+            this.lang = JSON.parse(localStorage.getItem('lang')!);
+        } else {
+            this.lang = 'ltr';
+        }
     }
 
     recallJsFuntions() {

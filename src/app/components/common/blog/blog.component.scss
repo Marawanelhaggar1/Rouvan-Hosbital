@@ -46,7 +46,7 @@
             font: {
                 size: 25px;
                 weight: 500;
-            };
+            }
         }
         p {
             margin-bottom: 12px;
@@ -55,7 +55,7 @@
             font: {
                 size: 15px;
                 weight: 500;
-            };
+            }
         }
         .entry-meta {
             position: relative;
@@ -63,11 +63,11 @@
             margin: {
                 bottom: 0;
                 top: 20px;
-            };
+            }
             padding: {
                 left: 0;
                 top: 20px;
-            };
+            }
             &::before {
                 background-color: #eeeeee;
                 position: absolute;
@@ -87,7 +87,7 @@
                 font: {
                     size: 15px;
                     weight: 500;
-                };
+                }
                 i {
                     left: 0;
                     top: 50%;
@@ -136,7 +136,7 @@
             top: 20px;
             left: 20px;
             right: 20px;
-        };
+        }
         .entry-meta {
             padding-left: 0;
             margin-bottom: 10px;
@@ -173,8 +173,8 @@
             font: {
                 size: 24px;
                 weight: 500;
-                family: var(--font-family2);
-            };
+                // family: var(--font-family2);
+            }
             a {
                 color: var(--black-color2);
 
@@ -214,7 +214,7 @@
             top: 38px;
             left: 20px;
             right: 20px;
-        };
+        }
         .entry-meta {
             padding-left: 0;
             margin-bottom: 10px;
@@ -251,8 +251,8 @@
             font: {
                 size: 24px;
                 weight: 500;
-                family: var(--font-family2);
-            };
+                // family: var(--font-family2);
+            }
             a {
                 color: var(--black-color2);
 
@@ -317,8 +317,8 @@
         font: {
             size: 24px;
             weight: 500;
-            family: var(--font-family2);
-        };
+            // family: var(--font-family2);
+        }
         a {
             color: var(--black-color2);
 
@@ -378,9 +378,9 @@
             margin-bottom: 15px;
             line-height: 1.4;
             font: {
-                family: var(--font-family2);
+                // family: var(--font-family2);
                 size: 22px;
-            };
+            }
             a {
                 color: var(--covid-black-color);
 
@@ -394,7 +394,7 @@
             display: inline-block;
             padding-right: 20px;
             position: relative;
-    
+
             &::before {
                 top: 1px;
                 right: 0;
@@ -463,8 +463,8 @@
             background-color: var(--hospital-black-color);
             font: {
                 size: 18px;
-                family: var(--hospital-font-family);
-            };
+                // family: var(--hospital-font-family);
+            }
         }
     }
     .blog-content {
@@ -479,7 +479,7 @@
             list-style-type: none;
 
             li {
-                font-family: var(--hospital-font-family);
+                // font-family: var(--hospital-font-family);
                 color: var(--paragraph-color2);
                 display: inline-block;
                 position: relative;
@@ -509,12 +509,12 @@
             line-height: 1.4;
             font: {
                 size: 22px;
-                family: var(--hospital-font-family);
-            };
+                // family: var(--hospital-font-family);
+            }
             margin: {
                 top: 12px;
                 bottom: 20px;
-            };
+            }
             a {
                 color: var(--hospital-black-color);
 
@@ -530,9 +530,9 @@
             color: var(--hospital-main-color);
             background: rgba(19, 168, 180, 0.1);
             font: {
-                family: var(--hospital-font-family);
+                // family: var(--hospital-font-family);
                 weight: 500;
-            };
+            }
             &:hover {
                 background: var(--hospital-main-color);
                 color: var(--white-color);
@@ -556,8 +556,7 @@
 }
 
 /* Max width 767px */
-@media only screen and (max-width : 767px) {
-
+@media only screen and (max-width: 767px) {
     .single-blog {
         .blog-image {
             .date {
@@ -571,7 +570,7 @@
         }
         .blog-content {
             padding: 20px;
-    
+
             h3 {
                 font-size: 20px;
             }
@@ -584,7 +583,7 @@
             .entry-meta {
                 margin-top: 15px;
                 padding-top: 5px;
-                
+
                 li {
                     margin-right: 10px;
                     padding-left: 22px;
@@ -592,7 +591,7 @@
                     margin: {
                         right: 10px;
                         top: 10px;
-                    };
+                    }
                 }
             }
         }
@@ -602,7 +601,7 @@
             .tag {
                 left: 15px;
                 top: 15px;
-    
+
                 a {
                     font-size: 13px;
                 }
@@ -613,17 +612,17 @@
                 left: 0;
                 right: 0;
                 top: 15px;
-            };
+            }
             .entry-meta {
                 margin-bottom: 2px;
-    
+
                 li {
                     font-size: 14px;
                     padding-left: 18px;
                     margin: {
                         right: 10px;
                         bottom: 8px;
-                    };
+                    }
                 }
             }
             h3 {
@@ -636,7 +635,7 @@
             .tag {
                 left: 15px;
                 bottom: 15px;
-    
+
                 a {
                     font-size: 13px;
                 }
@@ -647,17 +646,17 @@
                 left: 0;
                 right: 0;
                 top: 15px;
-            };
+            }
             .entry-meta {
                 margin-bottom: 2px;
-    
+
                 li {
                     font-size: 14px;
                     padding-left: 18px;
                     margin: {
                         right: 10px;
                         bottom: 8px;
-                    };
+                    }
                 }
             }
             h3 {
@@ -667,7 +666,7 @@
     }
     .eye-care-blog-card {
         padding: 20px;
-    
+
         .tag {
             font-size: 13px;
         }
@@ -680,7 +679,7 @@
                 margin: {
                     right: 10px;
                     bottom: 8px;
-                };
+                }
             }
         }
         h3 {
@@ -691,10 +690,10 @@
     .covid-blog-card {
         .blog-content {
             padding: 20px;
-    
+
             span {
                 margin-bottom: 10px;
-    
+
                 &::before {
                     top: -4px;
                 }
@@ -718,7 +717,7 @@
         }
         .blog-content {
             padding: 20px;
-    
+
             .meta {
                 li {
                     padding-left: 20px;
@@ -729,22 +728,21 @@
                 margin: {
                     top: 10px;
                     bottom: 15px;
-                };
+                }
             }
             .blog-btn {
                 padding: 12px 25px;
             }
         }
     }
-
 }
 
 /* Min width 576px to Max width 767px */
-@media only screen and (min-width : 576px) and (max-width : 767px) {}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+}
 
 /* Min width 768px to Max width 991px */
-@media only screen and (min-width : 768px) and (max-width : 991px) {
-
+@media only screen and (min-width: 768px) and (max-width: 991px) {
     .single-blog {
         .blog-image {
             .date {
@@ -767,7 +765,7 @@
             .entry-meta {
                 margin-bottom: 15px;
                 padding-top: 15px;
-                
+
                 li {
                     margin-right: 15px;
                     padding-left: 22px;
@@ -788,7 +786,7 @@
                 left: 0;
                 right: 0;
                 top: 18px;
-            };
+            }
             .entry-meta {
                 li {
                     font-size: 14px;
@@ -812,7 +810,7 @@
                 left: 0;
                 right: 0;
                 top: 18px;
-            };
+            }
             .entry-meta {
                 li {
                     font-size: 14px;
@@ -826,7 +824,7 @@
     }
     .eye-care-blog-card {
         padding: 25px;
-    
+
         .tag {
             padding: 8px 12px;
         }
@@ -843,7 +841,7 @@
     .covid-blog-card {
         .blog-content {
             padding: 25px;
-    
+
             span {
                 margin-bottom: 10px;
             }
@@ -866,25 +864,23 @@
         }
         .blog-content {
             padding: 25px;
-    
+
             h3 {
                 font-size: 20px;
                 margin: {
                     top: 10px;
                     bottom: 15px;
-                };
+                }
             }
             .blog-btn {
                 padding: 12px 25px;
             }
         }
     }
-
 }
 
 /* Min width 992px to Max width 1199px */
-@media only screen and (min-width : 992px) and (max-width : 1199px) {
-
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
     .single-blog {
         .blog-image {
             .tag {
@@ -903,7 +899,7 @@
                     margin: {
                         right: 15px;
                         top: 10px;
-                    };
+                    }
                 }
             }
         }
@@ -913,10 +909,10 @@
             padding: {
                 left: 0;
                 right: 0;
-            };
+            }
             .entry-meta {
                 margin-bottom: 0;
-    
+
                 li {
                     margin-bottom: 10px;
                 }
@@ -931,10 +927,10 @@
             padding: {
                 left: 0;
                 right: 0;
-            };
+            }
             .entry-meta {
                 margin-bottom: 0;
-    
+
                 li {
                     margin-bottom: 10px;
                 }
@@ -960,21 +956,19 @@
             }
         }
     }
-
 }
 
 /* Min width 1200px to Max width 1399px */
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-
     .dental-tourism-blog-card {
         .blog-content {
             padding: {
                 left: 0;
                 right: 0;
-            };
+            }
             .entry-meta {
                 margin-bottom: 0;
-    
+
                 li {
                     margin-bottom: 10px;
                 }
@@ -986,10 +980,10 @@
             padding: {
                 left: 0;
                 right: 0;
-            };
+            }
             .entry-meta {
                 margin-bottom: 0;
-    
+
                 li {
                     margin-bottom: 10px;
                 }
@@ -1003,8 +997,8 @@
             }
         }
     }
-
 }
 
 /* Min width 1600px */
-@media only screen and (min-width: 1600px) {}
+@media only screen and (min-width: 1600px) {
+}

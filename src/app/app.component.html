@@ -1,4 +1,6 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div [ngClass]="lang === 'ltr' ? '' : 'rtl'">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+</div>
 <ngx-scrolltop></ngx-scrolltop>

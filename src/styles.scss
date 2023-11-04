@@ -4,6 +4,8 @@
     --font-family: "Poppins", sans-serif;
     --font-family2: "Heebo", sans-serif;
     --font-family3: "Nunito Sans", sans-serif;
+    --font-family-ar: "Noto Kufi Arabic", sans-serif;
+
     --main-color: #00adf1;
     --main-color2: #0a335b;
     --optional-color: #124390;
@@ -115,7 +117,7 @@ h5,
 h6 {
     color: var(--black-color);
     font: {
-        family: var(--font-family);
+        // family: var(--font-family);
         weight: 700;
     }
 }
@@ -142,6 +144,10 @@ h6 {
 }
 .bg-f8f8f8 {
     background-color: #f8f8f8;
+}
+
+.rtl {
+    font-family: var(--font-family-ar);
 }
 
 // Default Btn
@@ -337,12 +343,12 @@ h6 {
             background-color: transparent;
             color: var(--hospital-main-color);
             font: {
-                family: var(--hospital-font-family);
+                // family: var(--hospital-font-family);
                 size: 18px;
             }
         }
         h2 {
-            font-family: var(--hospital-font-family);
+            // font-family: var(--hospital-font-family);
         }
     }
 }
@@ -893,7 +899,7 @@ h6 {
                     font: {
                         size: 18px;
                         weight: 500;
-                        family: var(--font-family2);
+                        // family: var(--font-family2);
                     }
                     &::before {
                         top: 50%;
@@ -932,7 +938,7 @@ h6 {
 .hospital-faq-accordion {
     .panel {
         margin-bottom: 15px;
-        font-family: var(--hospital-font-family);
+        // font-family: var(--hospital-font-family);
 
         .panel {
             padding: 0;
@@ -961,7 +967,7 @@ h6 {
                     font: {
                         size: 18px;
                         weight: 600;
-                        family: var(--hospital-font-family);
+                        // family: var(--hospital-font-family);
                     }
                     &::before {
                         top: 50%;
@@ -1089,7 +1095,7 @@ h6 {
         .page-banner-content {
             h2 {
                 color: var(--black-color2);
-                font-family: var(--font-family2);
+                // font-family: var(--font-family2);
             }
             .pages-list {
                 li {
@@ -1126,7 +1132,7 @@ h6 {
                 color: var(--black-color2);
                 font: {
                     weight: 700;
-                    family: var(--hospital-font-family);
+                    // family: var(--hospital-font-family);
                 }
             }
             .pages-list {
@@ -1251,7 +1257,7 @@ h6 {
         .page-banner-content {
             h2 {
                 color: var(--black-color2);
-                font-family: var(--font-family2);
+                // font-family: var(--font-family2);
             }
             .pages-list {
                 li {
@@ -1288,7 +1294,7 @@ h6 {
                 color: var(--black-color2);
                 font: {
                     weight: 700;
-                    family: var(--hospital-font-family);
+                    // family: var(--hospital-font-family);
                 }
             }
             .pages-list {

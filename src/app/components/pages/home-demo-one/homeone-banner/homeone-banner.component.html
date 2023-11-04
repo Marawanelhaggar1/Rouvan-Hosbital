@@ -3,8 +3,10 @@
         <ng-template carouselSlide>
             <div
                 class="main-slides-item"
-                style="
-                    background-image: url(assets/images/main-slides/slides-bg3.jpg);
+                [style]="
+                    lang === 'ltr'
+                        ? ' background-image: url(https://angular.hibotheme.com/inba/assets/images/main-slides/slides-bg3.jpg);'
+                        : ' background-image: url(https://angular.hibotheme.com/inba/inba-rtl/assets/images/main-slides/slides-bg3.jpg);'
                 "
             >
                 <div class="container" [dir]="lang">
@@ -17,13 +19,29 @@
                     >
                         <span class="sub-title">
                             <i class="flaticon-198-hashtag-1"></i>
-                            Keeping Teeth Clean
+
+                            {{
+                                lang === "ltr"
+                                    ? "Stay Healthy With Us"
+                                    : "خليك صحى معانا "
+                            }}
                         </span>
-                        <h1>Your Health is Our Top <span>Priority</span></h1>
+                        <h1>
+                            {{
+                                lang === "ltr"
+                                    ? "Your Health is Our Top"
+                                    : "صحتك هي قمة"
+                            }}
+                            <span>{{
+                                lang === "ltr" ? "Priority" : "أولوياتنا"
+                            }}</span>
+                        </h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
+                            {{
+                                lang === "ltr"
+                                    ? "An innovative approach to diagnosis and treatment, to deliver medical services at the highest level of quality for each patient."
+                                    : "نهج مبتكر للتشخيص والعلاج، لتقديم الخدمات الطبية على أعلى مستوى من الجودة لكل مريض."
+                            }}
                         </p>
                         <!-- <div class="slides-btn">
                             <a routerLink="/appointment" class="default-btn">
@@ -46,8 +64,10 @@
         <ng-template carouselSlide>
             <div
                 class="main-slides-item"
-                style="
-                    background-image: url(assets/images/main-slides/slides-bg1.jpg);
+                [style]="
+                    lang === 'ltr'
+                        ? ' background-image: url(https://angular.hibotheme.com/inba/assets/images/main-slides/slides-bg1.jpg);'
+                        : ' background-image: url(https://angular.hibotheme.com/inba/inba-rtl/assets/images/main-slides/slides-bg1.jpg);'
                 "
             >
                 <div class="container" [dir]="lang">
@@ -60,27 +80,30 @@
                     >
                         <span class="sub-title">
                             <i class="flaticon-198-hashtag-1"></i>
-                            Keeping Teeth Clean
+                            {{
+                                lang === "ltr"
+                                    ? "Stay Healthy With Us"
+                                    : "خليك صحى معانا "
+                            }}
                         </span>
-                        <h1>Personalized Dental <span>Care</span></h1>
+                        <h1>
+                            {{
+                                lang === "ltr"
+                                    ? " Personalized Medical"
+                                    : "رعاية طبية "
+                            }}
+                            <span>
+                                {{ lang === "ltr" ? "Care" : "شخصية " }}</span
+                            >
+                        </h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
+                            {{
+                                lang === "ltr"
+                                    ? "World class hospital services with the most qualified professors and consultants"
+                                    : "خدمات مستشفى على مستوى عالمي مع أكفأ الأساتذة والاستشاريين"
+                            }}
                         </p>
-                        <!-- <div class="slides-btn">
-                            <a routerLink="/appointment" class="default-btn">
-                                Book Appointment
-                            </a>
-                            <div class="checkup-content">
-                                <div class="icon">
-                                    <i class="flaticon-146-dentist-chair"></i>
-                                </div>
-                                <span><a routerLink="/contact-us">
-                                    Get Free Checkup
-                                </a></span>
-                            </div>
-                        </div> -->
+
                         <app-appointment-search></app-appointment-search>
                     </div>
                 </div>
@@ -89,8 +112,10 @@
         <ng-template carouselSlide>
             <div
                 class="main-slides-item"
-                style="
-                    background-image: url(assets/images/main-slides/slides-bg2.jpg);
+                [style]="
+                    lang === 'ltr'
+                        ? ' background-image: url(https://angular.hibotheme.com/inba/assets/images/main-slides/slides-bg2.jpg);'
+                        : ' background-image: url(https://angular.hibotheme.com/inba/inba-rtl/assets/images/main-slides/slides-bg2.jpg);'
                 "
             >
                 <div class="container" [dir]="lang">
@@ -103,27 +128,30 @@
                     >
                         <span class="sub-title">
                             <i class="flaticon-198-hashtag-1"></i>
-                            Keeping Teeth Clean
+                            {{
+                                lang === "ltr"
+                                    ? "Stay Healthy With Us"
+                                    : "خليك صحى معانا "
+                            }}
                         </span>
-                        <h1>Exceptional Care for <span>Women</span></h1>
+                        <h1>
+                            {{
+                                lang === "ltr"
+                                    ? "Exceptional Care for"
+                                    : "رعاية استثنائية"
+                            }}
+                            <span>
+                                {{ lang === "ltr" ? "Women" : "للنساء" }}</span
+                            >
+                        </h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
+                            {{
+                                lang === "ltr"
+                                    ? "Stay Healthy With Uswe provide specialty care in obstetrics and gynecology. We encourage all of our patients to also have a primary care physician, such as a family practice doctor or internist, to manage any acute and chronic illnesses or injuries."
+                                    : "نحن نقدم رعاية متخصصة في أمراض النساء والتوليد. نحن نشجع جميع مرضانا على أن يكون لديهم أيضًا طبيب رعاية أولية، مثل طبيب الأسرة أو طبيب باطني، لإدارة أي أمراض أو إصابات حادة ومزمنة."
+                            }}
                         </p>
-                        <!-- <div class="slides-btn">
-                            <a routerLink="/appointment" class="default-btn">
-                                Book Appointment
-                            </a>
-                            <div class="checkup-content">
-                                <div class="icon">
-                                    <i class="flaticon-146-dentist-chair"></i>
-                                </div>
-                                <span><a routerLink="/contact-us">
-                                    Get Free Checkup
-                                </a></span>
-                            </div>
-                        </div> -->
+
                         <app-appointment-search></app-appointment-search>
                     </div>
                 </div>

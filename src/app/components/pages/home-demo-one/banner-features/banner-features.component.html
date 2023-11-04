@@ -16,10 +16,20 @@
                         </div>
                         <h3>
                             <a routerLink="/service-details">
-                                Green Hospital
+                                {{
+                                    lang === "ltr"
+                                        ? "Green Hospital"
+                                        : " ندعم البيئة "
+                                }}
                             </a>
                         </h3>
-                        <p>First Green Hospital in Egypt.</p>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "First Green Hospital in Egypt."
+                                    : " أول مستشفى تدعم البيئة فى مصر "
+                            }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -37,11 +47,21 @@
                             <i class="flaticon-151-healthcare"></i>
                         </div>
                         <h3>
-                            <a routerLink="/service-details">
-                                Accept Insurance
+                            <a routerLink="/insurance">
+                                {{
+                                    lang === "ltr"
+                                        ? "Accept Insurance"
+                                        : "قبول التأمين"
+                                }}
                             </a>
                         </h3>
-                        <p>Proin gravida nibh velit auctor aliquet aenean.</p>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "We Accept Insurance from many Insurance companies"
+                                    : "نحن نقبل التأمين من العديد من شركات التأمين"
+                            }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -58,11 +78,21 @@
                             <i class="flaticon-149-doctor-2"></i>
                         </div>
                         <h3>
-                            <a routerLink="/service-details">
-                                Centers Of Excellence
+                            <a routerLink="/center-of-excellence">
+                                {{
+                                    lang === "ltr"
+                                        ? "Centers Of Excellence"
+                                        : "المراكز المتخصصة"
+                                }}
                             </a>
                         </h3>
-                        <p>Proin gravida nibh velit auctor aliquet aenean.</p>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "We have a lot of Centers and They are excellent in their jobs"
+                                    : "لدينا الكثير من المراكز وهم ممتازون في وظائفهم"
+                            }}
+                        </p>
                     </div>
                 </div>
             </div>

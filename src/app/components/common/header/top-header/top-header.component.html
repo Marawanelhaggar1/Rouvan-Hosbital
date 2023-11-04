@@ -1,38 +1,47 @@
-<div class="top-header-area">
+<div
+    [dir]="lang"
+    class="top-header-area"
+    [ngClass]="lang === 'ltr' ? 'ltr' : 'rtl'"
+>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-lg-7 col-md-12">
                 <ul class="top-header-information">
                     <li>
-                        <i class="bx bxs-map"></i>
-                        35 West Dental Street, California 1004
-                    </li>
-                    <li>
                         <i class="bx bxs-phone"></i>
                         <span
-                            ><a href="tel:088123654987"
-                                >+088 123 654 987</a
-                            ></span
+                            ><a href="tel:19647">{{
+                                lang === "ltr" ? "19647" : "١٩٦٤٧ "
+                            }}</a></span
                         >
                     </li>
-                </ul>
-            </div>
-            <div class="col-xl-6 col-lg-5 col-md-12">
-                <ul class="top-header-optional">
                     <li>
-                        <a href="https://www.facebook.com/" target="_blank">
+                        <a
+                            href="https://www.facebook.com/RouvanhospitalEg"
+                            target="_blank"
+                        >
                             <i class="bx bxl-facebook"></i>
                         </a>
                         <a href="https://twitter.com/?lang=en" target="_blank">
                             <i class="bx bxl-twitter"></i>
                         </a>
-                        <a href="https://www.linkedin.com/" target="_blank">
+                        <a
+                            href="https://www.linkedin.com/company/rouvanhospital/"
+                            target="_blank"
+                        >
                             <i class="bx bxl-linkedin"></i>
                         </a>
-                        <a href="https://www.instagram.com/" target="_blank">
+                        <a
+                            href="https://www.instagram.com/rouvanhospitaleg?fbclid=IwAR2DsgO2feehTPFmKFU-ZhIepmYdWQoyJBjum6IZvD8HQyynGVToyz1TsCY"
+                            target="_blank"
+                        >
                             <i class="bx bxl-instagram"></i>
                         </a>
                     </li>
+                </ul>
+            </div>
+            <div class="col-xl-6 col-lg-5 col-md-12">
+                <ul class="top-header-optional">
                     <li class="languages-list">
                         <select
                             [(ngModel)]="lang"
@@ -45,8 +54,14 @@
                     </li>
                     <li>
                         <div *ngIf="!user">
-                            <a class="auth" routerLink="/login">Login</a>
-                            <a class="auth" routerLink="/register">Register</a>
+                            <a class="auth" routerLink="/login">
+                                {{
+                                    lang === "ltr" ? "Login" : "تسجيل الدخول "
+                                }}</a
+                            >
+                            <a class="auth" routerLink="/register">{{
+                                lang === "ltr" ? "Register" : "  "
+                            }}</a>
                         </div>
 
                         <a class="pointer" (click)="logout()" *ngIf="user">

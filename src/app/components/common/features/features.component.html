@@ -23,67 +23,43 @@
         >
             <span class="sub-title">
                 <i class="flaticon-198-hashtag-1"></i>
-                Specialty and Our Features
+                {{
+                    lang === "ltr"
+                        ? "  Specialty and Our Features "
+                        : " التخصص وميزاتنا "
+                }}
             </span>
-            <h2>Features That You Will Love Us</h2>
-            <a routerLink="/services" class="default-btn">View All</a>
+            <h2>
+                {{
+                    lang === "ltr"
+                        ? " Features That You Will Love Us "
+                        : " ميزات ستحبها "
+                }}
+            </h2>
+            <a routerLink="/services" class="default-btn">{{
+                lang === "ltr" ? " View All " : " عرض الكل "
+            }}</a>
         </div>
         <div class="row justify-content-center">
-            <div class="col-xl-3 col-lg-6 col-sm-6">
+            <div
+                class="col-xl-3 col-lg-6 col-sm-6"
+                *ngFor="let item of services"
+            >
                 <div class="single-core-features">
                     <div class="icon">
                         <i class="flaticon-157-caduceus"></i>
                     </div>
                     <h3>
-                        <a routerLink="/service-details"> Quality Brackets </a>
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit
-                        sed do eiusmod tempor.
-                    </p>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-sm-6">
-                <div class="single-core-features">
-                    <div class="icon">
-                        <i class="flaticon-158-policy"></i>
-                    </div>
-                    <h3>
                         <a routerLink="/service-details">
-                            Certified Dentists
-                        </a>
+                            {{ lang === "ltr" ? item.en : item.ar }}</a
+                        >
                     </h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit
-                        sed do eiusmod tempor.
-                    </p>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-sm-6">
-                <div class="single-core-features">
-                    <div class="icon">
-                        <i class="flaticon-160-diamond-1"></i>
-                    </div>
-                    <h3>
-                        <a routerLink="/service-details"> Experience </a>
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit
-                        sed do eiusmod tempor.
-                    </p>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-sm-6">
-                <div class="single-core-features">
-                    <div class="icon">
-                        <i class="flaticon-161-hospitalisation"></i>
-                    </div>
-                    <h3>
-                        <a routerLink="/service-details"> Patient Care </a>
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit
-                        sed do eiusmod tempor.
+                        {{
+                            lang === "ltr"
+                                ? item.descriptionEn
+                                : item.descriptionAr
+                        }}
                     </p>
                 </div>
             </div>

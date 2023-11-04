@@ -4,12 +4,24 @@
             <img src="../../../../assets/images/marwan.jpg" alt="" />
         </div>
         <div class="details">
-            <h3>Marwan magdy elhaggar</h3>
-            <p>Consultant Obstetrics and Gynecology Clinics</p>
+            <h3>
+                {{
+                    lang === "ltr"
+                        ? "Dr. Marwan magdy elhaggar"
+                        : "د. مروان مجدى محمد الحجار"
+                }}
+            </h3>
+            <p>
+                {{
+                    lang === "ltr"
+                        ? " Consultant Obstetrics and Gynecology Clinics"
+                        : "عيادات إستشارية أمراض النساء والتوليد"
+                }}
+            </p>
         </div>
     </div>
     <div class="form">
-        <h3>Appointment Form</h3>
+        <h3>{{ lang === "ltr" ? "Appointment Form" : " أحجز الأن " }}</h3>
         <div>
             <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
@@ -17,7 +29,9 @@
                         type="text"
                         class="form-control"
                         formControlName="first_name"
-                        placeholder="First Name"
+                        [placeholder]="
+                            lang === 'ltr' ? 'First Name' : 'اللأسم اللأول'
+                        "
                     />
                 </div>
                 <div class="form-group">
@@ -25,7 +39,9 @@
                         type="text"
                         formControlName="last_name"
                         class="form-control"
-                        placeholder="Last Name"
+                        [placeholder]="
+                            lang === 'ltr' ? 'Last Name' : 'اسم العائلة'
+                        "
                     />
                 </div>
                 <div class="form-group">
@@ -33,7 +49,11 @@
                         type="text"
                         formControlName="email"
                         class="form-control"
-                        placeholder="Email address"
+                        [placeholder]="
+                            lang === 'ltr'
+                                ? 'Email address'
+                                : 'بريدك اللألكترونى'
+                        "
                     />
                 </div>
                 <div class="form-group">
@@ -41,11 +61,15 @@
                         type="text"
                         formControlName="mobile"
                         class="form-control"
-                        placeholder="Mobile Number"
+                        [placeholder]="
+                            lang === 'ltr' ? 'Mobile Number' : 'رقم هاتفك'
+                        "
                     />
                 </div>
                 <div class="form-group text-start">
-                    <label class="payment-label">PayMent Method</label>
+                    <label class="payment-label">{{
+                        lang === "ltr" ? "PayMent Method" : "طرق الدفع"
+                    }}</label>
                     <div class="form-check">
                         <input
                             class="form-check-input"
@@ -54,7 +78,7 @@
                             id="flexRadioDefault1"
                         />
                         <label class="form-check-label" for="flexRadioDefault1">
-                            Insured
+                            {{ lang === "ltr" ? "Insured" : "التأمين" }}
                         </label>
                     </div>
                     <div class="form-check">
@@ -66,7 +90,7 @@
                             checked
                         />
                         <label class="form-check-label" for="flexRadioDefault2">
-                            Cash
+                            {{ lang === "ltr" ? "Cash" : " نقدي" }}
                         </label>
                     </div>
                 </div>
@@ -78,7 +102,7 @@
                     [siteKey]="siteKey"
                 ></re-captcha>
                 <button type="submit" class="default-btn">
-                    Book an Appointment
+                    {{ lang === "ltr" ? "Book an Appointment" : " أحجز الأن " }}
                 </button>
             </form>
         </div>

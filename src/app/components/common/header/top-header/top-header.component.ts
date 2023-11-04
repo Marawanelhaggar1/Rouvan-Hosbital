@@ -15,6 +15,12 @@ export class TopHeaderComponent implements OnInit {
     constructor(public router: Router, public _cookie: CookieService) {}
 
     ngOnInit(): void {
+        if (localStorage.getItem('lang')) {
+            this.lang = JSON.parse(localStorage.getItem('lang')!);
+        } else {
+            this.lang = 'ltr';
+        }
+
         if (this._cookie.get('user')) {
             this.user = JSON.parse(this._cookie.get('user'));
         } else {

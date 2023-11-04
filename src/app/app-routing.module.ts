@@ -51,9 +51,9 @@ const routes: Routes = [
     { path: 'center-of-excellence', component: AboutPageOneComponent },
     { path: 'about-us-2', component: AboutPageTwoComponent },
     { path: 'about-us-3', component: AboutPageThreeComponent },
-    { path: 'dentists', component: DentistsPageComponent },
+    { path: 'doctors', component: DentistsPageComponent },
     { path: 'insurance', component: InsurancePageComponent },
-    { path: 'dentist-details', component: DentistDetailsPageComponent },
+    { path: 'doctors-details', component: DentistDetailsPageComponent },
     {
         path: 'portfolio',
         component: PortfolioPageComponent,

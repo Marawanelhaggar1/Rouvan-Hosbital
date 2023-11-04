@@ -7,10 +7,22 @@
                     : 'page-banner-content-rtl text-end'
             "
         >
-            <h2>Best Doctors in Egypt</h2>
+            <h2>
+                {{
+                    lang === "ltr"
+                        ? "Best Doctors in Egypt"
+                        : "أحسن دكاتره فى مصر"
+                }}
+            </h2>
             <ul class="pages-list">
-                <li><a href="index.html">Home</a></li>
-                <li>Find a Doctor</li>
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? "Home" : "الرئيسيه"
+                    }}</a>
+                </li>
+                <li>
+                    {{ lang === "ltr" ? "Find a Doctor" : "ابحث عن دكتور" }}
+                </li>
             </ul>
             <div class="mt-4">
                 <app-appointment-search></app-appointment-search>
@@ -22,14 +34,20 @@
     <div class="container">
         <div class="header">
             <div class="header-contnet">
-                <h4>All Specialities</h4>
-                <span> Doctors</span>
+                <h4>
+                    {{ lang === "ltr" ? "All Specialities" : "كل التخصصات" }}
+                </h4>
+                <span> {{ lang === "ltr" ? "2 Doctors" : "٢ طبيب" }}</span>
             </div>
             <div class="sort">
-                <label>Sort : </label>
+                <label>{{ lang === "ltr" ? "Sort :" : "رتب :" }} </label>
                 <select aria-placeholder="Sort Doctor">
-                    <option value="best match" selected>Best Match</option>
-                    <option value="top rated">Top Rated</option>
+                    <option value="best match" selected>
+                        {{ lang === "ltr" ? "Best Match" : "الأكثر تطابقا" }}
+                    </option>
+                    <option value="top rated">
+                        {{ lang === "ltr" ? "Top Rated" : "الأعلى تقيما" }}
+                    </option>
                 </select>
                 <!--
                 <div>
@@ -46,11 +64,17 @@
             <div class="details">
                 <div class="title">
                     <div class="name">
-                        <span>Doctor </span>
-                        <h3>Tamer Yehia</h3>
+                        <span>{{ lang === "ltr" ? "Doctor" : "دكتور" }} </span>
+                        <h3>
+                            {{ lang === "ltr" ? "Tamer Yehia" : "تامر يحي" }}
+                        </h3>
                     </div>
                     <p class="job-title">
-                        Ph.D. and Consultant Oral and Maxillofacial Surgery
+                        {{
+                            lang === "ltr"
+                                ? "Ph.D. and Consultant Oral and Maxillofacial Surgery"
+                                : "دكتوراه. واستشاري جراحة الفم والوجه والفكين"
+                        }}
                     </p>
                 </div>
 
@@ -61,36 +85,50 @@
                     <i class="bx bxs-star"></i>
                     <i class="bx bxs-star-half"></i>
 
-                    <p>overall ratings from 1232</p>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "overall ratings from 1232"
+                                : "التقييم العام من ١٢٣٢ شخص"
+                        }}
+                    </p>
                 </div>
 
                 <div class="doctor-info">
                     <div class="info">
                         <i class="bx bx-location-plus"></i>
                         <p>
-                            Orthopedist Specialized in Hand and Upper Limb
-                            Surgery,
+                            {{
+                                lang === "ltr"
+                                    ? " Orthopedist Specialized in Hand and Upper Limb Surgery"
+                                    : "دكتور عظام متخصص في جراحة اليد والطرف العلوي"
+                            }}
                         </p>
                     </div>
                     <div class="info">
                         <i class="bx bx-money"></i>
                         <p>
-                            Orthopedist Specialized in Hand and Upper Limb
-                            Surgery,
+                            {{
+                                lang === "ltr"
+                                    ? "fee : 300 EGB"
+                                    : "السعر : ٣٠٠ جم"
+                            }}
                         </p>
                     </div>
                     <div class="info">
                         <i class="bx bx-stopwatch"></i>
                         <p>
-                            Orthopedist Specialized in Hand and Upper Limb
-                            Surgery,
+                            {{
+                                lang === "ltr"
+                                    ? "wating period is 20 minutes"
+                                    : "مدة الانتظار : ٢٠ دقيقة"
+                            }}
                         </p>
                     </div>
                     <div class="info">
                         <i class="bx bx-phone"></i>
                         <p>
-                            Orthopedist Specialized in Hand and Upper Limb
-                            Surgery,
+                            {{ lang === "ltr" ? "19647" : "١٩٦٤٧ " }}
                         </p>
                     </div>
                 </div>
@@ -101,10 +139,18 @@
                         *ngFor="let item of daysOfTheWeek; index as i"
                         carouselSlide
                     >
-                        <div class="dates-card">
+                        <div class="dates-card" routerLink="/book-appointment">
                             <p class="date-banner">{{ item }}</p>
-                            <p class="dates">From 8pm To 12pm</p>
-                            <button type="button">Book</button>
+                            <p class="dates">
+                                {{
+                                    lang === "ltr"
+                                        ? "From 8pm To 12pm"
+                                        : "من الساعه ١٠ ص الى الساعه ٥ م"
+                                }}
+                            </p>
+                            <button type="button">
+                                {{ lang === "ltr" ? "Book" : "أحجز" }}
+                            </button>
                         </div>
                     </ng-template>
                 </owl-carousel-o>
@@ -117,11 +163,17 @@
             <div class="details">
                 <div class="title">
                     <div class="name">
-                        <span>Doctor </span>
-                        <h3>Tamer Yehia</h3>
+                        <span>{{ lang === "ltr" ? "Doctor" : "دكتور" }} </span>
+                        <h3>
+                            {{ lang === "ltr" ? "Tamer Yehia" : "تامر يحي" }}
+                        </h3>
                     </div>
                     <p class="job-title">
-                        Ph.D. and Consultant Oral and Maxillofacial Surgery
+                        {{
+                            lang === "ltr"
+                                ? "Ph.D. and Consultant Oral and Maxillofacial Surgery"
+                                : "دكتوراه. واستشاري جراحة الفم والوجه والفكين"
+                        }}
                     </p>
                 </div>
 
@@ -132,36 +184,50 @@
                     <i class="bx bxs-star"></i>
                     <i class="bx bxs-star-half"></i>
 
-                    <p>overall ratings from 1232</p>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "overall ratings from 1232"
+                                : "التقييم العام من ١٢٣٢ شخص"
+                        }}
+                    </p>
                 </div>
 
                 <div class="doctor-info">
                     <div class="info">
                         <i class="bx bx-location-plus"></i>
                         <p>
-                            Orthopedist Specialized in Hand and Upper Limb
-                            Surgery,
+                            {{
+                                lang === "ltr"
+                                    ? " Orthopedist Specialized in Hand and Upper Limb Surgery"
+                                    : "دكتور عظام متخصص في جراحة اليد والطرف العلوي"
+                            }}
                         </p>
                     </div>
                     <div class="info">
                         <i class="bx bx-money"></i>
                         <p>
-                            Orthopedist Specialized in Hand and Upper Limb
-                            Surgery,
+                            {{
+                                lang === "ltr"
+                                    ? "fee : 300 EGB"
+                                    : "السعر : ٣٠٠ جم"
+                            }}
                         </p>
                     </div>
                     <div class="info">
                         <i class="bx bx-stopwatch"></i>
                         <p>
-                            Orthopedist Specialized in Hand and Upper Limb
-                            Surgery,
+                            {{
+                                lang === "ltr"
+                                    ? "wating period is 20 minutes"
+                                    : "مدة الانتظار : ٢٠ دقيقة"
+                            }}
                         </p>
                     </div>
                     <div class="info">
                         <i class="bx bx-phone"></i>
                         <p>
-                            Orthopedist Specialized in Hand and Upper Limb
-                            Surgery,
+                            {{ lang === "ltr" ? "19647" : "١٩٦٤٧ " }}
                         </p>
                     </div>
                 </div>
@@ -187,10 +253,18 @@
                         *ngFor="let item of daysOfTheWeek; index as i"
                         carouselSlide
                     >
-                        <div class="dates-card">
+                        <div class="dates-card" routerLink="/book-appointment">
                             <p class="date-banner">{{ item }}</p>
-                            <p class="dates">From 8pm To 12pm</p>
-                            <button type="button">Book</button>
+                            <p class="dates">
+                                {{
+                                    lang === "ltr"
+                                        ? "From 8pm To 12pm"
+                                        : "من الساعه ١٠ ص الى الساعه ٥ م"
+                                }}
+                            </p>
+                            <button type="button">
+                                {{ lang === "ltr" ? "Book" : "أحجز" }}
+                            </button>
                         </div>
                     </ng-template>
                 </owl-carousel-o>

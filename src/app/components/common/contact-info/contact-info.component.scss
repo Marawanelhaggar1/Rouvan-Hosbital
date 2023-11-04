@@ -3,6 +3,7 @@
 }
 .hospital-information-card {
     background: #fffdfd;
+    height: 230px;
     border-radius: 10px;
     padding: 30px 25px;
     margin-bottom: 25px;
@@ -32,11 +33,11 @@
             margin-bottom: 10px;
             font: {
                 size: 22px;
-                family: var(--hospital-font-family);
+                // family: var(--hospital-font-family);
             }
         }
         p {
-            font-family: var(--hospital-font-family);
+            // font-family: var(--hospital-font-family);
             color: var(--paragraph-color2);
 
             a {
@@ -61,6 +62,7 @@
     background: #fffdfd;
     border-radius: 10px;
     padding: 30px 25px;
+    height: 230px;
     margin-bottom: 25px;
     position: relative;
     overflow: hidden;
@@ -88,11 +90,11 @@
             margin-bottom: 10px;
             font: {
                 size: 22px;
-                family: var(--hospital-font-family);
+                // family: var(--hospital-font-family);
             }
         }
         p {
-            font-family: var(--hospital-font-family);
+            // font-family: var(--hospital-font-family);
             color: var(--paragraph-color2);
 
             a {

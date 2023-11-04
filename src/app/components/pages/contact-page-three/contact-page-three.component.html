@@ -2,7 +2,11 @@
 <div
     [dir]="lang"
     class="page-banner-area three ptb-100"
-    style="background-image: url(assets/images/hospital/page-banner/bg-3.jpg)"
+    [style]="
+        lang === 'ltr'
+            ? ' background-image: url(https://angular.hibotheme.com/inba/assets/images/hospital/page-banner/bg-3.jpg);'
+            : ' background-image: url(https://angular.hibotheme.com/inba/inba-rtl/assets/images/hospital/page-banner/bg-3.jpg);'
+    "
 >
     <div class="container">
         <div
@@ -127,7 +131,7 @@
 <app-contact-info></app-contact-info>
 
 <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34179.52682096503!2d-73.96244733794057!3d40.782433457301636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258a8d8fe5c1b%3A0xc7594d037ba3f984!2sNYC%20Health%20%2B%20Hospitals%2FMetropolitan.!5e0!3m2!1sen!2sbd!4v1668078195264!5m2!1sen!2sbd"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11937.313321859823!2d31.210933626347778!3d27.18822444881498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14450bdab155b8dd%3A0xbe576e24e95992a!2z2YXYs9iq2LTZgdmKINix2YjZgdin2YY!5e0!3m2!1sen!2seg!4v1699055576161!5m2!1sen!2seg"
     width="600"
     height="450"
     style="border: 0"

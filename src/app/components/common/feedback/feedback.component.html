@@ -8,10 +8,22 @@
         >
             <span class="sub-title">
                 <i class="flaticon-198-hashtag-1"></i>
-                Our Clients Review
+                {{
+                    lang === "ltr"
+                        ? "Our Clients Review"
+                        : " تعليقات من العملاء"
+                }}
             </span>
-            <h2>Real Review From Our Real Customer</h2>
-            <a routerLink="/testimonials" class="default-btn">View All</a>
+            <h2>
+                {{
+                    lang === "ltr"
+                        ? "Real Review From Our Real Customer"
+                        : " مراجعة حقيقية من عملائنا الحقيقيين "
+                }}
+            </h2>
+            <a routerLink="/testimonials" class="default-btn">
+                {{ lang === "ltr" ? " View All " : " عرض الكل " }}
+            </a>
         </div>
         <div class="review-slides">
             <owl-carousel-o dir="ltr" [options]="feedbackSlides">

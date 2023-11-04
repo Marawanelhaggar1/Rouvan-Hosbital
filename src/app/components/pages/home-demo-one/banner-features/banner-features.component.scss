@@ -10,6 +10,7 @@
     transition: var(--transition);
     background-color: var(--white-color);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height: 250px;
 
     // &.bg-f57e57 {
     //     background-color: #f57e57;
@@ -49,6 +50,7 @@
 .single-features-rtl {
     padding: 45px 30px;
     border-radius: 10px;
+    height: 250px;
     margin-bottom: 25px;
     transition: var(--transition);
     background-color: var(--white-color);
