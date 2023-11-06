@@ -30,7 +30,7 @@
             <div class="col-lg-4 col-md-6" *ngFor="let ser of services">
                 <div class="single-services-box">
                     <div class="icon">
-                        <i class="flaticon-146-dentist-chair"></i>
+                        <i [ngClass]="ser.icon"></i>
                     </div>
                     <h3>
                         <a routerLink="/service-details">

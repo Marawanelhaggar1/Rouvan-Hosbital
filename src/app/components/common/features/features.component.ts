@@ -10,6 +10,7 @@ export class FeaturesComponent implements OnInit {
     lang?: string;
     services = [
         {
+            icon: 'flaticon-052-ecg-reading',
             en: 'Radiology Center',
             ar: 'مركز الأشعة',
             descriptionEn:
@@ -17,6 +18,7 @@ export class FeaturesComponent implements OnInit {
             descriptionAr: 'مركز متكامل للأشعة يحتوي علي أحدث الأجهزة والمعدات',
         },
         {
+            icon: 'flaticon-104-pulse',
             en: 'Operations Department',
             ar: ' قسم العمليات ',
             descriptionEn:
@@ -25,6 +27,7 @@ export class FeaturesComponent implements OnInit {
                 'غرف عمليات صُممت بنظام الكبسولة لضمان أعلى درجات التعقيم وتجُنب أي مصادر للعدوى',
         },
         {
+            icon: 'flaticon-082-siren',
             en: 'Emergency and Trauma Center',
             ar: ' مركز الطوارئ والإصابات ',
             descriptionEn:
@@ -33,6 +36,7 @@ export class FeaturesComponent implements OnInit {
                 'طوارئ متاحة 24 ساعة طوال أيام الأسبوع لتقديم أعلى مستويات الرعاية الطبية في الحالات الطارئة',
         },
         {
+            icon: 'flaticon-161-hospitalisation',
             en: 'Intensive Care Unit',
             ar: ' الرعاية المركزة ',
             descriptionEn:
@@ -41,6 +45,7 @@ export class FeaturesComponent implements OnInit {
                 'وحدة رعاية مجهزة بالكامل ومزودة بأحدث الأجهزة لرعاية الحالات الحرجة والغير مستقرة',
         },
         {
+            icon: 'bx bxs-clinic',
             en: 'Outpatient clinics',
             ar: 'العيادات الخارجية',
             descriptionEn:
@@ -49,6 +54,7 @@ export class FeaturesComponent implements OnInit {
                 'تحتوي المستشفى على عدد كبير من العيادات الخارجية المجهزة بأحدث التقنيات والخدمات الطبية في جميع التخصصات',
         },
         {
+            icon: 'bx bx-bed',
             en: 'Accommodation',
             ar: 'الإقامات',
             descriptionEn:
@@ -57,6 +63,7 @@ export class FeaturesComponent implements OnInit {
                 'إقامات داخلية متميزة لضمان أعلى درجات الراحة والرفاعية',
         },
         {
+            icon: 'flaticon-065-microscope',
             en: 'Medical analysis laboratory',
             ar: 'معمل التحاليل الطبية',
             descriptionEn:
@@ -65,8 +72,9 @@ export class FeaturesComponent implements OnInit {
                 'معمل مجهز للعمل علي مدار 24 ساعة لإعطاء أسرع وأدق النتائج',
         },
         {
-            en: 'Medical analysis laboratory',
-            ar: 'معمل التحاليل الطبية',
+            icon: 'flaticon-110-heart-4',
+            en: 'Caediology Center',
+            ar: 'مراكز القلب',
             descriptionEn:
                 'lab services 24/7 to give fast and accurate results',
             descriptionAr:
