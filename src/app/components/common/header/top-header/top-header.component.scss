@@ -54,6 +54,9 @@
                 transform: translateY(-2px);
             }
         }
+        .font {
+            font-family: var(--font-family);
+        }
     }
 }
 .ltr {
@@ -95,6 +98,9 @@
         &:hover {
             transform: translateY(-2px);
         }
+    }
+    .font {
+        font-family: var(--font-family-ar);
     }
 }
 .top-header-information {
@@ -178,6 +184,9 @@
             padding-right: 0;
             border-right: none;
         }
+    }
+    .social {
+        display: none;
     }
 }
 
@@ -472,6 +481,15 @@
             margin-right: 15px;
         }
     }
+    .top-header-optional {
+        li {
+            &:nth-child(2) {
+                margin-right: 0;
+                padding-right: 0;
+                border-right: none;
+            }
+        }
+    }
     .container-fluid {
         max-width: 960px;
         padding: {
@@ -513,6 +531,16 @@
 
 /* Min width 1200px to Max width 1399px */
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .top-header-optional {
+        li {
+            &:nth-child(2) {
+                margin-right: 0;
+                padding-right: 0;
+                border-right: none;
+            }
+        }
+    }
+
     .top-dental-tourism-information {
         &.with-left {
             margin-left: 142px;
@@ -538,6 +566,15 @@
 
 /* Min width 1400px to Max width 1460px */
 @media only screen and (min-width: 1400px) and (max-width: 1460px) {
+    .top-header-optional {
+        li {
+            &:nth-child(2) {
+                margin-right: 0;
+                padding-right: 0;
+                border-right: none;
+            }
+        }
+    }
     .top-dental-tourism-information {
         &.with-left {
             margin-left: 260px;
@@ -567,6 +604,15 @@
             right: 100px;
         }
     }
+    .top-header-optional {
+        li {
+            &:nth-child(2) {
+                margin-right: 0;
+                padding-right: 0;
+                border-right: none;
+            }
+        }
+    }
 }
 .languages-list {
     select {
@@ -584,6 +630,50 @@
         }
         option {
             color: var(--black-color);
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .top-header-information {
+        display: none;
+    }
+
+    .top-header-optional {
+        margin-top: 0;
+        .social {
+            display: block;
+            margin-right: 0;
+            padding-right: 0;
+            border-right: none;
+            a {
+                width: 32px;
+                height: 32px;
+                margin-right: 5px;
+                text-align: center;
+                position: relative;
+                border-radius: 50px;
+                display: inline-block;
+                color: var(--white-color);
+                font-size: var(--font-size);
+                background-color: rgba(255, 255, 255, 0.08);
+
+                i {
+                    left: 0;
+                    right: 0;
+                    top: 50%;
+                    position: absolute;
+                    transform: translateY(-50%);
+                }
+                &:hover {
+                    background-color: var(--white-color);
+                    transform: translateY(-2px);
+                    color: var(--main-color);
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
         }
     }
 }

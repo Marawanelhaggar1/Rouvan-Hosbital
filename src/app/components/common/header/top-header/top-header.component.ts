@@ -28,9 +28,15 @@ export class TopHeaderComponent implements OnInit {
         }
     }
 
-    setLanguage() {
-        console.log(this.lang);
-        localStorage.setItem('lang', JSON.stringify(this.lang));
+    setArabic() {
+        let language = 'rtl';
+        localStorage.setItem('lang', JSON.stringify(language));
+        window.location.reload();
+    }
+
+    setEnglish() {
+        let language = 'ltr';
+        localStorage.setItem('lang', JSON.stringify(language));
         window.location.reload();
     }
 

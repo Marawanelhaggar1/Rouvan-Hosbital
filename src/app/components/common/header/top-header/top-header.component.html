@@ -43,14 +43,28 @@
             <div class="col-xl-6 col-lg-5 col-md-12">
                 <ul class="top-header-optional">
                     <li class="languages-list">
-                        <select
-                            [(ngModel)]="lang"
-                            (change)="setLanguage()"
-                            aria-placeholder="Language"
+                        <button
+                            *ngIf="lang === 'ltr'"
+                            (click)="setArabic()"
+                            class="auth font"
+                            type="button"
                         >
-                            <option value="ltr" selected>English</option>
-                            <option value="rtl">العربيّة</option>
-                        </select>
+                            <p>
+                                العربية
+                                <i class="bx bx-globe"></i>
+                            </p>
+                        </button>
+                        <button
+                            *ngIf="lang === 'rtl'"
+                            (click)="setEnglish()"
+                            class="auth font"
+                            type="button"
+                        >
+                            <p>
+                                English
+                                <i class="bx bx-globe"></i>
+                            </p>
+                        </button>
                     </li>
                     <li>
                         <div *ngIf="!user">
@@ -72,6 +86,29 @@
 
                         <a class="pointer" (click)="logout()" *ngIf="user">
                             <i class="bx bxs-log-out"></i>
+                        </a>
+                    </li>
+                    <li class="social">
+                        <a
+                            href="https://www.facebook.com/RouvanhospitalEg"
+                            target="_blank"
+                        >
+                            <i class="bx bxl-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/?lang=en" target="_blank">
+                            <i class="bx bxl-twitter"></i>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/company/rouvanhospital/"
+                            target="_blank"
+                        >
+                            <i class="bx bxl-linkedin"></i>
+                        </a>
+                        <a
+                            href="https://www.instagram.com/rouvanhospitaleg?fbclid=IwAR2DsgO2feehTPFmKFU-ZhIepmYdWQoyJBjum6IZvD8HQyynGVToyz1TsCY"
+                            target="_blank"
+                        >
+                            <i class="bx bxl-instagram"></i>
                         </a>
                     </li>
                 </ul>
