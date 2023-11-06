@@ -15,7 +15,7 @@
                             }}</a></span
                         >
                     </li>
-                    <li>
+                    <li class="social">
                         <a
                             href="https://www.facebook.com/RouvanhospitalEg"
                             target="_blank"
@@ -54,14 +54,20 @@
                     </li>
                     <li>
                         <div *ngIf="!user">
-                            <a class="auth" routerLink="/login">
-                                {{
-                                    lang === "ltr" ? "Login" : "تسجيل الدخول "
-                                }}</a
+                            <button
+                                routerLink="/login"
+                                class="auth"
+                                type="button"
                             >
-                            <a class="auth" routerLink="/register">{{
-                                lang === "ltr" ? "Register" : "  "
-                            }}</a>
+                                <p>
+                                    {{
+                                        lang === "ltr"
+                                            ? "Sign In"
+                                            : "تسجيل الدخول "
+                                    }}
+                                    <i class="bx bx-user"></i>
+                                </p>
+                            </button>
                         </div>
 
                         <a class="pointer" (click)="logout()" *ngIf="user">
@@ -73,70 +79,3 @@
         </div>
     </div>
 </div>
-
-<!-- Top Header for Home Demo - 8
-<div class="hospital-top-area">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="row align-items-center">
-                <div class="col-lg-4 col-md-12">
-                    <ul class="top-optional-wrap">
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                                <i class="bx bxl-facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://twitter.com/?lang=en"
-                                target="_blank"
-                            >
-                                <i class="bx bxl-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/" target="_blank">
-                                <i class="bx bxl-linkedin"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://www.instagram.com/"
-                                target="_blank"
-                            >
-                                <i class="bx bxl-instagram"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-8 col-md-12">
-                    <ul class="top-information-wrap">
-                        <li>
-                            <i class="bx bxs-phone"></i>
-                            <a href="tel:01887689870859"
-                                >(+0188) 768 987 0859</a
-                            >
-                        </li>
-                        <li class="languages-list">
-                            <select>
-                                <option value="1">English</option>
-                                <option value="2">العربيّة</option>
-                            </select>
-                        </li>
-                        <li>
-                            <div *ngIf="!user">
-                                <a class="me-2" routerLink="/login">Login</a>
-                                <a routerLink="/register">Register</a>
-                            </div>
-
-                            <a class="user" (click)="logout()" *ngIf="user">
-                                <i class="bx bxs-user"></i>
-                                <i class="bx bxs-log-out"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->

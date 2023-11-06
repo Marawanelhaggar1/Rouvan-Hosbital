@@ -1,10 +1,12 @@
 @import "../../common/dentists/dentists.component.scss";
 
-.single-doctor {
-}
 .image {
     height: 300px;
     img {
         max-height: 300px;
     }
+}
+
+.doctor-content {
+    height: 200px;
 }

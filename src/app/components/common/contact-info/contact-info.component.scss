@@ -1,5 +1,9 @@
 .hospital-information-area {
-    background: linear-gradient(90deg, #19abae 0.39%, #3dbd8d 101.54%);
+    background: linear-gradient(
+        90deg,
+        var(--main-color2) 0.39%,
+        var(--main-color) 101.54%
+    );
 }
 .hospital-information-card {
     background: #fffdfd;

@@ -1,147 +1,4 @@
-<!-- Footer section for Home Demo - 8
-<div
-    class="hospital-footer-area pt-100"
-    style="background-image: url(assets/images/hospital/footer-bg.jpg)"
->
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-3 col-sm-6">
-                <div class="hospital-footer-widget">
-                    <h2>
-                        <a routerLink="/"> Inba </a>
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet incidid tempor incididu ut
-                        aliqua exercitation ullam lorem ipsum dolor sit amet.
-                    </p>
-                    <ul class="share-link">
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                                <i class="bx bxl-facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://twitter.com/?lang=en"
-                                target="_blank"
-                            >
-                                <i class="bx bxl-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/" target="_blank">
-                                <i class="bx bxl-linkedin"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://www.instagram.com/"
-                                target="_blank"
-                            >
-                                <i class="bx bxl-instagram"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="hospital-footer-widget ps-5">
-                    <h3>Useful Link</h3>
-                    <ul class="quick-links">
-                        <li>
-                            <a routerLink="/">About Us</a>
-                        </li>
-                        <li>
-                            <a routerLink="/">Latest Blog</a>
-                        </li>
-                        <li>
-                            <a routerLink="/">Appointments</a>
-                        </li>
-                        <li>
-                            <a routerLink="/">Contact Us</a>
-                        </li>
-                        <li>
-                            <a routerLink="/">Our Doctors</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="hospital-footer-widget ps-5">
-                    <h3>Our Services</h3>
-                    <ul class="quick-links">
-                        <li>
-                            <a routerLink="/service-details">Cardiology</a>
-                        </li>
-                        <li>
-                            <a routerLink="/service-details">Oncology</a>
-                        </li>
-                        <li>
-                            <a routerLink="/service-details">Surgery</a>
-                        </li>
-                        <li>
-                            <a routerLink="/service-details">Dermatology</a>
-                        </li>
-                        <li>
-                            <a routerLink="/service-details">Anesthesiology</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="hospital-footer-widget ps-5">
-                    <h3>Working Days</h3>
-                    <ul class="hours-list">
-                        <li
-                            class="d-flex justify-content-between align-items-center"
-                        >
-                            <span>Mon - Tue</span>
-                            <span>08:00 AM - 05:00PM</span>
-                        </li>
-                        <li
-                            class="d-flex justify-content-between align-items-center"
-                        >
-                            <span>Wed - Thu</span>
-                            <span>09:00 AM - 06:00PM</span>
-                        </li>
-                        <li
-                            class="d-flex justify-content-between align-items-center"
-                        >
-                            <span>Fri - Sat</span>
-                            <span>10:00 AM - 05:00PM</span>
-                        </li>
-                        <li
-                            class="d-flex justify-content-between align-items-center"
-                        >
-                            <span>Sunday</span>
-                            <span>Emergency Only</span>
-                        </li>
-                        <li
-                            class="d-flex justify-content-between align-items-center"
-                        >
-                            <span>Personal</span>
-                            <span>Mon - 10:00 AM</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="hospital-copyright-area">
-        <div class="container">
-            <div class="copyright-area-content">
-                <p>
-                    © Inba is Proudly Owned by
-                    <a href="https://hibotheme.com/" target="_blank"
-                        >HiboTheme</a
-                    >
-                </p>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<footer [dir]="lang" class="footer-area pt-100 pb-75">
+<footer [dir]="lang" class="footer-area pt-5 pb-3">
     <div class="container">
         <div class="row">
             <div class="col-xl-3 col-lg-3 col-sm-6">
@@ -153,7 +10,6 @@
                     "
                 >
                     <h2>
-                        <!-- <a routerLink="/"> ROUVAN </a> -->
                         <a routerLink="/">
                             <img
                                 src="../../../../assets/images/footer-logo.png"
@@ -161,33 +17,9 @@
                             />
                         </a>
                     </h2>
-                    <!-- <div class="signature">
-                        <img
-                            src="assets/images/footer/signature.png"
-                            alt="signature-image"
-                        />
-                    </div> -->
-                    <div class="footer-info">
-                        <img
-                            src="assets/images/footer/footer-1.jpg"
-                            alt="footer-image"
-                        />
-                        <h4>
-                            {{
-                                lang === "ltr"
-                                    ? "Dr. Thomas Albin"
-                                    : "د. مصطفى محمود"
-                            }}
-                        </h4>
-                        <span>{{
-                            lang === "ltr"
-                                ? "CEO & Founder"
-                                : "الرئيس التنفيذي والمؤسس"
-                        }}</span>
-                    </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-2 col-sm-6">
+            <div class="col-xl-3 col-lg-2 col-sm-6 menu">
                 <div
                     [ngClass]="
                         lang === 'ltr'
@@ -237,11 +69,6 @@
                                 lang === "ltr" ? "Pediatrics" : "طب الأطفال "
                             }}</a>
                         </li>
-                        <li>
-                            <a routerLink="/services">{{
-                                lang === "ltr" ? "Woman's Health" : "صحة المرأه"
-                            }}</a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -261,7 +88,7 @@
                                     class="fullimage"
                                     role="img"
                                     style="
-                                        background-image: url(assets/images/footer/footer-2.jpg);
+                                        background-image: url(https://angular.hibotheme.com/inba/assets/images/footer/footer-2.jpg);
                                     "
                                 ></span>
                             </a>
@@ -289,7 +116,7 @@
                                     class="fullimage"
                                     role="img"
                                     style="
-                                        background-image: url(assets/images/footer/footer-3.jpg);
+                                        background-image: url(https://angular.hibotheme.com/inba/assets/images/footer/footer-4.jpg);
                                     "
                                 ></span>
                             </a>
@@ -317,7 +144,7 @@
                                     class="fullimage"
                                     role="img"
                                     style="
-                                        background-image: url(assets/images/footer/footer-4.jpg);
+                                        background-image: url(https://angular.hibotheme.com/inba/assets/images/footer/footer-3.jpg);
                                     "
                                 ></span>
                             </a>
@@ -379,7 +206,7 @@
                             <span>{{
                                 lang === "ltr"
                                     ? " Al Wasti, El Fateh, Assiut Governorate 2232121"
-                                    : "الطريق المؤدي الي كوبري الواسطي العلوي- شرق النیل بجوار مدارس دار الكوثر, Asyut, Egypt, 112121 "
+                                    : "الطريق المؤدي الي كوبري الواسطي العلوي- شرق النیل بجوار مدارس دار الكوثر "
                             }}</span>
                         </li>
                     </ul>

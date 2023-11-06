@@ -22,6 +22,7 @@
     }
     .navbar {
         padding: 0;
+        display: flex;
 
         .navbar-brand {
             font-size: inherit;
@@ -664,10 +665,11 @@
                     // font-family: var(--hospital-font-family);
                 }
             }
+
             .navbar-nav {
                 margin: {
-                    left: auto;
-                    right: 10px;
+                    left: 20px;
+                    right: 20px;
                 }
                 .nav-item {
                     .nav-link {
@@ -1541,13 +1543,18 @@
                 left: var(--bs-gutter-x, 0.75rem);
                 right: var(--bs-gutter-x, 0.75rem);
             }
-        }
-        .navbar {
-            .navbar-nav {
-                .nav-item {
-                    margin: {
-                        left: 5px;
-                        right: 5px;
+            .navbar {
+                .navbar-nav {
+                    margin: 0;
+                    .nav-item {
+                        margin: {
+                            left: 5px;
+                            right: 5px;
+                        }
+
+                        .nav-link {
+                            font-size: 15px;
+                        }
                     }
                 }
             }

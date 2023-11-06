@@ -19,7 +19,21 @@
             // justify-self: center;
             overflow: hidden;
         }
+        .doctor-info {
+            .info {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 1rem;
+                margin-top: 1rem;
 
+                i {
+                    color: var(--main-color);
+                    margin-right: 1rem;
+                    border-bottom: 2px solid var(--main-color);
+                }
+            }
+        }
         .details {
             margin: 0 2rem;
             margin-top: 2rem;

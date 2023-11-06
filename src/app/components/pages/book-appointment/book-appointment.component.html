@@ -1,7 +1,10 @@
 <div [dir]="lang" class="container">
     <div class="profile">
         <div class="image">
-            <img src="../../../../assets/images/marwan.jpg" alt="" />
+            <img
+                src="https://angular.hibotheme.com/inba/assets/images/doctor/doctor-1.jpg"
+                alt=""
+            />
         </div>
         <div class="details">
             <h3>
@@ -18,6 +21,36 @@
                         : "عيادات إستشارية أمراض النساء والتوليد"
                 }}
             </p>
+            <div class="doctor-info">
+                <div class="info">
+                    <i class="bx bx-location-plus"></i>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "Gynecologist Specialized in IVF"
+                                : "دكتور نساء وتوليد متخصص في أطفال الأنابيب وأمراض "
+                        }}
+                    </p>
+                </div>
+                <div class="info">
+                    <i class="bx bx-money"></i>
+                    <p>
+                        {{
+                            lang === "ltr" ? "Fee : 300 EGB" : "السعر : ٣٠٠ جم"
+                        }}
+                    </p>
+                </div>
+                <div class="info">
+                    <i class="bx bx-stopwatch"></i>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "Wating Period is 20 Minutes"
+                                : "مدة الانتظار : ٢٠ دقيقة"
+                        }}
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
     <div class="form">

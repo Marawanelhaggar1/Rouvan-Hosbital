@@ -56,7 +56,6 @@ export class NavbarComponent implements OnInit {
             this.isSticky = false;
         }
     }
-
     // logout() {
     //     this._cookie.delete('user');
     //     this.sendToHome();

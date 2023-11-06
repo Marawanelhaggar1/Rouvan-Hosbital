@@ -2,6 +2,7 @@ form {
     justify-content: center;
     align-items: flex-end;
     margin-bottom: 2rem;
+    padding: 1rem;
     border: 1px solid #e1e1e1;
     background-color: white;
     border-radius: 20px;
@@ -93,7 +94,7 @@ select {
             width: 300px;
             border: 1px solid #e1e1e1;
             // margin: 1rem;
-            margin: 2rem;
+            margin: 1rem;
             .form-control,
             select {
                 width: 100%;

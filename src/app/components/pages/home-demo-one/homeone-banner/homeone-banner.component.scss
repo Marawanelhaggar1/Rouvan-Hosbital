@@ -1,5 +1,6 @@
 .main-slides-item {
     z-index: 1;
+    height: 800px;
     position: relative;
     background: {
         position: center center;
@@ -38,6 +39,14 @@
             top: 50%;
         }
     }
+
+    .appointment {
+        position: absolute;
+        width: -webkit-fill-available;
+        margin-right: 1rem;
+        bottom: 15%;
+    }
+
     h1 {
         font-size: 75px;
         margin-bottom: 15px;
@@ -136,6 +145,12 @@
             right: 20px;
             top: 50%;
         }
+    }
+    .appointment {
+        position: absolute;
+        bottom: 15%;
+        width: -webkit-fill-available;
+        margin-left: 1rem;
     }
     h1 {
         font-size: 75px;
@@ -244,6 +259,9 @@
                 left: 15px;
             }
         }
+        .appointment {
+            bottom: 10%;
+        }
         h1 {
             font-size: 30px;
             margin-bottom: 10px;
@@ -290,6 +308,9 @@
                 margin-top: 1px;
                 right: 15px;
             }
+        }
+        .appointment {
+            bottom: 10%;
         }
         h1 {
             font-size: 30px;

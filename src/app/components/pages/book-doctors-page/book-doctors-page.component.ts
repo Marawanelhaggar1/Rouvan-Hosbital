@@ -11,7 +11,7 @@ export class BookDoctorsPageComponent {
     customOptions: OwlOptions = {
         items: 3,
         nav: true,
-        loop: true,
+        loop: false,
         dots: false,
 
         smartSpeed: 1000,
