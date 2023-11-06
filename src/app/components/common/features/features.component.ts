@@ -73,7 +73,7 @@ export class FeaturesComponent implements OnInit {
         },
         {
             icon: 'flaticon-110-heart-4',
-            en: 'Caediology Center',
+            en: 'Cardiology Center',
             ar: 'مراكز القلب',
             descriptionEn:
                 'lab services 24/7 to give fast and accurate results',
