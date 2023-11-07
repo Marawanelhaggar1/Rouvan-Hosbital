@@ -43,6 +43,28 @@
             <div class="col-xl-6 col-lg-5 col-md-12 resp">
                 <ul class="top-header-optional">
                     <li>
+                        <div *ngIf="!user">
+                            <button
+                                routerLink="/login"
+                                class="auth"
+                                type="button"
+                            >
+                                <p>
+                                    {{
+                                        lang === "ltr"
+                                            ? "Sign In"
+                                            : "تسجيل الدخول "
+                                    }}
+                                    <i class="bx bx-user"></i>
+                                </p>
+                            </button>
+                        </div>
+
+                        <a class="pointer" (click)="logout()" *ngIf="user">
+                            <i class="bx bxs-log-out"></i>
+                        </a>
+                    </li>
+                    <li>
                         <button
                             *ngIf="lang === 'ltr'"
                             (click)="setArabic()"
@@ -65,28 +87,6 @@
                                 <i class="bx bx-globe"></i>
                             </p>
                         </button>
-                    </li>
-                    <li>
-                        <div *ngIf="!user">
-                            <button
-                                routerLink="/login"
-                                class="auth"
-                                type="button"
-                            >
-                                <p>
-                                    {{
-                                        lang === "ltr"
-                                            ? "Sign In"
-                                            : "تسجيل الدخول "
-                                    }}
-                                    <i class="bx bx-user"></i>
-                                </p>
-                            </button>
-                        </div>
-
-                        <a class="pointer" (click)="logout()" *ngIf="user">
-                            <i class="bx bxs-log-out"></i>
-                        </a>
                     </li>
                     <li class="social">
                         <a

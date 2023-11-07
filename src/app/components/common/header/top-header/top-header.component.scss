@@ -20,8 +20,8 @@
     .top-header-optional {
         li {
             &:first-child {
-                padding-left: 20px;
-                margin-left: 10px;
+                // padding-left: 20px;
+                // margin-left: 10px;
                 border-left: 1px solid #e2edf7;
             }
         }
@@ -244,92 +244,6 @@
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .container-fluid {
         max-width: 540px;
-    }
-}
-
-/* Min width 768px to Max width 991px */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .top-header-area {
-        text-align: center;
-    }
-    .top-header-information {
-        justify-content: center;
-
-        li {
-            margin-right: 15px;
-            font-size: 14px;
-
-            i {
-                top: 1px;
-            }
-        }
-    }
-    .top-header-optional {
-        justify-content: center;
-        margin-top: 10px;
-
-        .languages-list {
-            select {
-                font-size: 14px;
-            }
-        }
-    }
-    .container-fluid {
-        max-width: 720px;
-    }
-    .top-dental-tourism-information {
-        text-align: center;
-
-        &.with-left {
-            margin-left: 0;
-        }
-        li {
-            margin-right: 15px;
-            padding-left: 20px;
-        }
-    }
-    .top-dental-tourism-optional {
-        text-align: center;
-        margin-top: 10px;
-    }
-    .top-skin-care-information {
-        text-align: center;
-
-        li {
-            margin-right: 15px;
-            padding-left: 20px;
-        }
-    }
-    .top-skin-care-optional {
-        text-align: center;
-        margin-top: 10px;
-    }
-    .top-area-information {
-        text-align: center;
-
-        li {
-            margin-right: 15px;
-            padding-left: 20px;
-        }
-    }
-    .top-area-optional {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    .hospital-top-area {
-        text-align: center;
-
-        .top-optional-wrap {
-            li {
-                a {
-                    font-size: 15px;
-                }
-            }
-        }
-        .top-information-wrap {
-            text-align: center;
-            margin-top: 10px;
-        }
     }
 }
 
@@ -573,5 +487,27 @@
                 }
             }
         }
+    }
+}
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .top-header-area {
+        text-align: center;
+    }
+    .top-header-information {
+        justify-content: center;
+
+        li {
+            margin-right: 15px;
+            font-size: 14px;
+
+            i {
+                top: 1px;
+            }
+        }
+    }
+    .top-header-optional {
+        justify-content: center;
+        margin-top: 10px;
     }
 }
