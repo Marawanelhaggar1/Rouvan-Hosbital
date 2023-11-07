@@ -791,6 +791,15 @@
                     }
                 }
             }
+
+            .for-responsive {
+                .nav-item {
+                    &:first-child,
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
         }
     }
 }

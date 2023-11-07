@@ -238,147 +238,6 @@
             }
         }
     }
-    .dental-tourism-top-area {
-        text-align: center;
-    }
-    .top-dental-tourism-information {
-        &.with-left {
-            margin-left: 0;
-        }
-        li {
-            padding-left: 18px;
-            font-size: 14px;
-            margin: {
-                left: 5px;
-                right: 5px;
-                bottom: 5px;
-            }
-            i {
-                top: 3px;
-            }
-            &:first-child {
-                margin-left: 0;
-            }
-        }
-    }
-    .top-dental-tourism-optional {
-        margin-top: 5px;
-        text-align: center;
-
-        li {
-            margin: {
-                left: 5px;
-                right: 5px;
-            }
-            &:first-child {
-                margin-left: 0;
-            }
-        }
-    }
-    .container-fluid {
-        padding: {
-            left: var(--bs-gutter-x, 0.75rem);
-            right: var(--bs-gutter-x, 0.75rem);
-        }
-    }
-    .skin-care-top-area {
-        text-align: center;
-    }
-    .top-skin-care-information {
-        li {
-            padding-left: 18px;
-            font-size: 14px;
-            margin: {
-                left: 5px;
-                right: 5px;
-                bottom: 5px;
-            }
-            i {
-                top: 3px;
-            }
-            &:first-child {
-                margin-left: 0;
-            }
-        }
-    }
-    .top-skin-care-optional {
-        margin-top: 5px;
-        text-align: center;
-
-        li {
-            margin: {
-                left: 5px;
-                right: 5px;
-            }
-            &:first-child {
-                margin-left: 0;
-            }
-        }
-    }
-    .top-area {
-        text-align: center;
-    }
-    .top-area-information {
-        margin-top: 5px;
-        text-align: center;
-
-        li {
-            padding-left: 18px;
-            font-size: 14px;
-            margin: {
-                left: 5px;
-                right: 5px;
-                top: 5px;
-            }
-            i {
-                top: 3px;
-            }
-            &:first-child {
-                margin-left: 0;
-            }
-        }
-    }
-    .top-area-optional {
-        li {
-            margin: {
-                left: 5px;
-                right: 5px;
-            }
-            &:first-child {
-                margin-left: 0;
-            }
-        }
-    }
-    .hospital-top-area {
-        text-align: center;
-
-        .top-optional-wrap {
-            li {
-                margin-right: 12px;
-                padding-right: 12px;
-
-                a {
-                    font-size: 14px;
-                }
-            }
-        }
-        .top-information-wrap {
-            text-align: center;
-            margin-top: 5px;
-
-            li {
-                border-right: none;
-                margin: {
-                    top: 5px;
-                    right: 5px;
-                }
-                padding: {
-                    left: 18px;
-                    right: 0;
-                }
-            }
-        }
-    }
 }
 
 /* Min width 576px to Max width 767px */
@@ -641,6 +500,7 @@
 
     .top-header-optional {
         margin-top: 0;
+
         .social {
             display: block;
             margin-right: 0;
@@ -672,6 +532,37 @@
                 }
                 &:last-child {
                     margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .ltr {
+        li {
+            .auth {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .rtl {
+        .resp {
+            padding: 0 !important;
+        }
+        .top-header-optional {
+            padding-right: 0;
+            li {
+                padding-left: 0px !important;
+                margin-left: 0px !important;
+                margin-right: 0 !important;
+                padding-right: 0 !important;
+
+                &:nth-child(2) {
+                    border-left: 1px solid #e2edf7;
+                }
+
+                .auth {
+                    margin: 0 4px;
                 }
             }
         }
