@@ -18,6 +18,7 @@
     }
 
     .top-header-optional {
+        margin-top: 0 !important;
         li {
             &:first-child {
                 // padding-left: 20px;
@@ -508,6 +509,5 @@
     }
     .top-header-optional {
         justify-content: center;
-        margin-top: 10px;
     }
 }
