@@ -5,7 +5,7 @@
             <input
                 type="text"
                 class="form-control"
-                placeholder="Specialty"
+                [placeholder]="lang === 'ltr' ? 'Specialty' : 'التخصص'"
                 list="list-specialty"
             />
             <datalist id="list-specialty">
@@ -36,22 +36,26 @@
             <input
                 type="text"
                 class="form-control"
-                placeholder="Doctors"
+                [placeholder]="lang === 'ltr' ? 'Doctors' : 'الدكتور'"
                 list="list-doctors"
             />
             <datalist id="list-doctors">
                 <option>
+                    <i class="flaticon-149-doctor-2"></i>
                     {{
                         lang === "ltr" ? "  Maged El Wakeel " : " ماجد الوكيل "
                     }}
                 </option>
                 <option>
+                    <i class="flaticon-149-doctor-2"></i>
                     {{ lang === "ltr" ? "  Sally Mohamed " : " سالي محمد " }}
                 </option>
                 <option>
+                    <i class="flaticon-149-doctor-2"></i>
                     {{ lang === "ltr" ? "  Amira Elsaid " : " أميرة السيد " }}
                 </option>
                 <option>
+                    <i class="flaticon-149-doctor-2"></i>
                     {{
                         lang === "ltr"
                             ? "  Muhammed Elmessry "

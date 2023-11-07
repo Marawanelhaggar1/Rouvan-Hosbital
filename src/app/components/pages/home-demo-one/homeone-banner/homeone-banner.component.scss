@@ -1,3 +1,19 @@
+.home-slides {
+    position: relative;
+    .appointment {
+        position: absolute;
+        width: -webkit-fill-available;
+        bottom: 14%;
+        z-index: 100;
+    }
+
+    // .appointment-rtl {
+    //     position: absolute;
+    //     bottom: 14%;
+    //     width: -webkit-fill-available;
+    //     margin-left: 1rem;
+    // }
+}
 .main-slides-item {
     z-index: 1;
     height: 800px;
@@ -38,13 +54,6 @@
             left: 20px;
             top: 50%;
         }
-    }
-
-    .appointment {
-        position: absolute;
-        width: -webkit-fill-available;
-        margin-right: 1rem;
-        bottom: 15%;
     }
 
     h1 {
@@ -146,12 +155,6 @@
             top: 50%;
         }
     }
-    .appointment {
-        position: absolute;
-        bottom: 15%;
-        width: -webkit-fill-available;
-        margin-left: 1rem;
-    }
     h1 {
         font-size: 75px;
         margin-bottom: 15px;
@@ -245,6 +248,11 @@
             background-color: var(--white-color);
         }
     }
+    .home-slides {
+        .appointment {
+            bottom: 20%;
+        }
+    }
     .main-slides-content {
         max-width: 100%;
         margin-left: 0;
@@ -259,9 +267,7 @@
                 left: 15px;
             }
         }
-        .appointment {
-            bottom: 10%;
-        }
+
         h1 {
             font-size: 30px;
             margin-bottom: 10px;
@@ -309,9 +315,7 @@
                 right: 15px;
             }
         }
-        .appointment {
-            bottom: 10%;
-        }
+
         h1 {
             font-size: 30px;
             margin-bottom: 10px;
