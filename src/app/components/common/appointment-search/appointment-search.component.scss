@@ -80,13 +80,11 @@ form {
             border-radius: 0px;
             // margin: 0.5rem;
             .form-control {
-                input {
-                    width: 100%;
-                }
+                width: 100% !important;
                 padding: 10px;
                 // border-radius: 0px;
             }
-            .form-control,
+
             &:last-child {
                 border: none;
                 width: 50%;
