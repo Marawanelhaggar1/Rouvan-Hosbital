@@ -55,7 +55,11 @@
                                         <input
                                             type="text"
                                             class="form-control"
-                                            placeholder="Specialty"
+                                            [placeholder]="
+                                                lang === 'ltr'
+                                                    ? 'Specialty'
+                                                    : 'التخصص'
+                                            "
                                             list="list-specialty"
                                         />
                                         <datalist id="list-specialty">
@@ -98,7 +102,11 @@
                                         <input
                                             type="text"
                                             class="form-control"
-                                            placeholder="Doctors"
+                                            [placeholder]="
+                                                lang === 'ltr'
+                                                    ? 'Doctors'
+                                                    : 'الدكتور'
+                                            "
                                             list="list-doctors"
                                         />
                                         <datalist id="list-doctors">

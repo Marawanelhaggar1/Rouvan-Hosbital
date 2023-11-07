@@ -672,6 +672,10 @@
                     right: 60px;
                 }
                 .nav-item {
+                    &:first-child,
+                    &:last-child {
+                        margin: 0 10px;
+                    }
                     .nav-link {
                         font: {
                             // family: var(--hospital-font-family);
