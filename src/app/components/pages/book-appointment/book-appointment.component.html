@@ -123,13 +123,15 @@
                         </label>
                     </div>
                 </div>
-                <re-captcha
-                    (resolved)="resolved($event)"
-                    (errored)="onError($event)"
-                    errorMode="handled"
-                    render="explicit"
-                    [siteKey]="siteKey"
-                ></re-captcha>
+                <div class="recaptcha">
+                    <re-captcha
+                        (resolved)="resolved($event)"
+                        (errored)="onError($event)"
+                        errorMode="handled"
+                        render="explicit"
+                        [siteKey]="siteKey"
+                    ></re-captcha>
+                </div>
                 <button type="submit" class="default-btn">
                     {{ lang === "ltr" ? "Book an Appointment" : " أحجز الأن " }}
                 </button>

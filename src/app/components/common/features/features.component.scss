@@ -16,7 +16,7 @@
     }
 }
 .single-core-features {
-    height: 400px !important;
+    height: 450px !important;
     padding: 25px;
     border-radius: 5px;
     margin-bottom: 25px;
@@ -51,6 +51,7 @@
         }
     }
     h3 {
+        height: 100px;
         margin-bottom: 12px;
         font: {
             size: 25px;
@@ -320,7 +321,7 @@
 @media only screen and (max-width: 767px) {
     .single-core-features {
         padding: 20px;
-
+        height: 350px;
         .icon {
             margin-bottom: 20px;
             font-size: 30px;
@@ -328,6 +329,7 @@
             width: 60px;
         }
         h3 {
+            height: 70px;
             margin-bottom: 12px;
             font-size: 20px;
         }

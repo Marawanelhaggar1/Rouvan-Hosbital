@@ -41,7 +41,7 @@ export class DentistsPageComponent implements OnInit {
             nameEn: ' Eman Tantawy',
             nameAr: 'ايمان طنطاوى',
             specializationEn: 'Prosthodontics Dentist',
-            specializationAr: 'Prosthodontics Dentist',
+            specializationAr: 'طبيب الأسنان التعويضات السنية',
         },
         {
             image: 'https://angular.hibotheme.com/inba/inba-rtl/assets/images/doctor/doctor-7.jpg',
