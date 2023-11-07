@@ -61,10 +61,6 @@
         form {
             margin-top: 5px;
 
-            .captcha {
-                justify-self: center;
-                align-self: center;
-            }
             .form-group {
                 margin-bottom: 20px;
 
@@ -148,11 +144,17 @@
             align-items: center;
         }
     }
+    .recaptcha {
+        width: 305px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
 }
 
 @media only screen and (max-width: 576px) {
     .recaptcha {
         transform: scale(0.7);
+        width: 210px;
         transform-origin: 0;
     }
 

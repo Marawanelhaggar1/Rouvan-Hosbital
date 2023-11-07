@@ -145,13 +145,22 @@
                                         type="button"
                                         class="default-btn"
                                     >
-                                        <i class="bx bx-search"></i>
                                         <span>
-                                            {{
-                                                lang === "ltr"
-                                                    ? "  Search "
-                                                    : " أبحث "
-                                            }}
+                                            <i
+                                                *ngIf="lang === 'ltr'"
+                                                class="bx bx-search"
+                                            ></i>
+                                            <span>
+                                                {{
+                                                    lang === "ltr"
+                                                        ? "  Search "
+                                                        : " ابحث "
+                                                }}
+                                            </span>
+                                            <i
+                                                *ngIf="lang === 'rtl'"
+                                                class="bx bx-search"
+                                            ></i>
                                         </span>
                                     </a>
                                 </form>
