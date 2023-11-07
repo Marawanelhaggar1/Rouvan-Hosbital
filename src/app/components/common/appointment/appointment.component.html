@@ -52,32 +52,42 @@
                                                 ? "  Specialty "
                                                 : " التخصص "
                                         }}</label>
-                                        <select
-                                            formControlName="specialty"
-                                            aria-placeholder="Select Specialty"
-                                        >
-                                            <option value="" selected>
-                                                {{
-                                                    lang === "ltr"
-                                                        ? "  Select Specialty "
-                                                        : " أختار التخصص"
-                                                }}
-                                            </option>
-                                            <option value="male">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="Specialty"
+                                            list="list-specialty"
+                                        />
+                                        <datalist id="list-specialty">
+                                            <option>
                                                 {{
                                                     lang === "ltr"
                                                         ? "  Surgery "
-                                                        : " الجراحه "
+                                                        : " جراحة "
                                                 }}
                                             </option>
-                                            <option value="female">
+                                            <option>
                                                 {{
                                                     lang === "ltr"
-                                                        ? " Urology "
-                                                        : " جراحة المسالك البولية "
+                                                        ? "  Urology "
+                                                        : " المسالك البوليه"
                                                 }}
                                             </option>
-                                        </select>
+                                            <option>
+                                                {{
+                                                    lang === "ltr"
+                                                        ? " Anesthesia, obstetrics and gynecology"
+                                                        : " التخدير أمراض النساء و الولادة "
+                                                }}
+                                            </option>
+                                            <option>
+                                                {{
+                                                    lang === "ltr"
+                                                        ? "  cardiology "
+                                                        : " جراحة القلب و القسطرة طب القلب العامة  "
+                                                }}
+                                            </option>
+                                        </datalist>
                                     </div>
                                     <div class="form-group">
                                         <label>{{
@@ -85,32 +95,42 @@
                                                 ? "  Doctor "
                                                 : " دكتور "
                                         }}</label>
-                                        <select
-                                            formControlName="doctor"
-                                            aria-placeholder="Select Doctor"
-                                        >
-                                            <option value="" selected>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="Doctors"
+                                            list="list-doctors"
+                                        />
+                                        <datalist id="list-doctors">
+                                            <option>
                                                 {{
                                                     lang === "ltr"
-                                                        ? "  Select Doctor "
-                                                        : " أختر الدكتور "
+                                                        ? "  Maged El Wakeel "
+                                                        : " ماجد الوكيل "
                                                 }}
                                             </option>
-                                            <option value="male">
+                                            <option>
                                                 {{
                                                     lang === "ltr"
-                                                        ? "  Marwan "
-                                                        : " مروان "
+                                                        ? "  Sally Mohamed "
+                                                        : " سالي محمد "
                                                 }}
                                             </option>
-                                            <option value="female">
+                                            <option>
                                                 {{
                                                     lang === "ltr"
-                                                        ? "  Ibrahem "
-                                                        : " ابراهيم "
+                                                        ? "  Amira Elsaid "
+                                                        : " أميرة السيد "
                                                 }}
                                             </option>
-                                        </select>
+                                            <option>
+                                                {{
+                                                    lang === "ltr"
+                                                        ? "  Muhammed Elmessry "
+                                                        : " محمد الميسيري "
+                                                }}
+                                            </option>
+                                        </datalist>
                                     </div>
                                     <a
                                         routerLink="/book-doctor"

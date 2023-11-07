@@ -24,7 +24,7 @@ export class HomeoneBannerComponent implements OnInit {
         loop: true,
         dots: false,
         autoplay: true,
-        smartSpeed: 1000,
+        smartSpeed: 2000,
         animateIn: `fadeIn`,
         animateOut: `fadeOut`,
         autoplayHoverPause: true,
