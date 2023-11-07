@@ -109,6 +109,28 @@
                             <i class="bx bxl-instagram"></i>
                         </a>
                     </li>
+                    <!-- <li *ngIf="lang === 'ltr'">
+                        <div *ngIf="!user">
+                            <button
+                                routerLink="/login"
+                                class="auth"
+                                type="button"
+                            >
+                                <p>
+                                    {{
+                                        lang === "ltr"
+                                            ? "Sign In"
+                                            : "تسجيل الدخول "
+                                    }}
+                                    <i class="bx bx-user"></i>
+                                </p>
+                            </button>
+                        </div>
+
+                        <a class="pointer" (click)="logout()" *ngIf="user">
+                            <i class="bx bxs-log-out"></i>
+                        </a>
+                    </li> -->
                 </ul>
             </div>
         </div>

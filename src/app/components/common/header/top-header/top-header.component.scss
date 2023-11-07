@@ -388,25 +388,6 @@
         }
     }
 }
-.languages-list {
-    select {
-        height: 32px;
-        border: none;
-        font-size: 15px;
-        cursor: pointer;
-        color: var(--white-color);
-        background-color: rgba(255, 255, 255, 0.08);
-        padding: {
-            top: 2px;
-            left: 8px;
-            right: 8px;
-            bottom: 2px;
-        }
-        option {
-            color: var(--black-color);
-        }
-    }
-}
 
 @media only screen and (max-width: 991px) {
     .top-header-information {
@@ -510,4 +491,9 @@
     .top-header-optional {
         justify-content: center;
     }
+}
+
+.bor {
+    border-left: 1px solid #e2edf7;
+    margin-left: 10px;
 }
