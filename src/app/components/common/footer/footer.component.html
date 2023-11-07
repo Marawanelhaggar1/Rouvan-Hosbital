@@ -31,25 +31,37 @@
                     <h3>{{ lang === "ltr" ? "Menu" : "القائمه" }}</h3>
                     <ul class="quick-links">
                         <li>
-                            <a routerLink="/about-us">
+                            <a routerLink="/about-us-2">
                                 {{ lang === "ltr" ? "About Us" : "من نحن " }}</a
                             >
                         </li>
                         <li>
-                            <a routerLink="/services">{{
+                            <a routerLink="/services-2">{{
                                 lang === "ltr"
                                     ? "Medical Services"
                                     : "الخدمات الطبية"
                             }}</a>
                         </li>
                         <li>
-                            <a routerLink="/dentists">{{
+                            <a routerLink="/doctors">{{
                                 lang === "ltr" ? "Doctors" : "الأطباء"
                             }}</a>
                         </li>
                         <li>
                             <a routerLink="/blog-grid">{{
-                                lang === "ltr" ? "Blog" : "مدونة"
+                                lang === "ltr"
+                                    ? "Centers Of Excellence"
+                                    : "المراكز المتخصصه"
+                            }}</a>
+                        </li>
+                        <li>
+                            <a routerLink="/insurance">{{
+                                lang === "ltr" ? "Insurance" : " التأمين "
+                            }}</a>
+                        </li>
+                        <li>
+                            <a routerLink="/insurance">{{
+                                lang === "ltr" ? "Contact Us" : " تواصل معنا "
                             }}</a>
                         </li>
                         <li>
@@ -62,11 +74,6 @@
                                 lang === "ltr"
                                     ? "Privacy Policy"
                                     : "سياسة الخصوصية"
-                            }}</a>
-                        </li>
-                        <li>
-                            <a routerLink="/services">{{
-                                lang === "ltr" ? "Pediatrics" : "طب الأطفال "
                             }}</a>
                         </li>
                     </ul>
@@ -83,7 +90,7 @@
                     <h3>{{ lang === "ltr" ? "Services " : "خدمات" }}</h3>
                     <div class="footer-widget-blog">
                         <article class="item">
-                            <a routerLink="/blog-details" class="thumb">
+                            <a routerLink="/service-details" class="thumb">
                                 <span
                                     class="fullimage"
                                     role="img"
@@ -102,7 +109,7 @@
                                     }}</a></span
                                 >
                                 <h4>
-                                    <a routerLink="/blog-details">{{
+                                    <a routerLink="/service-details">{{
                                         lang === "ltr"
                                             ? "Dental Hygiene for Children"
                                             : "صحة الأسنان للأطفال"
@@ -111,7 +118,7 @@
                             </div>
                         </article>
                         <article class="item">
-                            <a routerLink="/blog-details" class="thumb">
+                            <a routerLink="/service-details" class="thumb">
                                 <span
                                     class="fullimage"
                                     role="img"
@@ -130,7 +137,7 @@
                                     }}</a></span
                                 >
                                 <h4>
-                                    <a routerLink="/blog-details">{{
+                                    <a routerLink="/service-details">{{
                                         lang === "ltr"
                                             ? "Regular Checkup for Good Health"
                                             : "الفحص الدوري للصحة جيدة"
@@ -139,7 +146,7 @@
                             </div>
                         </article>
                         <article class="item">
-                            <a routerLink="/blog-details" class="thumb">
+                            <a routerLink="/service-details" class="thumb">
                                 <span
                                     class="fullimage"
                                     role="img"
@@ -157,7 +164,7 @@
                                     }}</a></span
                                 >
                                 <h4>
-                                    <a routerLink="/blog-details">{{
+                                    <a routerLink="/service-details">{{
                                         lang === "ltr"
                                             ? "The Future Of Health"
                                             : " مستقبل الصحة كمنظومة فى مصر"

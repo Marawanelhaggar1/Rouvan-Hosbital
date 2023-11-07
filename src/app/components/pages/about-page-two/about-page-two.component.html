@@ -1,17 +1,33 @@
 <!-- Page Banner -->
-<div class="page-banner-area ptb-100">
+<div
+    [dir]="lang"
+    [ngClass]="lang === 'ltr' ? 'page-banner-area' : 'page-banner-area-rtl '"
+    class="ptb-100"
+>
     <div class="container">
-        <div class="page-banner-content">
-            <h2>About Us</h2>
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl '
+            "
+        >
+            <h2>{{ lang === "ltr" ? "About Us" : "من نحن" }}</h2>
             <ul class="pages-list">
-                <li><a href="index.html">Home</a></li>
-                <li>About Us</li>
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? "Home" : "الرئيسه"
+                    }}</a>
+                </li>
+                <li>{{ lang === "ltr" ? "About Us" : "من نحن " }}</li>
             </ul>
         </div>
     </div>
 </div>
 
-<app-about></app-about>
+<div class="mt-5">
+    <app-about></app-about>
+</div>
 
 <app-funfacts></app-funfacts>
 
