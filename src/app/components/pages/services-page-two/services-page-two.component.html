@@ -32,6 +32,7 @@
                     <div class="icon">
                         <i [ngClass]="ser.icon"></i>
                     </div>
+
                     <h3>
                         <a routerLink="/service-details">
                             {{ lang === "ltr" ? ser.en : ser.ar }}
@@ -44,6 +45,7 @@
                                 : ser.descriptionAr
                         }}
                     </p>
+
                     <a routerLink="/service-details" class="default-btn">
                         {{ lang === "ltr" ? " Read More" : "أقرأ المزيد" }}
                     </a>

@@ -21,7 +21,11 @@
             "
         >
             <h2>
-                {{ lang === "ltr" ? "Center Of Excellence" : "مركز التميز" }}
+                {{
+                    lang === "ltr"
+                        ? "Centers Of Excellence"
+                        : "المراكز المتخصصه"
+                }}
             </h2>
             <ul class="pages-list">
                 <li>
@@ -29,7 +33,13 @@
                         lang === "ltr" ? "Home" : "الرئيسه"
                     }}</a>
                 </li>
-                <li>{{ lang === "ltr" ? "About Us" : "من نحن" }}</li>
+                <li>
+                    {{
+                        lang === "ltr"
+                            ? "Centers Of Excellence"
+                            : "المراكز المتخصصه"
+                    }}
+                </li>
             </ul>
         </div>
     </div>
