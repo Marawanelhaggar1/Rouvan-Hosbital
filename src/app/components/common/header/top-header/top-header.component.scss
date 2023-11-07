@@ -551,6 +551,13 @@
         }
         .top-header-optional {
             padding-right: 0;
+            .social {
+                a {
+                    &:last-child {
+                        margin-right: 5px !important;
+                    }
+                }
+            }
             li {
                 padding-left: 0px !important;
                 margin-left: 0px !important;
