@@ -53,45 +53,54 @@
                                                 : " التخصص "
                                         }}</label>
                                         <input
-                                            type="text"
-                                            class="form-control"
+                                            [typeahead]="specialties"
+                                            formControlName="specialty"
                                             [placeholder]="
                                                 lang === 'ltr'
                                                     ? 'Specialty'
                                                     : 'التخصص'
                                             "
-                                            list="list-specialty"
+                                            [optionsListTemplate]="
+                                                customListTemplate
+                                            "
+                                            class="form-control"
                                         />
-                                        <datalist id="list-specialty">
-                                            <option>
-                                                {{
-                                                    lang === "ltr"
-                                                        ? "  Surgery "
-                                                        : " جراحة "
-                                                }}
-                                            </option>
-                                            <option>
-                                                {{
-                                                    lang === "ltr"
-                                                        ? "  Urology "
-                                                        : " المسالك البوليه"
-                                                }}
-                                            </option>
-                                            <option>
-                                                {{
-                                                    lang === "ltr"
-                                                        ? " Anesthesia, obstetrics and gynecology"
-                                                        : " التخدير أمراض النساء و الولادة "
-                                                }}
-                                            </option>
-                                            <option>
-                                                {{
-                                                    lang === "ltr"
-                                                        ? "  cardiology "
-                                                        : " جراحة القلب و القسطرة طب القلب العامة  "
-                                                }}
-                                            </option>
-                                        </datalist>
+                                        <ng-template
+                                            #customListTemplate
+                                            let-matches="matches"
+                                            let-query="query"
+                                            let-typeaheadTemplateMethods
+                                        >
+                                            <ul class="custom-list-group">
+                                                <li
+                                                    class="custom-list-group-item"
+                                                    *ngFor="
+                                                        let match of matches
+                                                    "
+                                                    [class.active]="
+                                                        typeaheadTemplateMethods.isActive(
+                                                            match
+                                                        )
+                                                    "
+                                                    (click)="
+                                                        typeaheadTemplateMethods.selectMatch(
+                                                            match,
+                                                            $event
+                                                        )
+                                                    "
+                                                    (mouseenter)="
+                                                        typeaheadTemplateMethods.selectActive(
+                                                            match
+                                                        )
+                                                    "
+                                                >
+                                                    <i
+                                                        class="flaticon-149-doctor-2"
+                                                    ></i>
+                                                    {{ match.item }}
+                                                </li>
+                                            </ul>
+                                        </ng-template>
                                     </div>
                                     <div class="form-group">
                                         <label>{{
@@ -100,45 +109,54 @@
                                                 : " دكتور "
                                         }}</label>
                                         <input
-                                            type="text"
-                                            class="form-control"
+                                            [typeahead]="doctors"
+                                            formControlName="doctor"
                                             [placeholder]="
                                                 lang === 'ltr'
                                                     ? 'Doctors'
                                                     : 'الدكتور'
                                             "
-                                            list="list-doctors"
+                                            [optionsListTemplate]="
+                                                customListTemplate
+                                            "
+                                            class="form-control"
                                         />
-                                        <datalist id="list-doctors">
-                                            <option>
-                                                {{
-                                                    lang === "ltr"
-                                                        ? "  Maged El Wakeel "
-                                                        : " ماجد الوكيل "
-                                                }}
-                                            </option>
-                                            <option>
-                                                {{
-                                                    lang === "ltr"
-                                                        ? "  Sally Mohamed "
-                                                        : " سالي محمد "
-                                                }}
-                                            </option>
-                                            <option>
-                                                {{
-                                                    lang === "ltr"
-                                                        ? "  Amira Elsaid "
-                                                        : " أميرة السيد "
-                                                }}
-                                            </option>
-                                            <option>
-                                                {{
-                                                    lang === "ltr"
-                                                        ? "  Muhammed Elmessry "
-                                                        : " محمد الميسيري "
-                                                }}
-                                            </option>
-                                        </datalist>
+                                        <ng-template
+                                            #customListTemplate
+                                            let-matches="matches"
+                                            let-query="query"
+                                            let-typeaheadTemplateMethods
+                                        >
+                                            <ul class="custom-list-group">
+                                                <li
+                                                    class="custom-list-group-item"
+                                                    *ngFor="
+                                                        let match of matches
+                                                    "
+                                                    [class.active]="
+                                                        typeaheadTemplateMethods.isActive(
+                                                            match
+                                                        )
+                                                    "
+                                                    (click)="
+                                                        typeaheadTemplateMethods.selectMatch(
+                                                            match,
+                                                            $event
+                                                        )
+                                                    "
+                                                    (mouseenter)="
+                                                        typeaheadTemplateMethods.selectActive(
+                                                            match
+                                                        )
+                                                    "
+                                                >
+                                                    <i
+                                                        class="flaticon-149-doctor-2"
+                                                    ></i>
+                                                    {{ match.item }}
+                                                </li>
+                                            </ul>
+                                        </ng-template>
                                     </div>
                                     <a
                                         routerLink="/book-doctor"

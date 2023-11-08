@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 export class AppointmentComponent implements OnInit {
     mytime: Date = new Date();
     lang?: string;
-
+    doctors?: string[];
+    specialties?: string[];
     searchForm!: FormGroup;
 
     constructor(private _formBuilder: FormBuilder, public router: Router) {
@@ -25,6 +26,34 @@ export class AppointmentComponent implements OnInit {
             this.lang = JSON.parse(localStorage.getItem('lang')!);
         } else {
             this.lang = 'ltr';
+        }
+        if (this.lang == 'rtl') {
+            this.doctors = [
+                'محمد الميسيري',
+                'أميرة السيد',
+                'سالي محمد',
+                'ماجد الوكيل',
+            ];
+
+            this.specialties = [
+                ' المسالك البوليه',
+                ' التخدير أمراض النساء و الولادة ',
+                ' جراحة القلب و القسطرة طب القلب العامة  ',
+                ' جراحة ',
+            ];
+        } else {
+            this.doctors = [
+                'Muhammed Elmessry',
+                'Amira Elsaid',
+                'Sally Mohamed',
+                'Maged El Wakeel',
+            ];
+            this.specialties = [
+                'Urology',
+                'Anesthesia, obstetrics and gynecology',
+                'cardiology',
+                'Surgery',
+            ];
         }
     }
 
