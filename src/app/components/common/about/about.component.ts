@@ -16,7 +16,7 @@ export class AboutComponent implements OnInit {
         { en: 'Outpatient clinics', ar: 'العيادات الخارجية' },
         { en: 'Accommodation', ar: 'الإقامات' },
         { en: 'Medical analysis laboratory', ar: 'معمل التحاليل الطبية' },
-        { en: 'Anything', ar: 'اى حاجه' },
+        { en: 'Cardiology Center', ar: ' مراكز القلب' },
     ];
     constructor() {}
 
