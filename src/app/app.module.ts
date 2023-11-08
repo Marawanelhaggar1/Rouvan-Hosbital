@@ -111,6 +111,7 @@ import { DatePipe } from '@angular/common';
 import { AppointmentSearchComponent } from './components/common/appointment-search/appointment-search.component';
 import { BookDoctorsPageComponent } from './components/pages/book-doctors-page/book-doctors-page.component';
 import { BookAppointmentComponent } from './components/pages/book-appointment/book-appointment.component';
+import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 
 @NgModule({
     declarations: [
@@ -216,6 +217,7 @@ import { BookAppointmentComponent } from './components/pages/book-appointment/bo
         SocialLoginModule,
         GoogleSigninButtonModule,
         RecaptchaModule,
+        TypeaheadModule.forRoot(),
     ],
     providers: [
         DatePipe,

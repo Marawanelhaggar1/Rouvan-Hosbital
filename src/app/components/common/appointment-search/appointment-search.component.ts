@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 
 @Component({
     selector: 'app-appointment-search',
@@ -9,6 +10,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AppointmentSearchComponent {
     searchForm!: FormGroup;
     lang?: string;
+
+    doctors?: string[];
+    specialties?: string[];
 
     constructor(private _formBuilder: FormBuilder) {
         this.searchForm = _formBuilder.group({
@@ -23,5 +27,34 @@ export class AppointmentSearchComponent {
         } else {
             this.lang = 'ltr';
         }
+        if (this.lang == 'rtl') {
+            this.doctors = [
+                'محمد الميسيري',
+                'أميرة السيد',
+                'سالي محمد',
+                'ماجد الوكيل',
+            ];
+
+            this.specialties = [
+                ' المسالك البوليه',
+                ' التخدير أمراض النساء و الولادة ',
+                ' جراحة القلب و القسطرة طب القلب العامة  ',
+                ' جراحة ',
+            ];
+        } else {
+            this.doctors = [
+                'Muhammed Elmessry',
+                'Amira Elsaid',
+                'Sally Mohamed',
+                'Maged El Wakeel',
+            ];
+            this.specialties = [
+                'Urology',
+                'Anesthesia, obstetrics and gynecology',
+                'cardiology',
+                'Surgery',
+            ];
+        }
+        console.log(this.doctors);
     }
 }
