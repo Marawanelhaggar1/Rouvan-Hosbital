@@ -1,6 +1,7 @@
 .single-review-item {
     background-color: var(--white-color);
     transition: var(--transition);
+    height: 500px;
     padding: 60px 30px 30px;
     border-radius: 10px;
     position: relative;
@@ -37,7 +38,8 @@
     }
     .review-info {
         margin-top: 25px;
-        position: relative;
+        position: absolute;
+        bottom: 7%;
         padding-left: 75px;
 
         img {
@@ -91,6 +93,7 @@
     background-color: var(--white-color);
     transition: var(--transition);
     padding: 60px 30px 30px;
+    height: 400px;
     border-radius: 10px;
     position: relative;
     margin: {
@@ -125,7 +128,9 @@
     }
     .review-info {
         margin-top: 25px;
-        position: relative;
+        position: absolute;
+        bottom: 10%;
+        // position: relative;
         padding-right: 75px;
 
         img {
