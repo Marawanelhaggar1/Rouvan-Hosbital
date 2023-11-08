@@ -2,7 +2,6 @@
     background-color: var(--main-color);
     padding: {
         top: 5px;
-        bottom: 5px;
     }
 }
 
@@ -120,7 +119,7 @@
         padding-left: 22px;
         padding-right: 10px;
         font: {
-            size: 15px;
+            size: 14px;
             weight: 500;
         }
         i {
@@ -190,7 +189,9 @@
         display: none;
     }
 }
-
+p {
+    font-size: 14px !important;
+}
 /* Max width 767px */
 @media only screen and (max-width: 767px) {
     .top-header-area {
