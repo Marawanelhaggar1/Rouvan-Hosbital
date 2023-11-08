@@ -24,8 +24,9 @@
 .main-slides-content {
     max-width: 700px;
     margin-left: auto;
+    padding: 1rem;
     position: absolute;
-    top: 8%;
+    top: 6%;
     right: 9%;
 
     .sub-title {
@@ -129,7 +130,8 @@
     max-width: 700px;
     margin-right: auto;
     position: absolute;
-    top: 8%;
+    padding: 1rem;
+    top: 6%;
     left: 9%;
 
     .sub-title {
@@ -251,7 +253,7 @@
     }
     .home-slides {
         .appointment {
-            bottom: 25%;
+            bottom: 22%;
         }
     }
     .main-slides-content {

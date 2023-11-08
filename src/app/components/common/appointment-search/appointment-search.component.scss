@@ -87,9 +87,36 @@ form {
     }
 }
 
-@media only screen and (max-width: 576px) {
+/* Min width 768px to Max width 991px */
+@media only screen and (max-width: 991px) {
+    .custom-list-group {
+        min-width: 188px !important;
+        width: 188px !important;
+        font-size: small;
+    }
+    .custom-list-group-item {
+        padding: 0.75rem 0.25rem;
+    }
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
     .custom-list-group {
         max-width: 250px;
+        font-size: small;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .custom-list-group {
+        min-width: 250px;
+        width: 250px;
+        font-size: small;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .custom-list-group {
+        width: 280px !important;
+        max-width: 300px !important;
         font-size: small;
     }
     .container {
@@ -131,32 +158,5 @@ form {
                 }
             }
         }
-    }
-}
-
-/* Min width 768px to Max width 991px */
-@media only screen and (max-width: 991px) {
-    .custom-list-group {
-        min-width: 188px !important;
-        width: 188px !important;
-        font-size: small;
-    }
-    .custom-list-group-item {
-        padding: 0.75rem 0.25rem;
-    }
-}
-
-/* Min width 992px to Max width 1199px */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .custom-list-group {
-        max-width: 250px;
-        font-size: small;
-    }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-    .custom-list-group {
-        min-width: 250px;
-        width: 250px;
-        font-size: small;
     }
 }
