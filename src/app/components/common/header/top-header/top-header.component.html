@@ -59,10 +59,26 @@
                                 </p>
                             </button>
                         </div>
+                        <div *ngIf="user">
+                            <button
+                                routerLink="/login"
+                                class="auth"
+                                type="button"
+                            >
+                                <p>
+                                    {{
+                                        lang === "ltr"
+                                            ? "Sign Out"
+                                            : "تسجيل الخروج "
+                                    }}
+                                    <i class="bx bx-log-out"></i>
+                                </p>
+                            </button>
+                        </div>
 
-                        <a class="pointer" (click)="logout()" *ngIf="user">
+                        <!-- <a class="pointer" (click)="logout()" *ngIf="user">
                             <i class="bx bxs-log-out"></i>
-                        </a>
+                        </a> -->
                     </li>
                     <li>
                         <button
