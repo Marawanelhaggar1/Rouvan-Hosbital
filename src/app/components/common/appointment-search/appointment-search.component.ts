@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 
 @Component({
     selector: 'app-appointment-search',
@@ -10,7 +10,8 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 export class AppointmentSearchComponent {
     searchForm!: FormGroup;
     lang?: string;
-
+    showCustomList: boolean = false;
+    showCustomListDoctors: boolean = false;
     doctors?: string[];
     specialties?: string[];
 

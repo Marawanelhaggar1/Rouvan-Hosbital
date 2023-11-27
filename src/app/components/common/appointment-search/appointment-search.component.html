@@ -12,6 +12,8 @@
                 [typeahead]="specialties"
                 formControlName="specialty"
                 [placeholder]="lang === 'ltr' ? 'Specialty' : 'التخصص'"
+                [typeaheadOptionsLimit]="100"
+                [typeaheadMinLength]="0"
                 [optionsListTemplate]="customListTemplate"
                 class="form-control"
             />
@@ -48,6 +50,8 @@
                 [placeholder]="lang === 'ltr' ? 'Doctors' : 'الدكتور'"
                 [optionsListTemplate]="customListTemplate"
                 class="form-control"
+                [typeaheadOptionsLimit]="100"
+                [typeaheadMinLength]="0"
             />
             <ng-template
                 #customListTemplate
