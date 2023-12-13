@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Slides } from 'src/app/core/models/slides';
+import { SlidesService } from 'src/app/core/services/slides.service';
 
 @Component({
     selector: 'app-homeone-banner',
@@ -8,7 +10,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class HomeoneBannerComponent implements OnInit {
     lang?: string;
-    constructor() {}
+    slides?: Slides[];
+    constructor(private _slideService: SlidesService) {}
 
     ngOnInit(): void {
         if (localStorage.getItem('lang')) {
@@ -16,6 +19,8 @@ export class HomeoneBannerComponent implements OnInit {
         } else {
             this.lang = 'ltr';
         }
+
+        this.getSlides();
     }
 
     homeSlides: OwlOptions = {
@@ -33,4 +38,13 @@ export class HomeoneBannerComponent implements OnInit {
             '<i class="flaticon-010-chevron"></i>',
         ],
     };
+
+    getSlides() {
+        return this._slideService.get().subscribe((slid) => {
+            this.slides = slid.data;
+            // console.log(this.slides);
+
+            return this.slides;
+        });
+    }
 }

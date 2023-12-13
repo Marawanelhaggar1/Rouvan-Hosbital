@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Specialization } from '../models/specialization';
 import { Observable } from 'rxjs';
+import { Slides } from '../models/slides';
 
 @Injectable({
     providedIn: 'root',
 })
-export class SpecializationService {
+export class SlidesService {
     lang: string;
 
     constructor(private _http: HttpClient) {
@@ -16,9 +16,10 @@ export class SpecializationService {
             this.lang = 'En';
         }
     }
-    get(): Observable<{ data: Specialization[] }> {
-        return this._http.get<{ data: Specialization[] }>(
-            `http://pp.etqanis.com/public/api/specialization?lang=${this.lang}`
+
+    get(): Observable<{ data: Slides[] }> {
+        return this._http.get<{ data: Slides[] }>(
+            `http://pp.etqanis.com/public/api/slides?lang=${this.lang}`
         );
     }
 }

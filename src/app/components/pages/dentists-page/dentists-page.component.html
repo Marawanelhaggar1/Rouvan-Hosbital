@@ -42,15 +42,9 @@
                     </a>
                     <div class="doctor-content">
                         <h3>
-                            <a routerLink="/doctors-details">{{
-                                lang === "ltr" ? doc.nameEn : doc.nameAr
-                            }}</a>
+                            <a routerLink="/doctors-details">{{ doc.name }}</a>
                         </h3>
-                        <span>{{
-                            lang === "ltr"
-                                ? doc.specializationEn
-                                : doc.specializationAr
-                        }}</span>
+                        <span>{{ doc.specialty.specialty }}</span>
                     </div>
                 </div>
             </div>

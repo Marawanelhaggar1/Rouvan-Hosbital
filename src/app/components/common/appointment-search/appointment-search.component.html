@@ -2,12 +2,7 @@
     <form class="row" [formGroup]="searchForm">
         <div class="form-group col-4 p-2">
             <label>{{ lang === "ltr" ? "  Specialty " : " التخصص " }}</label>
-            <!-- <input
-                type="text"
-                class="form-control"
-                [placeholder]="lang === 'ltr' ? 'Specialty' : 'التخصص'"
-                list="list-specialty"
-            /> -->
+
             <input
                 [typeahead]="specialties"
                 formControlName="specialty"
@@ -15,6 +10,7 @@
                 [typeaheadOptionsLimit]="100"
                 [typeaheadMinLength]="0"
                 [optionsListTemplate]="customListTemplate"
+                (typeaheadOnSelect)="getDoctor()"
                 class="form-control"
             />
             <ng-template
@@ -37,7 +33,8 @@
                             typeaheadTemplateMethods.selectActive(match)
                         "
                     >
-                        <i class="flaticon-149-doctor-2"></i> {{ match.item }}
+                        <i class="flaticon-149-doctor-2"></i>
+                        {{ match }}
                     </li>
                 </ul>
             </ng-template>
@@ -45,13 +42,14 @@
         <div class="form-group col-4 p-2">
             <label>{{ lang === "ltr" ? "  Doctor " : " دكتور " }}</label>
             <input
-                [typeahead]="doctors"
+                [typeahead]="doctor"
                 formControlName="doctor"
                 [placeholder]="lang === 'ltr' ? 'Doctors' : 'الدكتور'"
                 [optionsListTemplate]="customListTemplate"
                 class="form-control"
                 [typeaheadOptionsLimit]="100"
                 [typeaheadMinLength]="0"
+                (typeaheadOnSelect)="set()"
             />
             <ng-template
                 #customListTemplate
@@ -73,13 +71,21 @@
                             typeaheadTemplateMethods.selectActive(match)
                         "
                     >
-                        <i class="flaticon-149-doctor-2"></i> {{ match.item }}
+                        <i class="flaticon-149-doctor-2"></i>
+                        {{ match.name }}
                     </li>
                 </ul>
             </ng-template>
         </div>
         <div class="form-group col-4">
-            <a routerLink="/book-doctor" class="default-btn">
+            <a
+                [routerLink]="[
+                    '/book-doctor',
+                    docId,
+                    searchForm.value.specialty
+                ]"
+                class="default-btn"
+            >
                 <i *ngIf="lang === 'ltr'" class="bx bx-search"></i>
                 <span> {{ lang === "ltr" ? "  Search " : " ابحث " }} </span>
                 <i *ngIf="lang === 'rtl'" class="bx bx-search"></i>

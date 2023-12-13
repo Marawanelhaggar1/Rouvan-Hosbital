@@ -62,7 +62,7 @@ const routes: Routes = [
         path: 'appointment-search',
         component: AppointmentSearchComponent,
     },
-    { path: 'book-appointment', component: BookAppointmentComponent },
+    { path: 'book-appointment/:id', component: BookAppointmentComponent },
     {
         path: 'portfolio-details',
         component: PortfolioDetailsPageComponent,
@@ -74,7 +74,13 @@ const routes: Routes = [
         component: ServicesPageThreeComponent,
         canActivate: [IsLoggedIn],
     },
-    { path: 'book-doctor', component: BookDoctorsPageComponent },
+    {
+        path: 'book-doctor',
+        children: [
+            { path: ':id/:specialty', component: BookDoctorsPageComponent },
+            { path: ':id', component: BookDoctorsPageComponent },
+        ],
+    },
     { path: 'services-4', component: ServicesPageFourComponent },
     { path: 'services-5', component: ServicesPageFiveComponent },
     { path: 'services-6', component: ServicesPageSixComponent },

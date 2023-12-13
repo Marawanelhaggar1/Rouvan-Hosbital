@@ -1,38 +1,29 @@
 <div [dir]="lang" class="container">
     <div class="profile">
         <div class="image">
-            <img
-                src="https://angular.hibotheme.com/inba/assets/images/doctor/doctor-1.jpg"
-                alt=""
-            />
+            <img [src]="doctor.image" alt="image" />
         </div>
         <div class="details">
             <h3>
-                {{ lang === "ltr" ? "Dr. Amira Elsaid" : "د. أميرة السيد" }}
+                {{ doctor.name }}
             </h3>
             <p>
-                {{
-                    lang === "ltr"
-                        ? " Consultant Obstetrics and Gynecology Clinics"
-                        : "عيادات إستشارية أمراض النساء والتوليد"
-                }}
+                {{ doctor.title }}
             </p>
             <div class="doctor-info">
                 <div class="info">
                     <i class="bx bx-location-plus"></i>
                     <p>
-                        {{
-                            lang === "ltr"
-                                ? "Gynecologist Specialized in IVF"
-                                : "دكتور نساء وتوليد متخصص في أطفال الأنابيب وأمراض "
-                        }}
+                        {{ doctor.specialty.specialty }}
                     </p>
                 </div>
                 <div class="info">
                     <i class="bx bx-money"></i>
                     <p>
                         {{
-                            lang === "ltr" ? "Fee : 300 EGB" : "السعر : ٣٠٠ جم"
+                            lang === "ltr"
+                                ? "Fee : " + doctor.fee + " EGB"
+                                : "السعر : " + doctor.fee + " جم"
                         }}
                     </p>
                 </div>
@@ -44,6 +35,12 @@
                                 ? "Wating Period is 20 Minutes"
                                 : "مدة الانتظار : ٢٠ دقيقة"
                         }}
+                    </p>
+                </div>
+                <div class="info">
+                    <i class="bx bx-calendar-event"></i>
+                    <p>
+                        {{ schedule.date }}
                     </p>
                 </div>
             </div>

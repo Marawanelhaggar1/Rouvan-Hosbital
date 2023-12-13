@@ -1,13 +1,9 @@
 <div class="home-slides">
     <owl-carousel-o [options]="homeSlides">
-        <ng-template carouselSlide>
+        <ng-template *ngFor="let item of slides" carouselSlide>
             <div
                 class="main-slides-item"
-                [style]="
-                    lang === 'ltr'
-                        ? ' background-image: url(https://angular.hibotheme.com/inba/assets/images/main-slides/slides-bg3.jpg);'
-                        : ' background-image: url(https://angular.hibotheme.com/inba/inba-rtl/assets/images/main-slides/slides-bg3.jpg);'
-                "
+                [style.background-image]="'url(' + item.image + ')'"
             >
                 <div class="container" [dir]="lang">
                     <div
@@ -20,34 +16,19 @@
                         <span class="sub-title">
                             <i class="flaticon-198-hashtag-1"></i>
 
-                            {{
-                                lang === "ltr"
-                                    ? "Stay Healthy With Us"
-                                    : "خليك صحى معانا "
-                            }}
+                            {{ item.title }}
                         </span>
                         <h1>
-                            {{
-                                lang === "ltr"
-                                    ? "Your Health is Our Top"
-                                    : "صحتك هي قمة"
-                            }}
-                            <span>{{
-                                lang === "ltr" ? "Priority" : "أولوياتنا"
-                            }}</span>
+                            {{ item.sub_title }}
                         </h1>
                         <p>
-                            {{
-                                lang === "ltr"
-                                    ? "An innovative approach to diagnosis and treatment, to deliver medical services at the highest level of quality for each patient."
-                                    : "نهج مبتكر للتشخيص والعلاج، لتقديم الخدمات الطبية على أعلى مستوى من الجودة لكل مريض."
-                            }}
+                            {{ item.description }}
                         </p>
                     </div>
                 </div>
             </div>
         </ng-template>
-        <ng-template carouselSlide>
+        <!-- <ng-template carouselSlide>
             <div
                 class="main-slides-item"
                 [style]="
@@ -131,14 +112,14 @@
                         <p>
                             {{
                                 lang === "ltr"
-                                    ? "Stay Healthy With Uswe provide specialty care in obstetrics and gynecology. We encourage all of our patients to also have a primary care physician, such as a family practice doctor or internist ."
+                                    ? "Stay Healthy With Us we provide specialty care in obstetrics and gynecology. We encourage all of our patients to also have a primary care physician, such as a family practice doctor or internist ."
                                     : "نحن نقدم رعاية متخصصة في أمراض النساء والتوليد. نحن نشجع جميع مرضانا على أن يكون لديهم أيضًا طبيب رعاية أولية، مثل طبيب الأسرة ."
                             }}
                         </p>
                     </div>
                 </div>
             </div>
-        </ng-template>
+        </ng-template> -->
     </owl-carousel-o>
     <div class="appointment">
         <app-appointment-search></app-appointment-search>
