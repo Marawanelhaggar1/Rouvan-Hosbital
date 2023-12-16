@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { RecaptchaErrorParameters } from 'ng-recaptcha';
 import { Doctor } from 'src/app/core/models/doctor';
+import { BookingService } from 'src/app/core/services/booking.service';
 import { DoctorService } from 'src/app/core/services/doctor.service';
 
 @Component({
@@ -22,18 +23,24 @@ export class BookAppointmentComponent {
     constructor(
         private _formBuilder: FormBuilder,
         private _ActivatedRoute: ActivatedRoute,
-        private _doctorService: DoctorService
+        private _doctorService: DoctorService,
+        private _bookingService: BookingService
     ) {
         this.appointmentForm = this._formBuilder.group({
-            first_name: ['', [Validators.required]],
-            last_name: ['', [Validators.required]],
+            patient_name: ['', [Validators.required]],
             email: ['', [Validators.required, Validators.email]],
-            mobile: ['', [Validators.required]],
-            payment_method: ['', [Validators.required]],
+            phone: ['', [Validators.required]],
+            payment: ['', [Validators.required]],
         });
     }
 
-    onSubmit() {}
+    onSubmit() {
+        if (this.appointmentForm.valid) {
+            this.sendBooking();
+        } else {
+            alert('Please enter valid Data');
+        }
+    }
 
     ngOnInit() {
         // this.getTheDate();
@@ -62,6 +69,19 @@ export class BookAppointmentComponent {
         return this._doctorService.getById(id).subscribe((data) => {
             // console.log(data);
             this.doctor = data.data;
+        });
+    }
+
+    sendBooking() {
+        let booking = {
+            doctor_id: this.doctor.id,
+            date: this.schedule.date,
+            status: 'submitted',
+            ...this.appointmentForm.value,
+        };
+        console.log(booking);
+        return this._bookingService.postBooking(booking).subscribe((data) => {
+            console.log(data);
         });
     }
 
@@ -103,21 +123,18 @@ export class BookAppointmentComponent {
         nextOccurrence.setDate(
             today.getDate() + ((targetIndex + 7 - today.getDay()) % 7)
         );
-
+        console.log(nextOccurrence);
         // Format the date as "dd/mm/yyyy"
         const options: any = {
-            day: '2-digit',
-            month: '2-digit',
             year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
         };
-        const formattedDate =
-            this.lang == 'ltr'
-                ? nextOccurrence.toLocaleDateString('en', options)
-                : nextOccurrence.toLocaleDateString('ar', options);
+        const formattedDate = nextOccurrence.toLocaleDateString(
+            'zh-Hans-CN',
+            options
+        );
         this.schedule.date = formattedDate;
-        // console.log(formattedDate);
-        // return formattedDate;
-        // Output: "dd/mm/yyyy" (Next occurrence of the specified day with the format day/month/year)
     }
 
     public resolved(captchaResponse: string): void {

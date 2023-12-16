@@ -53,17 +53,7 @@
                 <div class="form-group">
                     <input
                         type="text"
-                        class="form-control"
-                        formControlName="first_name"
-                        [placeholder]="
-                            lang === 'ltr' ? 'First Name' : 'اللأسم اللأول'
-                        "
-                    />
-                </div>
-                <div class="form-group">
-                    <input
-                        type="text"
-                        formControlName="last_name"
+                        formControlName="patient_name"
                         class="form-control"
                         [placeholder]="
                             lang === 'ltr' ? 'Last Name' : 'اسم العائلة'
@@ -85,7 +75,7 @@
                 <div class="form-group">
                     <input
                         type="text"
-                        formControlName="mobile"
+                        formControlName="phone"
                         class="form-control"
                         [placeholder]="
                             lang === 'ltr' ? 'Mobile Number' : 'رقم هاتفك'
@@ -100,7 +90,8 @@
                         <input
                             class="form-check-input"
                             type="radio"
-                            name="flexRadioDefault"
+                            value="Insured"
+                            formControlName="payment"
                             id="flexRadioDefault1"
                         />
                         <label class="form-check-label" for="flexRadioDefault1">
@@ -111,8 +102,9 @@
                         <input
                             class="form-check-input"
                             type="radio"
-                            name="flexRadioDefault"
+                            value="Cash"
                             id="flexRadioDefault2"
+                            formControlName="payment"
                             checked
                         />
                         <label class="form-check-label" for="flexRadioDefault2">
