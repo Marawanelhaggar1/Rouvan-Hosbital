@@ -8,7 +8,14 @@ import { CookieService } from 'ngx-cookie-service';
     providedIn: 'root',
 })
 export class BookingService {
-    constructor(private _http: HttpClient, private _Cookie: CookieService) {}
+    token: string;
+    constructor(private _http: HttpClient, private _Cookie: CookieService) {
+        if (_Cookie.get('user')) {
+            this.token = JSON.parse(this._Cookie.get('user')).data.token;
+        } else {
+            this.token = '';
+        }
+    }
 
     postBooking(body: Booking): Observable<Booking> {
         return this._http.post<Booking>(
@@ -16,9 +23,7 @@ export class BookingService {
             body,
             {
                 headers: {
-                    Authorization:
-                        'Bearer ' +
-                        JSON.parse(this._Cookie.get('user')).data.token,
+                    Authorization: 'Bearer ' + this.token,
                 },
             }
         );

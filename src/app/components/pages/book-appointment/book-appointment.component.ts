@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { RecaptchaErrorParameters } from 'ng-recaptcha';
 import { Doctor } from 'src/app/core/models/doctor';
 import { BookingService } from 'src/app/core/services/booking.service';
@@ -21,6 +21,7 @@ export class BookAppointmentComponent {
     siteKey = '6LdICtkoAAAAAD6AtUM08O4U-DS_5HIVfSY__Py3';
 
     constructor(
+        private _router: Router,
         private _formBuilder: FormBuilder,
         private _ActivatedRoute: ActivatedRoute,
         private _doctorService: DoctorService,
@@ -80,8 +81,14 @@ export class BookAppointmentComponent {
             ...this.appointmentForm.value,
         };
         console.log(booking);
-        return this._bookingService.postBooking(booking).subscribe((data) => {
-            console.log(data);
+        return this._bookingService.postBooking(booking).subscribe({
+            next: (data) => {
+                console.log(data);
+            },
+            error: (err) => {
+                this._router.navigate(['/login']);
+                // alert('you must login first');
+            },
         });
     }
 
