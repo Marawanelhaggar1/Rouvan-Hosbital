@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RecaptchaErrorParameters } from 'ng-recaptcha';
 import { Doctor } from 'src/app/core/models/doctor';
+import { UserService } from 'src/app/core/services/auth-services.service';
 import { BookingService } from 'src/app/core/services/booking.service';
 import { DoctorService } from 'src/app/core/services/doctor.service';
 
@@ -18,6 +19,7 @@ export class BookAppointmentComponent {
     schedule: any;
     doctor!: Doctor;
     scheduleId!: number;
+    user!: any;
     siteKey = '6LdICtkoAAAAAD6AtUM08O4U-DS_5HIVfSY__Py3';
 
     constructor(
@@ -25,13 +27,15 @@ export class BookAppointmentComponent {
         private _formBuilder: FormBuilder,
         private _ActivatedRoute: ActivatedRoute,
         private _doctorService: DoctorService,
-        private _bookingService: BookingService
+        private _bookingService: BookingService,
+        private _userService: UserService
     ) {
         this.appointmentForm = this._formBuilder.group({
             patient_name: ['', [Validators.required]],
             email: ['', [Validators.required, Validators.email]],
             phone: ['', [Validators.required]],
             payment: ['', [Validators.required]],
+            time: ['', [Validators.required]],
         });
     }
 
@@ -60,9 +64,16 @@ export class BookAppointmentComponent {
         return this._doctorService.getSchedule(id).subscribe((data) => {
             this.schedule = data.data;
             console.log(this.schedule);
-            // this.getTheDate(this.schedule.date);
-            // this.schedule.date = console.log(this.schedule);
+
             this.getDoctorById(this.schedule.doctor_id);
+        });
+    }
+
+    getUser() {
+        // console.log(this._Cookie.get('user'));
+        return this._userService.get().subscribe((data) => {
+            console.log(data);
+            this.user = data;
         });
     }
 
@@ -78,6 +89,7 @@ export class BookAppointmentComponent {
             doctor_id: this.doctor.id,
             date: this.schedule.date,
             status: 'submitted',
+            user_id: this.user.id,
             ...this.appointmentForm.value,
         };
         console.log(booking);
