@@ -18,7 +18,7 @@ export class SpecializationService {
     }
     get(): Observable<{ data: Specialization[] }> {
         return this._http.get<{ data: Specialization[] }>(
-            `https://pp.etqanis.com/public/api/specialization?lang=${this.lang}`
+            `https://rouvanhospital.com/laravel/public/api/specialization?lang=${this.lang}`
         );
     }
 }

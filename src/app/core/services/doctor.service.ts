@@ -18,25 +18,25 @@ export class DoctorService {
     }
     get(): Observable<{ data: Doctor[] }> {
         return this._http.get<{ data: Doctor[] }>(
-            `https://pp.etqanis.com/public/api/doctors?lang=${this.lang}`
+            `https://rouvanhospital.com/laravel/public/api/doctors?lang=${this.lang}`
         );
     }
 
     getById(id: number): Observable<{ data: Doctor }> {
         return this._http.get<{ data: Doctor }>(
-            `https://pp.etqanis.com/public/api/doctors/${id}?lang=${this.lang}`
+            `https://rouvanhospital.com/laravel/public/api/doctors/${id}?lang=${this.lang}`
         );
     }
 
     getDoctorSchedule(id: number): Observable<{ data: any[] }> {
         return this._http.get<{ data: any[] }>(
-            `https://pp.etqanis.com/public/api/doctor/schedule/doc/${id}?lang=${this.lang}`
+            `https://rouvanhospital.com/laravel/public/api/doctor/schedule/doc/${id}?lang=${this.lang}`
         );
     }
 
     getSchedule(id: number): Observable<{ data: any }> {
         return this._http.get<{ data: any[] }>(
-            `https://pp.etqanis.com/public/api/doctor/schedule/${id}?lang=${this.lang}`
+            `https://rouvanhospital.com/laravel/public/api/doctor/schedule/${id}?lang=${this.lang}`
         );
     }
 }

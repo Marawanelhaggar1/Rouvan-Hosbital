@@ -19,7 +19,7 @@ export class BookingService {
 
     postBooking(body: Booking): Observable<Booking> {
         return this._http.post<Booking>(
-            'https://pp.etqanis.com/public/api/booking',
+            'https://rouvanhospital.com/laravel/public/api/booking',
             body,
             {
                 headers: {
