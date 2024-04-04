@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Router } from '@angular/router';
+import { CareerService } from 'src/app/core/services/career-service.service';
 
 @Component({
     selector: 'app-feedback',
@@ -9,8 +10,12 @@ import { Router } from '@angular/router';
 })
 export class FeedbackComponent implements OnInit {
     lang?: string;
+    feedback?: { image: string }[];
 
-    constructor(public router: Router) {}
+    constructor(
+        public router: Router,
+        private _feedbackService: CareerService
+    ) {}
 
     ngOnInit(): void {
         if (localStorage.getItem('lang')) {
@@ -18,6 +23,19 @@ export class FeedbackComponent implements OnInit {
         } else {
             this.lang = 'ltr';
         }
+        this.getFeedback();
+    }
+
+    getFeedback() {
+        this._feedbackService.getFeedback().subscribe({
+            next: (data) => {
+                console.log(data.data);
+                this.feedback = data.data;
+            },
+            error: (err) => {
+                console.error(err);
+            },
+        });
     }
 
     feedbackSlides: OwlOptions = {
@@ -40,10 +58,10 @@ export class FeedbackComponent implements OnInit {
                 items: 1,
             },
             695: {
-                items: 2,
+                items: 3,
             },
             935: {
-                items: 2,
+                items: 3,
             },
             1200: {
                 items: 3,

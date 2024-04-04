@@ -3,13 +3,13 @@
     .appointment {
         position: absolute;
         width: -webkit-fill-available;
-        bottom: 35%;
+        bottom: 25%;
         z-index: 10;
     }
 }
 .main-slides-item {
     z-index: 1;
-    height: 900px;
+    height: 800px;
     position: relative;
     background: {
         position: center center;
@@ -235,9 +235,10 @@
     .main-slides-item {
         position: relative;
         z-index: 1;
+        height: 800px;
         padding: {
-            top: 70px;
-            bottom: 180px;
+            // top: 70px;
+            // bottom: 180px;
         }
         &::before {
             top: 0;
@@ -253,12 +254,15 @@
     }
     .home-slides {
         .appointment {
-            bottom: 22%;
+            bottom: 12%;
+            margin: 1rem;
         }
     }
     .main-slides-content {
         max-width: 100%;
         margin-left: 0;
+        top: 0%;
+        right: 0%;
 
         .sub-title {
             padding: 7px 15px 7px 35px;
@@ -307,7 +311,8 @@
     .main-slides-content-rtl {
         max-width: 100%;
         margin-right: 0;
-
+        top: 0%;
+        left: 0%;
         .sub-title {
             padding: 7px 35px 7px 15px;
             margin-bottom: 17px;

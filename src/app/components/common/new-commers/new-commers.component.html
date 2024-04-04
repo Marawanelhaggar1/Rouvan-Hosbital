@@ -14,28 +14,19 @@
         >
             <span class="sub-title">
                 <i class="flaticon-198-hashtag-1"></i>
-                {{ lang === "ltr" ? "Rouvan Doctors" : " أطباء روفان " }}
+                {{ lang === "ltr" ? "Our Hiring" : "توظيفنا" }}
             </span>
             <h2>
-                {{ lang === "ltr" ? "Experienced Doctors" : "أطباء روفان" }}
+                {{ lang === "ltr" ? "Our New Employees" : " أجدد موظفينا " }}
             </h2>
-            <a routerLink="/doctors" class="default-btn">
-                {{ lang === "ltr" ? "View All" : " عرض الكل " }}
-            </a>
         </div>
         <div class="row justify-content-center">
             <owl-carousel-o dir="ltr" [options]="customOptions">
                 <ng-template *ngFor="let doc of doctors" carouselSlide>
                     <!-- <div class="col-lg-4 col-md-6 col-sm-6"> -->
                     <div class="single-doctor">
-                        <a
-                            class="d-flex justify-content-center align-items-center"
-                        >
-                            <img
-                                class=""
-                                [src]="doc.image"
-                                alt="doctor-image"
-                            />
+                        <a class="d-block">
+                            <img [src]="doc.image" alt="doctor-image" />
                         </a>
                         <div class="doctor-content">
                             <h3>

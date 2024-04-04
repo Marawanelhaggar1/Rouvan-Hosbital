@@ -22,6 +22,12 @@ export class DoctorService {
         );
     }
 
+    getFeatured(): Observable<{ data: Doctor[] }> {
+        return this._http.get<{ data: Doctor[] }>(
+            `https://rouvanhospital.com/laravel/public/api/doctors/featured?lang=${this.lang}`
+        );
+    }
+
     getById(id: number): Observable<{ data: Doctor }> {
         return this._http.get<{ data: Doctor }>(
             `https://rouvanhospital.com/laravel/public/api/doctors/${id}?lang=${this.lang}`

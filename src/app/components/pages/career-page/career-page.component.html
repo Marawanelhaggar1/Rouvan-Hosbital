@@ -1,0 +1,32 @@
+<div
+    [dir]="lang"
+    [ngClass]="lang === 'ltr' ? 'page-banner-area' : 'page-banner-area-rtl '"
+    class="ptb-100"
+>
+    <div class="container">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl '
+            "
+        >
+            <h2>{{ lang === "ltr" ? "Career" : "المهنة" }}</h2>
+            <ul class="pages-list">
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? "Home" : "الرئيسه"
+                    }}</a>
+                </li>
+                <li>{{ lang === "ltr" ? "Career" : "المهنة" }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- <app-hiring></app-hiring> -->
+<app-emergency-registration> </app-emergency-registration>
+
+<div class="mt-5">
+    <app-new-commers></app-new-commers>
+</div>

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Service } from 'src/app/core/models/service';
+import { Settings } from 'src/app/core/models/settings';
+import { ServiceService } from 'src/app/core/services/service.service';
+import { SettingsService } from 'src/app/core/services/settings.service';
 
 @Component({
     selector: 'app-footer',
@@ -7,8 +11,14 @@ import { Router } from '@angular/router';
     styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
+    setting?: Settings;
     lang?: string;
-    constructor(public router: Router) {}
+    service?: Service[];
+    constructor(
+        public router: Router,
+        private _settingService: SettingsService,
+        private _serviceService: ServiceService
+    ) {}
 
     ngOnInit(): void {
         if (localStorage.getItem('lang')) {
@@ -16,5 +26,30 @@ export class FooterComponent implements OnInit {
         } else {
             this.lang = 'ltr';
         }
+        this.getSettings();
+        this.getService();
+    }
+
+    getSettings() {
+        this._settingService.get().subscribe({
+            next: (data) => {
+                console.log(data.data);
+                this.setting = data.data[data.data.length - 1];
+            },
+            error: (err) => {
+                console.error(err);
+            },
+        });
+    }
+
+    getService() {
+        this._serviceService.getFeatured().subscribe({
+            next: (data) => {
+                this.service = data.data;
+            },
+            error: (err) => {
+                console.error(err);
+            },
+        });
     }
 }

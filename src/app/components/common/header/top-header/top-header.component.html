@@ -10,31 +10,20 @@
                     <li>
                         <i class="bx bxs-phone"></i>
                         <span
-                            ><a href="tel:19647">{{
-                                lang === "ltr" ? "19647" : "١٩٦٤٧ "
-                            }}</a></span
+                            ><a href="tel:16670">{{ setting?.phone }}</a></span
                         >
                     </li>
                     <li class="social">
-                        <a
-                            href="https://www.facebook.com/RouvanhospitalEg"
-                            target="_blank"
-                        >
+                        <a [href]="setting?.facebook" target="_blank">
                             <i class="bx bxl-facebook"></i>
                         </a>
-                        <a href="https://twitter.com/?lang=en" target="_blank">
-                            <i class="bx bxl-twitter"></i>
+                        <a [href]="setting?.youtube" target="_blank">
+                            <i class="bx bxl-youtube"></i>
                         </a>
-                        <a
-                            href="https://www.linkedin.com/company/rouvanhospital/"
-                            target="_blank"
-                        >
+                        <a [href]="setting?.linkedin" target="_blank">
                             <i class="bx bxl-linkedin"></i>
                         </a>
-                        <a
-                            href="https://www.instagram.com/rouvanhospitaleg?fbclid=IwAR2DsgO2feehTPFmKFU-ZhIepmYdWQoyJBjum6IZvD8HQyynGVToyz1TsCY"
-                            target="_blank"
-                        >
+                        <a [href]="setting?.instagram" target="_blank">
                             <i class="bx bxl-instagram"></i>
                         </a>
                     </li>
@@ -101,23 +90,14 @@
                         </button>
                     </li>
                     <li class="social">
-                        <a
-                            href="https://www.facebook.com/RouvanhospitalEg"
-                            target="_blank"
-                        >
+                        <a [href]="setting?.facebook" target="_blank">
                             <i class="bx bxl-facebook"></i>
                         </a>
 
-                        <a
-                            href="https://www.linkedin.com/company/rouvanhospital/"
-                            target="_blank"
-                        >
+                        <a [href]="setting?.linkedin" target="_blank">
                             <i class="bx bxl-linkedin"></i>
                         </a>
-                        <a
-                            href="https://www.instagram.com/rouvanhospitaleg?fbclid=IwAR2DsgO2feehTPFmKFU-ZhIepmYdWQoyJBjum6IZvD8HQyynGVToyz1TsCY"
-                            target="_blank"
-                        >
+                        <a [href]="setting?.instagram" target="_blank">
                             <i class="bx bxl-instagram"></i>
                         </a>
                     </li>

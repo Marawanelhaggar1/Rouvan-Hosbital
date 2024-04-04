@@ -12,20 +12,34 @@
                             <i class="flaticon-039-emergency-call"></i>
                             {{ lang === "ltr" ? "Call Today" : "اتصل اليوم" }}
                             <span>
-                                <a href="tel:19647">
-                                    {{ lang === "ltr" ? "+19647" : "١٩٦٤٧+ " }}
+                                <a href="tel:16670">
+                                    {{ lang === "ltr" ? "+16670" : "١٦٦٧٠+ " }}
                                 </a>
                             </span>
                         </div>
                         <p>
+                            <strong>
+                                {{
+                                    lang == "ltr"
+                                        ? "Book Your Appointment Now in AlAssema Clinics"
+                                        : "احجز موعدك الآن في عيادات العاصمة"
+                                }} </strong
+                            ><br />
+
                             {{
-                                lang === "ltr"
-                                    ? "Call Us AnyTime Between 10 am and 10pm "
-                                    : "اتصل بنا فى أى وقت بين ١٠ صباحا و ١٠ مساءا"
+                                lang == "ltr"
+                                    ? "Quick Reservation ."
+                                    : "الحجز السريع."
+                            }}
+                            <br />
+                            {{
+                                lang == "ltr"
+                                    ? "Most of Medical Specialties are available ."
+                                    : "معظم التخصصات الطبية متوفرة."
                             }}
                         </p>
-                        <a routerLink="/contact-us-3" class="default-btn">
-                            {{ lang === "ltr" ? "Contact Us" : " تواصل معنا " }}
+                        <a href="tel:16670" class="default-btn">
+                            {{ lang === "ltr" ? "+16670" : "١٦٦٧٠+ " }}
                         </a>
                     </div>
                 </div>
@@ -52,6 +66,7 @@
                                                 ? "  Specialty "
                                                 : " التخصص "
                                         }}</label>
+
                                         <input
                                             [typeahead]="specialties"
                                             formControlName="specialty"
@@ -60,11 +75,12 @@
                                                     ? 'Specialty'
                                                     : 'التخصص'
                                             "
+                                            [typeaheadOptionsLimit]="100"
+                                            [typeaheadMinLength]="0"
                                             [optionsListTemplate]="
                                                 customListTemplate
                                             "
-                                            [typeaheadOptionsLimit]="100"
-                                            [typeaheadMinLength]="0"
+                                            (typeaheadOnSelect)="getDoctor()"
                                             class="form-control"
                                         />
                                         <ng-template
@@ -97,9 +113,9 @@
                                                     "
                                                 >
                                                     <i
-                                                        class="flaticon-149-doctor-2"
+                                                        class="flaticon-063-stethoscope-tool"
                                                     ></i>
-                                                    {{ match.item }}
+                                                    {{ match }}
                                                 </li>
                                             </ul>
                                         </ng-template>
@@ -111,7 +127,7 @@
                                                 : " دكتور "
                                         }}</label>
                                         <input
-                                            [typeahead]="doctors"
+                                            [typeahead]="doctor"
                                             formControlName="doctor"
                                             [placeholder]="
                                                 lang === 'ltr'
@@ -121,9 +137,10 @@
                                             [optionsListTemplate]="
                                                 customListTemplate
                                             "
+                                            class="form-control"
                                             [typeaheadOptionsLimit]="100"
                                             [typeaheadMinLength]="0"
-                                            class="form-control"
+                                            (typeaheadOnSelect)="set()"
                                         />
                                         <ng-template
                                             #customListTemplate
@@ -157,15 +174,19 @@
                                                     <i
                                                         class="flaticon-149-doctor-2"
                                                     ></i>
-                                                    {{ match.item }}
+                                                    {{ match.name }}
                                                 </li>
                                             </ul>
                                         </ng-template>
                                     </div>
                                     <a
-                                        routerLink="/book-doctor"
                                         type="button"
                                         class="default-btn"
+                                        [routerLink]="[
+                                            '/book-doctor',
+                                            docId,
+                                            searchForm.value.specialty
+                                        ]"
                                     >
                                         <span>
                                             <i
@@ -193,8 +214,8 @@
                                 <h4>
                                     {{
                                         lang === "ltr"
-                                            ? " We Are a Certified and Award-winning Hospital "
-                                            : " نحن مستشفى معتمد وحائز على جوائز "
+                                            ? " Over 130 Qualified Consultants & Experts "
+                                            : " أكثر من 130 استشاري وخبير مؤهل"
                                     }}
                                 </h4>
                                 <div class="box-image">
@@ -222,10 +243,13 @@
 <div class="video-popup" *ngIf="isOpen">
     <div class="popup-inner">
         <iframe
-            src="https://www.youtube.com/embed/XNQk1qt__Vw"
-            title="Setup and Local Installation - React Nextjs Online Yoga Coaching &amp; Training Courses System"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/gRg55x-Q9oM?si=l6X4cXu4EzFvAe77"
+            title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
         ></iframe>
         <button (click)="closePopup()" type="button" class="close-btn">

@@ -44,6 +44,7 @@ import { HomeDemoOneComponent } from './components/pages/home-demo-one/home-demo
 import { AppointmentSearchComponent } from './components/common/appointment-search/appointment-search.component';
 import { BookDoctorsPageComponent } from './components/pages/book-doctors-page/book-doctors-page.component';
 import { BookAppointmentComponent } from './components/pages/book-appointment/book-appointment.component';
+import { CareerPageComponent } from './components/pages/career-page/career-page.component';
 
 const routes: Routes = [
     { path: '', component: HomeDemoOneComponent },
@@ -53,6 +54,7 @@ const routes: Routes = [
     { path: 'about-us-3', component: AboutPageThreeComponent },
     { path: 'doctors', component: DentistsPageComponent },
     { path: 'insurance', component: InsurancePageComponent },
+    { path: 'career', component: CareerPageComponent },
     { path: 'doctors-details', component: DentistDetailsPageComponent },
     {
         path: 'portfolio',

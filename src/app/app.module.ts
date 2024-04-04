@@ -112,6 +112,9 @@ import { AppointmentSearchComponent } from './components/common/appointment-sear
 import { BookDoctorsPageComponent } from './components/pages/book-doctors-page/book-doctors-page.component';
 import { BookAppointmentComponent } from './components/pages/book-appointment/book-appointment.component';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { CareerPageComponent } from './components/pages/career-page/career-page.component';
+import { FileUploadComponent } from './components/common/file-upload/file-upload.component';
+import { NewCommersComponent } from './components/common/new-commers/new-commers.component';
 
 @NgModule({
     declarations: [
@@ -196,6 +199,9 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
         AppointmentSearchComponent,
         BookDoctorsPageComponent,
         BookAppointmentComponent,
+        CareerPageComponent,
+        FileUploadComponent,
+        NewCommersComponent,
     ],
     imports: [
         BrowserModule,

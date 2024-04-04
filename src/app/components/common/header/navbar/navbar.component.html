@@ -10,7 +10,7 @@
             [class.active]="classApplied"
         >
             <a class="navbar-brand" routerLink="/" (click)="toggleClass()">
-                <img src="../../../../../assets/images/logo.jpg" alt="logo" />
+                <img [src]="setting?.logo" alt="logo" />
             </a>
 
             <button

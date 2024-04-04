@@ -11,10 +11,7 @@
                 >
                     <h2>
                         <a routerLink="/">
-                            <img
-                                src="../../../../assets/images/footer-logo.png"
-                                alt=""
-                            />
+                            <img [src]="setting?.footerLogo" alt="" />
                         </a>
                     </h2>
                 </div>
@@ -28,59 +25,69 @@
                     "
                     class="ps-5"
                 >
-                    <h3>{{ lang === "ltr" ? "Menu" : "القائمه" }}</h3>
+                    <h3>{{ lang === "ltr" ? "Menu" : "الاسم" }}</h3>
                     <ul class="quick-links">
                         <li>
-                            <a routerLink="/about-us-2">
-                                {{ lang === "ltr" ? "About Us" : "من نحن " }}</a
-                            >
+                            <a routerLink="/">
+                                {{ lang === "ltr" ? "Home" : " الرئيسيه " }}
+                            </a>
                         </li>
                         <li>
-                            <a routerLink="/services-2">{{
-                                lang === "ltr"
-                                    ? "Medical Services"
-                                    : "الخدمات الطبية"
-                            }}</a>
+                            <a routerLink="/medical-centers">
+                                {{
+                                    lang === "ltr"
+                                        ? "Medical Centers"
+                                        : " المراكز المتخصصة"
+                                }}
+                            </a>
+                        </li>
+                        <li class="">
+                            <a routerLink="/clinics">
+                                {{ lang === "ltr" ? "Clinics" : " العيادات " }}
+                            </a>
+                        </li>
+                        <li class="">
+                            <a routerLink="/dental-clinics">
+                                {{
+                                    lang === "ltr"
+                                        ? "Dental Clinics"
+                                        : " عيادات الأسنان "
+                                }}
+                            </a>
                         </li>
                         <li>
-                            <a routerLink="/doctors">{{
-                                lang === "ltr" ? "Doctors" : "الأطباء"
-                            }}</a>
+                            <a routerLink="/medical-tourism">
+                                {{
+                                    lang === "ltr"
+                                        ? " Medical Tourism & Visiting Doctor "
+                                        : " السياحة العلاجية وزيارات الأطباء  "
+                                }}
+                            </a>
                         </li>
                         <li>
-                            <a routerLink="/blog-grid">{{
-                                lang === "ltr"
-                                    ? "Centers Of Excellence"
-                                    : "المراكز المتخصصه"
-                            }}</a>
+                            <a routerLink="/about-us">
+                                {{ lang === "ltr" ? "About Us" : "من نحن " }}
+                            </a>
                         </li>
                         <li>
-                            <a routerLink="/insurance">{{
-                                lang === "ltr" ? "Insurance" : " التأمين "
-                            }}</a>
+                            <a routerLink="/contact-us">
+                                {{
+                                    lang === "ltr"
+                                        ? "Contact us"
+                                        : " تواصل معنا "
+                                }}
+                            </a>
                         </li>
                         <li>
-                            <a routerLink="/insurance">{{
-                                lang === "ltr" ? "Contact Us" : " تواصل معنا "
-                            }}</a>
+                            <a routerLink="/career">
+                                {{ lang === "ltr" ? "Career" : " الوظائف " }}
+                            </a>
                         </li>
-                        <!-- <li>
-                            <a routerLink="/faq">{{
-                                lang === "ltr" ? "FAQs" : "الأسئلة الشائعة"
-                            }}</a>
-                        </li> -->
                         <li>
-                            <a routerLink="/testimonials">{{
-                                lang === "ltr" ? "Testimonials" : "أراء العملاء"
-                            }}</a>
+                            <a routerLink="/media">
+                                {{ lang === "ltr" ? "Media" : " التسويق " }}
+                            </a>
                         </li>
-                        <!-- <li>
-                            <a routerLink="/privacy-policy">{{
-                                lang === "ltr"
-                                    ? "Privacy Policy"
-                                    : "سياسة الخصوصية"
-                            }}</a>
-                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -94,86 +101,27 @@
                 >
                     <h3>{{ lang === "ltr" ? "Services " : "خدمات" }}</h3>
                     <div class="footer-widget-blog">
-                        <article class="item">
-                            <a routerLink="/service-details" class="thumb">
+                        <article *ngFor="let ser of service" class="item">
+                            <a class="thumb">
                                 <span
                                     class="fullimage"
                                     role="img"
-                                    style="
-                                        background-image: url(https://angular.hibotheme.com/inba/assets/images/footer/footer-2.jpg);
+                                    [style.background-image]="
+                                        'url(' + ser.icon + ')'
                                     "
                                 ></span>
                             </a>
                             <div class="info">
-                                <span
+                                <!-- <span
                                     >{{ lang === "ltr" ? "By " : " بواسطة" }}
-                                    <a routerLink="/blog-grid">{{
+                                    <a >{{
                                         lang === "ltr"
                                             ? "Daisy Gabriela"
                                             : "تامر مصطفى "
                                     }}</a></span
-                                >
+                                > -->
                                 <h4>
-                                    <a routerLink="/service-details">{{
-                                        lang === "ltr"
-                                            ? "Dental Hygiene for Children"
-                                            : "صحة الأسنان للأطفال"
-                                    }}</a>
-                                </h4>
-                            </div>
-                        </article>
-                        <article class="item">
-                            <a routerLink="/service-details" class="thumb">
-                                <span
-                                    class="fullimage"
-                                    role="img"
-                                    style="
-                                        background-image: url(https://angular.hibotheme.com/inba/assets/images/footer/footer-4.jpg);
-                                    "
-                                ></span>
-                            </a>
-                            <div class="info">
-                                <span
-                                    >{{ lang === "ltr" ? "By " : " بواسطة" }}
-                                    <a routerLink="/blog-grid">{{
-                                        lang === "ltr"
-                                            ? "Ronnie Aaron"
-                                            : "أحمد عبدالله"
-                                    }}</a></span
-                                >
-                                <h4>
-                                    <a routerLink="/service-details">{{
-                                        lang === "ltr"
-                                            ? "Regular Checkup for Good Health"
-                                            : "الفحص الدوري للصحة جيدة"
-                                    }}</a>
-                                </h4>
-                            </div>
-                        </article>
-                        <article class="item">
-                            <a routerLink="/service-details" class="thumb">
-                                <span
-                                    class="fullimage"
-                                    role="img"
-                                    style="
-                                        background-image: url(https://angular.hibotheme.com/inba/assets/images/footer/footer-3.jpg);
-                                    "
-                                ></span>
-                            </a>
-                            <div class="info">
-                                <span>
-                                    <a routerLink="/blog-grid">{{
-                                        lang === "ltr"
-                                            ? "Babatunde Jon"
-                                            : "معز محمد"
-                                    }}</a></span
-                                >
-                                <h4>
-                                    <a routerLink="/service-details">{{
-                                        lang === "ltr"
-                                            ? "The Future Of Health"
-                                            : " مستقبل الصحة كمنظومة فى مصر"
-                                    }}</a>
+                                    <a>{{ ser.name }}</a>
                                 </h4>
                             </div>
                         </article>
@@ -200,26 +148,42 @@
                             <i class="flaticon-039-emergency-call"></i>
                             {{ lang === "ltr" ? "Call Today" : " اتصل اليوم " }}
                             <span
-                                ><a href="tel:19647">{{
-                                    lang === "ltr" ? "19647" : "١٩٦٤٧ "
+                                ><a href="tel:16670">{{
+                                    setting?.phone
                                 }}</a></span
                             >
                         </li>
                         <li>
                             <i class="flaticon-040-back-in-time"></i>
-                            {{ lang === "ltr" ? " Open Hour" : "ساعات العمل" }}
-                            <span>{{
-                                lang === "ltr" ? "24 Hours" : "٢٤ ساعة"
-                            }}</span>
+                            {{ lang === "ltr" ? "WhatsApp" : "الواتساب" }}
+                            <span>
+                                <a [href]="setting?.whatsAppLink">{{
+                                    setting?.whatsApp
+                                }}</a>
+                            </span>
                         </li>
                         <li>
                             <i class="flaticon-041-placeholder"></i>
                             {{ lang === "ltr" ? "Our Location" : "عنوانا" }}
-                            <span>{{
-                                lang === "ltr"
-                                    ? " Al Wasti, El Fateh, Assiut Governorate 2232121"
-                                    : "الطريق المؤدي الي كوبري الواسطي العلوي- شرق النیل بجوار مدارس دار الكوثر "
-                            }}</span>
+                            <span>
+                                <a [href]="setting?.location">
+                                    {{ setting?.address }}
+                                </a></span
+                            >
+                        </li>
+                        <li class="social">
+                            <a [href]="setting?.facebook" target="_blank">
+                                <i class="bx bxl-facebook"></i>
+                            </a>
+                            <a [href]="setting?.youtube" target="_blank">
+                                <i class="bx bxl-youtube"></i>
+                            </a>
+                            <a [href]="setting?.linkedin" target="_blank">
+                                <i class="bx bxl-linkedin"></i>
+                            </a>
+                            <a [href]="setting?.instagram" target="_blank">
+                                <i class="bx bxl-instagram"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -233,12 +197,18 @@
     <div class="container">
         <div class="copyright-area-content">
             <p>
+                <a href="https://axonbi.com/" target="_blank">
+                    {{
+                        lang === "ltr"
+                            ? "Proudly Powered by Axon inc"
+                            : " مدعوم بفخر من أكسون "
+                    }}</a
+                >
                 {{
                     lang === "ltr"
-                        ? "Proudly Powered by Axon | © All rights reserved Rovan Hospital 2023"
-                        : " مدعوم بفخر من أكسون | © جميع الحقوق محفوظة لمستشفى روفان ٢٠٢٣"
+                        ? " | © All rights reserved Rouvan Hospital 2023"
+                        : " | © جميع الحقوق محفوظة لمستشفى روفان ٢٠٢٣"
                 }}
-                <!-- <a href="https://hibotheme.com/" target="_blank">HiboTheme</a> -->
             </p>
         </div>
     </div>

@@ -1,7 +1,7 @@
 .single-review-item {
     background-color: var(--white-color);
     transition: var(--transition);
-    height: 500px;
+    // height: 400px;
     padding: 60px 30px 30px;
     border-radius: 10px;
     position: relative;
@@ -1187,4 +1187,7 @@
     .eye-care-testimonials-content-box {
         padding-right: 100px;
     }
+}
+img {
+    height: 100%;
 }
