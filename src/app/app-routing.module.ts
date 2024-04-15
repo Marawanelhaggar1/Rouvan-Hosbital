@@ -103,7 +103,7 @@ const routes: Routes = [
     { path: 'coming-soon', component: ComingSoonPageComponent },
     { path: 'privacy-policy', component: PrivacyPolicyPageComponent },
     { path: 'terms-conditions', component: TermsConditionsPageComponent },
-    { path: 'blog-grid', component: BlogGridPageComponent },
+    { path: 'blog', component: BlogGridPageComponent },
     { path: 'blog-right-sidebar', component: BlogRightSidebarPageComponent },
     { path: 'blog-left-sidebar', component: BlogLeftSidebarPageComponent },
     { path: 'blog-details', component: BlogDetailsPageComponent },
