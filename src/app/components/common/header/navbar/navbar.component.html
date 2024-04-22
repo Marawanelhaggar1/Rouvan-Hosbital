@@ -51,15 +51,6 @@
                         <a
                             href="javascript:void(0)"
                             class="nav-link"
-                            routerLink="/doctors"
-                        >
-                            {{ lang === "ltr" ? "Doctors" : " الأطباء " }}
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            href="javascript:void(0)"
-                            class="nav-link"
                             routerLink="/departments"
                         >
                             {{ lang === "ltr" ? "Departments" : " الأقسام " }}
@@ -74,6 +65,16 @@
                             {{ lang === "ltr" ? "Clinics" : " العيادات " }}
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a
+                            href="javascript:void(0)"
+                            class="nav-link"
+                            routerLink="/doctors"
+                        >
+                            {{ lang === "ltr" ? "Doctors" : " الأطباء " }}
+                        </a>
+                    </li>
+
                     <li class="nav-item">
                         <a
                             href="javascript:void(0)"
@@ -144,20 +145,16 @@
                             class="nav-link"
                             routerLink="/departments"
                         >
-                            {{ lang === "ltr" ? "Services" : " الخدمات " }}
+                            {{ lang === "ltr" ? "Departments" : " الأقسام " }}
                         </a>
                     </li>
                     <li class="nav-item">
                         <a
                             href="javascript:void(0)"
                             class="nav-link"
-                            routerLink="/center-of-excellence"
+                            routerLink="/about-us"
                         >
-                            {{
-                                lang === "ltr"
-                                    ? "Centers Of Excellence"
-                                    : " المراكز المتخصصة"
-                            }}
+                            {{ lang === "ltr" ? "About us" : "عن مستشفانا" }}
                         </a>
                     </li>
                     <li class="nav-item">
@@ -173,9 +170,9 @@
                         <a
                             href="javascript:void(0)"
                             class="nav-link"
-                            routerLink="/insurance"
+                            routerLink="/clinics"
                         >
-                            {{ lang === "ltr" ? "Insurance" : " التأمين " }}
+                            {{ lang === "ltr" ? "Clinics" : "العيادات " }}
                         </a>
                     </li>
 
