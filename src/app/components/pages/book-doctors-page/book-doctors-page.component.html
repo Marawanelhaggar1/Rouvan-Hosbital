@@ -37,7 +37,7 @@
                 <h4>
                     {{ lang === "ltr" ? "All Specialities" : "كل التخصصات" }}
                 </h4>
-                <span> {{ lang === "ltr" ? "2 Doctors" : "٢ طبيب" }}</span>
+                <span> {{ doctors.length }} Doctor</span>
             </div>
             <div class="sort">
                 <label>{{ lang === "ltr" ? "Sort :" : "رتب :" }} </label>
@@ -66,7 +66,7 @@
                     </p>
                 </div>
 
-                <div class="ratings">
+                <!-- <div class="ratings">
                     <i class="bx bxs-star"></i>
                     <i class="bx bxs-star"></i>
                     <i class="bx bxs-star"></i>
@@ -80,7 +80,7 @@
                                 : "التقييم العام من ١٢٣٢ شخص"
                         }}
                     </p>
-                </div>
+                </div> -->
 
                 <div class="doctor-info">
                     <div class="info">
@@ -89,7 +89,7 @@
                             {{ doc.specialty.specialty }}
                         </p>
                     </div>
-                    <div class="info">
+                    <div *ngIf="doc.fee" class="info">
                         <i class="bx bx-money"></i>
                         <p>
                             {{ doc.fee }}
@@ -100,8 +100,12 @@
                         <p>
                             {{
                                 lang === "ltr"
-                                    ? "Wating Period is 20 Minutes"
-                                    : "مدة الانتظار : ٢٠ دقيقة"
+                                    ? "Waiting Period is " +
+                                      doc.waiting +
+                                      " Minutes "
+                                    : " مدة الانتظار : " +
+                                      doc.waiting +
+                                      "  دقيقة "
                             }}
                         </p>
                     </div>
@@ -121,7 +125,7 @@
                             <p class="dates">
                                 {{
                                     lang === "ltr"
-                                        ? "From " +
+                                        ? "From  " +
                                           item.start_time +
                                           " To " +
                                           item.end_time

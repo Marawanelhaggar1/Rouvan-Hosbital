@@ -33,11 +33,14 @@
                             </a>
                         </li>
                         <li>
-                            <a routerLink="/medical-centers">
+                            <a routerLink="/about-us">
+                                {{ lang === "ltr" ? "About Us" : "من نحن " }}
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/departments">
                                 {{
-                                    lang === "ltr"
-                                        ? "Medical Centers"
-                                        : " المراكز المتخصصة"
+                                    lang === "ltr" ? "Departments " : "الأقسام"
                                 }}
                             </a>
                         </li>
@@ -46,51 +49,24 @@
                                 {{ lang === "ltr" ? "Clinics" : " العيادات " }}
                             </a>
                         </li>
-                        <li class="">
-                            <a routerLink="/dental-clinics">
-                                {{
-                                    lang === "ltr"
-                                        ? "Dental Clinics"
-                                        : " عيادات الأسنان "
-                                }}
+
+                        <li>
+                            <a routerLink="/blog">
+                                {{ lang === "ltr" ? "Blog" : "المقالات" }}
                             </a>
                         </li>
                         <li>
-                            <a routerLink="/medical-tourism">
-                                {{
-                                    lang === "ltr"
-                                        ? " Medical Tourism & Visiting Doctor "
-                                        : " السياحة العلاجية وزيارات الأطباء  "
-                                }}
+                            <a routerLink="/doctors">
+                                {{ lang === "ltr" ? "Doctors" : " الأطباء " }}
                             </a>
                         </li>
                         <li>
-                            <a routerLink="/about-us">
-                                {{ lang === "ltr" ? "About Us" : "من نحن " }}
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/contact-us">
+                            <a routerLink="/contact-us-3">
                                 {{
                                     lang === "ltr"
                                         ? "Contact us"
                                         : " تواصل معنا "
                                 }}
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/career">
-                                {{ lang === "ltr" ? "Career" : " الوظائف " }}
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/media">
-                                {{ lang === "ltr" ? "Media" : " التسويق " }}
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/blog">
-                                {{ lang === "ltr" ? "Blog" : "المقالات" }}
                             </a>
                         </li>
                     </ul>
@@ -117,14 +93,6 @@
                                 ></span>
                             </a>
                             <div class="info">
-                                <!-- <span
-                                    >{{ lang === "ltr" ? "By " : " بواسطة" }}
-                                    <a >{{
-                                        lang === "ltr"
-                                            ? "Daisy Gabriela"
-                                            : "تامر مصطفى "
-                                    }}</a></span
-                                > -->
                                 <h4>
                                     <a>{{ ser.name }}</a>
                                 </h4>
