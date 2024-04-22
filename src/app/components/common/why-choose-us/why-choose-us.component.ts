@@ -1,18 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { About } from 'src/app/core/models/about';
+import { AboutUsService } from 'src/app/core/services/about-us.service';
 
 @Component({
     selector: 'app-why-choose-us',
     templateUrl: './why-choose-us.component.html',
-    styleUrls: ['./why-choose-us.component.scss']
+    styleUrls: ['./why-choose-us.component.scss'],
 })
 export class WhyChooseUsComponent implements OnInit {
+    lang?: string;
+    about!: About;
+    constructor(public router: Router, private _aboutService: AboutUsService) {}
+    ngOnInit(): void {
+        if (localStorage.getItem('lang')) {
+            this.lang = JSON.parse(localStorage.getItem('lang')!);
+        } else {
+            this.lang = 'ltr';
+        }
 
-    constructor(
-        public router: Router
-    ) { }
+        this.getAbout();
+    }
 
-    ngOnInit(): void {}
+    getAbout() {
+        return this._aboutService.get().subscribe({
+            next: (data) => {
+                this.about = data.data[data.data.length - 1];
+            },
+            error: (err) => {
+                console.error(err);
+            },
+        });
+    }
 
     // Video Popup
     isOpen = false;
@@ -22,5 +41,4 @@ export class WhyChooseUsComponent implements OnInit {
     closePopup(): void {
         this.isOpen = false;
     }
-
 }

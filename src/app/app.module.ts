@@ -115,6 +115,7 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 import { CareerPageComponent } from './components/pages/career-page/career-page.component';
 import { FileUploadComponent } from './components/common/file-upload/file-upload.component';
 import { NewCommersComponent } from './components/common/new-commers/new-commers.component';
+import { OurBoardComponent } from './components/common/our-board/our-board.component';
 
 @NgModule({
     declarations: [
@@ -202,6 +203,7 @@ import { NewCommersComponent } from './components/common/new-commers/new-commers
         CareerPageComponent,
         FileUploadComponent,
         NewCommersComponent,
+        OurBoardComponent,
     ],
     imports: [
         BrowserModule,

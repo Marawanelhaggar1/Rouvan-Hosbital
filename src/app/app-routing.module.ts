@@ -49,7 +49,7 @@ import { CareerPageComponent } from './components/pages/career-page/career-page.
 const routes: Routes = [
     { path: '', component: HomeDemoOneComponent },
 
-    { path: 'center-of-excellence', component: AboutPageOneComponent },
+    { path: 'about-us', component: AboutPageOneComponent },
     { path: 'about-us-2', component: AboutPageTwoComponent },
     { path: 'about-us-3', component: AboutPageThreeComponent },
     { path: 'doctors', component: DentistsPageComponent },
