@@ -8,6 +8,7 @@ export interface Doctor {
     fee: string;
     address: string;
     title: string;
+    waiting: string;
     rating: string;
     image: string;
     health_center: {
