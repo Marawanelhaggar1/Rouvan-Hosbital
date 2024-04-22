@@ -116,6 +116,8 @@ import { CareerPageComponent } from './components/pages/career-page/career-page.
 import { FileUploadComponent } from './components/common/file-upload/file-upload.component';
 import { NewCommersComponent } from './components/common/new-commers/new-commers.component';
 import { OurBoardComponent } from './components/common/our-board/our-board.component';
+import { SpecialitiesComponent } from './components/common/specialities/specialities.component';
+import { ClinicPageComponent } from './components/pages/clinic-page/clinic-page.component';
 
 @NgModule({
     declarations: [
@@ -204,6 +206,8 @@ import { OurBoardComponent } from './components/common/our-board/our-board.compo
         FileUploadComponent,
         NewCommersComponent,
         OurBoardComponent,
+        SpecialitiesComponent,
+        ClinicPageComponent,
     ],
     imports: [
         BrowserModule,

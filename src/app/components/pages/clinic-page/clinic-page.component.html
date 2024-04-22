@@ -1,0 +1,31 @@
+<div
+    [dir]="lang"
+    [ngClass]="lang === 'ltr' ? 'page-banner-area' : 'page-banner-area-rtl '"
+    class="ptb-100 mb-4"
+>
+    <div class="container">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl '
+            "
+        >
+            <h2>{{ lang === "ltr" ? "Clinics" : "العيادات" }}</h2>
+            <ul class="pages-list">
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? "Home" : "الرئيسه"
+                    }}</a>
+                </li>
+                <li>{{ lang === "ltr" ? "Clinics" : "العيادات" }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- <div class="pt-100 mb-5"></div> -->
+<div class="mt-7">
+    <app-appointment></app-appointment>
+</div>
+
+<app-specialities></app-specialities>

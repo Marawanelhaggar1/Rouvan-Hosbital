@@ -11,14 +11,18 @@
                     : 'page-banner-content-rtl '
             "
         >
-            <h2>{{ lang === "ltr" ? " Services" : "الخدمات" }}</h2>
+            <h2>
+                {{ lang === "ltr" ? "Departments" : "الأقسام" }}
+            </h2>
             <ul class="pages-list">
                 <li>
                     <a href="index.html">{{
                         lang === "ltr" ? " Home" : "الرئيسيه"
                     }}</a>
                 </li>
-                <li>{{ lang === "ltr" ? " Services" : "الخدمات" }}</li>
+                <li>
+                    {{ lang === "ltr" ? "Departments" : "الأقسام" }}
+                </li>
             </ul>
         </div>
     </div>
@@ -30,27 +34,38 @@
             <div class="col-lg-4 col-md-6" *ngFor="let ser of services">
                 <div class="single-services-box">
                     <div class="icon">
-                        <i [ngClass]="ser.icon"></i>
+                        <img [src]="ser.icon" />
                     </div>
 
                     <h3>
-                        <a routerLink="/service-details">
-                            {{ lang === "ltr" ? ser.en : ser.ar }}
+                        <a [routerLink]="['/department-details', ser.id]">
+                            {{ ser.name }}
                         </a>
                     </h3>
-                    <p>
-                        {{
-                            lang === "ltr"
-                                ? ser.descriptionEn
-                                : ser.descriptionAr
-                        }}
-                    </p>
 
-                    <a routerLink="/service-details" class="default-btn">
+                    <div class="d-flex">
+                        <p
+                            [ngClass]="
+                                ser.description.length >= 230 ? 'overFlow' : ''
+                            "
+                        >
+                            {{ ser.description }}
+                        </p>
+                        <span *ngIf="ser.description.length >= 230">....</span>
+                    </div>
+
+                    <a
+                        [routerLink]="['/department-details', ser.id]"
+                        class="default-btn"
+                    >
                         {{ lang === "ltr" ? " Read More" : "أقرأ المزيد" }}
                     </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<div class="mt-7">
+    <app-appointment></app-appointment>
 </div>

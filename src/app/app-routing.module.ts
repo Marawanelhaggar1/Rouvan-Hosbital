@@ -45,11 +45,13 @@ import { AppointmentSearchComponent } from './components/common/appointment-sear
 import { BookDoctorsPageComponent } from './components/pages/book-doctors-page/book-doctors-page.component';
 import { BookAppointmentComponent } from './components/pages/book-appointment/book-appointment.component';
 import { CareerPageComponent } from './components/pages/career-page/career-page.component';
+import { ClinicPageComponent } from './components/pages/clinic-page/clinic-page.component';
 
 const routes: Routes = [
     { path: '', component: HomeDemoOneComponent },
 
     { path: 'about-us', component: AboutPageOneComponent },
+    { path: 'clinics', component: ClinicPageComponent },
     { path: 'about-us-2', component: AboutPageTwoComponent },
     { path: 'about-us-3', component: AboutPageThreeComponent },
     { path: 'doctors', component: DentistsPageComponent },
@@ -69,8 +71,8 @@ const routes: Routes = [
         path: 'portfolio-details',
         component: PortfolioDetailsPageComponent,
     },
-    { path: 'services', component: ServicesPageOneComponent },
-    { path: 'services-2', component: ServicesPageTwoComponent },
+    { path: 'services-2', component: ServicesPageOneComponent },
+    { path: 'departments', component: ServicesPageTwoComponent },
     {
         path: 'services-3',
         component: ServicesPageThreeComponent,
@@ -86,7 +88,10 @@ const routes: Routes = [
     { path: 'services-4', component: ServicesPageFourComponent },
     { path: 'services-5', component: ServicesPageFiveComponent },
     { path: 'services-6', component: ServicesPageSixComponent },
-    { path: 'service-details', component: ServiceDetailsPageOneComponent },
+    {
+        path: 'department-details/:id',
+        component: ServiceDetailsPageOneComponent,
+    },
     { path: 'service-details-2', component: ServiceDetailsPageTwoComponent },
     { path: 'appointment', component: AppointmentPageComponent },
     { path: 'pricing', component: PricingPageComponent },

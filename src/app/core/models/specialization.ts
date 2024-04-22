@@ -1,4 +1,4 @@
 export interface Specialization {
     specialty: string;
-    icon: string;
+    image: string;
 }

@@ -36,23 +36,18 @@
                         : "  تخصصات طبية"
                 }}
             </h2>
-            <a routerLink="/departments" class="default-btn">{{
-                lang === "ltr" ? " View All " : " عرض الكل "
-            }}</a>
         </div>
         <div class="row justify-content-center">
             <div
                 class="col-xl-3 col-lg-6 col-sm-6"
-                *ngFor="let item of services"
+                *ngFor="let item of specialties"
             >
                 <div class="single-core-features">
                     <div class="icon">
-                        <i [ngClass]="item.icon"></i>
+                        <img [src]="item.image" alt="icon" />
                     </div>
                     <h3>
-                        <a routerLink="/service-details">
-                            {{ lang === "ltr" ? item.en : item.ar }}</a
-                        >
+                        <a> {{ item.specialty }}</a>
                     </h3>
                     <!-- <p>
                         {{
@@ -61,6 +56,27 @@
                                 : item.descriptionAr
                         }}
                     </p> -->
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-sm-12 col-md-12">
+                <div class="pagination-area">
+                    <span class="prev page-numbers" disabled>
+                        <i class="flaticon-015-left-arrow"></i>
+                    </span>
+                    <span
+                        *ngFor="let p of page"
+                        [ngClass]="p == currentPage ? 'current' : ''"
+                        class="page-numbers"
+                        aria-current="page"
+                        (click)="getSpecialties(p)"
+                    >
+                        {{ p }}
+                    </span>
+
+                    <a class="next page-numbers">
+                        <i class="flaticon-014-right-arrow"></i>
+                    </a>
                 </div>
             </div>
         </div>

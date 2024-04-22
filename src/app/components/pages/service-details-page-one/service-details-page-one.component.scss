@@ -2,6 +2,8 @@
     .service-details-image {
         img {
             border-radius: 10px;
+            // width: 735px;
+            // height: 385px;
         }
     }
     .service-details-content {
@@ -16,6 +18,7 @@
         }
     }
     .service-details-list {
+        margin: 1rem;
         padding-left: 0;
         list-style-type: none;
         margin: {
@@ -42,9 +45,9 @@
                 transform: translateY(-50%);
                 background-color: var(--main-color);
             }
-            &:last-child {
-                margin-bottom: 0;
-            }
+            // &:last-child {
+            //     margin-bottom: 0;
+            // }
         }
     }
     .service-details-overview {
@@ -353,6 +356,7 @@
         }
     }
     .service-details-list {
+        margin: 1rem;
         padding-right: 0;
         list-style-type: none;
         margin: {
@@ -694,6 +698,9 @@
             li {
                 padding-left: 0;
                 margin-bottom: 15px;
+                display: flex;
+                gap: 10px;
+                width: 100%;
 
                 i {
                     top: 0;
@@ -797,7 +804,9 @@
             li {
                 padding-right: 0;
                 margin-bottom: 15px;
-
+                display: flex;
+                gap: 10px;
+                width: 100%;
                 i {
                     top: 0;
                     width: 25px;
