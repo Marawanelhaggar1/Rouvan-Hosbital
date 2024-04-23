@@ -13,26 +13,26 @@ export class CareerService {
     constructor(private _http: HttpClient, private _Cookie: CookieService) {}
     post(body: FormData): Observable<Career> {
         return this._http.post<Career>(
-            'https://rouvanhospital.com/laravel/public/api/career',
+            'https://rouvanhospital.com/public/api/career',
             body
         );
     }
 
     getNewEmployees(): Observable<{ data: NewEmployees[] }> {
         return this._http.get<{ data: NewEmployees[] }>(
-            'https://rouvanhospital.com/laravel/public/api/new/employee'
+            'https://rouvanhospital.com/public/api/new/employee'
         );
     }
 
     getPics(): Observable<{ data: { image: string }[] }> {
         return this._http.get<{ data: { image: string }[] }>(
-            `https://rouvanhospital.com/laravel/public/api/pics`
+            `https://rouvanhospital.com/public/api/pics`
         );
     }
 
     getFeedback(): Observable<{ data: { image: string }[] }> {
         return this._http.get<{ data: { image: string }[] }>(
-            `https://rouvanhospital.com/laravel/public/api/feedback`
+            `https://rouvanhospital.com/public/api/feedback`
         );
     }
 }

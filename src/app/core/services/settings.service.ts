@@ -18,7 +18,7 @@ export class SettingsService {
     }
     get(): Observable<{ data: Settings[] }> {
         return this._http.get<{ data: Settings[] }>(
-            `https://rouvanhospital.com/laravel/public/api/web/setting?lang=${this.lang}`
+            `https://rouvanhospital.com/public/api/web/setting?lang=${this.lang}`
         );
     }
 }

@@ -19,7 +19,7 @@ export class SlidesService {
 
     get(): Observable<{ data: Slides[] }> {
         return this._http.get<{ data: Slides[] }>(
-            `https://rouvanhospital.com/laravel/public/api/slides?lang=${this.lang}`
+            `https://rouvanhospital.com/public/api/slides?lang=${this.lang}`
         );
     }
 }

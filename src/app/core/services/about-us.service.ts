@@ -18,7 +18,7 @@ export class AboutUsService {
     }
     get(): Observable<{ data: About[] }> {
         return this._http.get<{ data: About[] }>(
-            `https://rouvanhospital.com/laravel/public/api/about/us?lang=${this.lang}`
+            `https://rouvanhospital.com/public/api/about/us?lang=${this.lang}`
         );
     }
 }

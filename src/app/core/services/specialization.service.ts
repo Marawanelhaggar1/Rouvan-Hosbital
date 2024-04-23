@@ -18,7 +18,7 @@ export class SpecializationService {
     }
     get(): Observable<{ data: Specialization[] }> {
         return this._http.get<{ data: Specialization[] }>(
-            `https://rouvanhospital.com/laravel/public/api/specialization?lang=${this.lang}`
+            `https://rouvanhospital.com/public/api/specialization?lang=${this.lang}`
         );
     }
 
@@ -32,7 +32,7 @@ export class SpecializationService {
             meta: { last_page: number; current_page: number };
             links: { next: string; prev: string };
         }>(
-            `https://rouvanhospital.com/laravel/public/api/specialization/paginate/pag?lang=${this.lang}&page=${page}`
+            `https://rouvanhospital.com/public/api/specialization/paginate/pag?lang=${this.lang}&page=${page}`
         );
     }
 }

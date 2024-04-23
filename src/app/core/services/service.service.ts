@@ -18,24 +18,24 @@ export class ServiceService {
     }
     get(): Observable<{ data: Service[] }> {
         return this._http.get<{ data: Service[] }>(
-            `https://rouvanhospital.com/laravel/public/api/service?lang=${this.lang}`
+            `https://rouvanhospital.com/public/api/service?lang=${this.lang}`
         );
     }
     getById(id: string): Observable<{ data: Service }> {
         return this._http.get<{ data: Service }>(
-            `https://rouvanhospital.com/laravel/public/api/service/${id}?lang=${this.lang}`
+            `https://rouvanhospital.com/public/api/service/${id}?lang=${this.lang}`
         );
     }
 
     getFeatured(): Observable<{ data: Service[] }> {
         return this._http.get<{ data: Service[] }>(
-            `https://rouvanhospital.com/laravel/public/api/service/featured?lang=${this.lang}`
+            `https://rouvanhospital.com/public/api/service/featured?lang=${this.lang}`
         );
     }
 
     getDental(): Observable<{ data: Service[] }> {
         return this._http.get<{ data: Service[] }>(
-            `https://rouvanhospital.com/laravel/public/api/service/dental?lang=${this.lang}`
+            `https://rouvanhospital.com/public/api/service/dental?lang=${this.lang}`
         );
     }
 }

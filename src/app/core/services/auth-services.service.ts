@@ -12,7 +12,7 @@ export class UserService {
 
     get(): Observable<User> {
         return this._Http.get<User>(
-            'https://rouvanhospital.com/laravel/public/api/user',
+            'https://rouvanhospital.com/public/api/user',
             {
                 headers: {
                     Authorization:
@@ -25,21 +25,21 @@ export class UserService {
 
     login(body: any): Observable<User> {
         return this._Http.post<User>(
-            'https://rouvanhospital.com/laravel/public/api/auth/login',
+            'https://rouvanhospital.com/public/api/auth/login',
             body
         );
     }
 
     register(body: any): Observable<User> {
         return this._Http.post<User>(
-            'https://rouvanhospital.com/laravel/public/api/auth/register',
+            'https://rouvanhospital.com/public/api/auth/register',
             body
         );
     }
 
     google(body: any): Observable<User> {
         return this._Http.post<User>(
-            'https://rouvanhospital.com/laravel/public/api/auth/google',
+            'https://rouvanhospital.com/public/api/auth/google',
             body
         );
     }

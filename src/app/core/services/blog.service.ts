@@ -18,19 +18,19 @@ export class BlogService {
     }
     get(): Observable<{ data: BlogModel[] }> {
         return this._http.get<{ data: BlogModel[] }>(
-            `https://rouvanhospital.com/laravel/public/api/blogs?lang=${this.lang}`
+            `https://rouvanhospital.com/public/api/blogs?lang=${this.lang}`
         );
     }
 
     getFeatured(): Observable<{ data: BlogModel[] }> {
         return this._http.get<{ data: BlogModel[] }>(
-            `https://rouvanhospital.com/laravel/public/api/blogs/featured?lang=${this.lang}`
+            `https://rouvanhospital.com/public/api/blogs/featured?lang=${this.lang}`
         );
     }
 
     getById(id: string): Observable<{ data: BlogModel }> {
         return this._http.get<{ data: BlogModel }>(
-            `https://rouvanhospital.com/laravel/public/api/blogs/${id}?lang=${this.lang}`
+            `https://rouvanhospital.com/public/api/blogs/${id}?lang=${this.lang}`
         );
     }
 }

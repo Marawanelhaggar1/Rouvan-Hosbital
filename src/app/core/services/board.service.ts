@@ -18,7 +18,7 @@ export class BoardService {
     }
     get(): Observable<{ data: Board[] }> {
         return this._http.get<{ data: Board[] }>(
-            `https://rouvanhospital.com/laravel/public/api/new/employee?lang=${this.lang}`
+            `https://rouvanhospital.com/public/api/new/employee?lang=${this.lang}`
         );
     }
 }
