@@ -45,7 +45,13 @@ export class FooterComponent implements OnInit {
     getService() {
         this._serviceService.getFeatured().subscribe({
             next: (data) => {
-                this.service = data.data;
+                // Assuming data is an array
+                const totalElements = data.data.length;
+                if (totalElements >= 3) {
+                    this.service = data.data.slice(totalElements - 3);
+                } else {
+                    this.service = data.data;
+                }
             },
             error: (err) => {
                 console.error(err);
