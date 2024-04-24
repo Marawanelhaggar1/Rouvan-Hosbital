@@ -12,17 +12,17 @@
                             <i class="flaticon-039-emergency-call"></i>
                             {{ lang === "ltr" ? "Call Today" : "اتصل اليوم" }}
                             <span>
-                                <a href="tel:16670">
-                                    {{ lang === "ltr" ? "+16670" : "١٦٦٧٠+ " }}
-                                </a>
+                                <a [href]="'tel:' + setting?.phone">{{
+                                    setting?.phone
+                                }}</a>
                             </span>
                         </div>
                         <p>
                             <strong>
                                 {{
                                     lang == "ltr"
-                                        ? "Book Your Appointment Now in AlAssema Clinics"
-                                        : "احجز موعدك الآن في عيادات العاصمة"
+                                        ? "Book Your Appointment Now in Rouvan Clinics"
+                                        : "احجز موعدك الآن في عيادات روفان"
                                 }} </strong
                             ><br />
 
@@ -38,9 +38,11 @@
                                     : "معظم التخصصات الطبية متوفرة."
                             }}
                         </p>
-                        <a href="tel:16670" class="default-btn">
-                            {{ lang === "ltr" ? "+16670" : "١٦٦٧٠+ " }}
-                        </a>
+                        <a
+                            [href]="'tel:' + setting?.phone"
+                            class="default-btn"
+                            >{{ setting?.phone }}</a
+                        >
                     </div>
                 </div>
             </div>

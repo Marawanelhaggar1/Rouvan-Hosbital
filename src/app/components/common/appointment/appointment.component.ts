@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { Doctor } from 'src/app/core/models/doctor';
+import { Settings } from 'src/app/core/models/settings';
 import { Specialization } from 'src/app/core/models/specialization';
 import { DoctorService } from 'src/app/core/services/doctor.service';
+import { SettingsService } from 'src/app/core/services/settings.service';
 import { SpecializationService } from 'src/app/core/services/specialization.service';
 
 @Component({
@@ -21,11 +23,13 @@ export class AppointmentComponent implements OnInit {
     doctor: string[] = [];
     specialties?: string[] = [];
     docId?: any = 0;
+    setting?: Settings;
 
     constructor(
         private _formBuilder: FormBuilder,
         private _specializations: SpecializationService,
-        private _doctorService: DoctorService
+        private _doctorService: DoctorService,
+        private _settingsService: SettingsService
     ) {
         this.searchForm = _formBuilder.group({
             specialty: ['', [Validators.required]],
@@ -41,6 +45,18 @@ export class AppointmentComponent implements OnInit {
         }
         this.getSpecialties();
         this.getDoctor();
+        this.getSettings();
+    }
+
+    getSettings() {
+        this._settingsService.get().subscribe({
+            next: (data) => {
+                this.setting = data.data[data.data.length - 1];
+            },
+            error: (err) => {
+                console.error(err);
+            },
+        });
     }
 
     getSpecialties() {
