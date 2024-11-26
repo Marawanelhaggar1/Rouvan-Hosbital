@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Slides } from 'src/app/core/models/slides';
 import { SlidesService } from 'src/app/core/services/slides.service';
@@ -11,9 +11,19 @@ import { SlidesService } from 'src/app/core/services/slides.service';
 export class HomeoneBannerComponent implements OnInit {
     lang?: string;
     slides?: Slides[];
+    width!: number;
+
+    @HostListener('window:resize', ['$event'])
+    onResize(event: any): void {
+        this.width = event.target.innerWidth;
+        console.log(this.width);
+    }
+
     constructor(private _slideService: SlidesService) {}
 
     ngOnInit(): void {
+        this.width = window.innerWidth;
+        console.log(this.width);
         if (localStorage.getItem('lang')) {
             this.lang = JSON.parse(localStorage.getItem('lang')!);
         } else {

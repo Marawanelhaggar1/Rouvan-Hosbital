@@ -3,4 +3,5 @@ export interface Slides {
     sub_title: string;
     description: string;
     image: string;
+    mobile: string;
 }

@@ -3,7 +3,11 @@
         <ng-template *ngFor="let item of slides" carouselSlide>
             <div
                 class="main-slides-item"
-                [style.background-image]="'url(' + item.image + ')'"
+                [style.background-image]="
+                    width >= 768
+                        ? 'url(' + item.image + ')'
+                        : 'url(' + item.mobile + ')'
+                "
             >
                 <div class="container" [dir]="lang">
                     <div
